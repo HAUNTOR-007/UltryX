@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- ── SEO Core ── -->
+  <title>UltryX | Free 4K & HD Dark Wallpapers — Cars, Nature, Abstract & More</title>
+  <meta name="description" content="Download free 4K and HD dark wallpapers handpicked for every screen. Browse Cars, Abstract, Nature, City, Minimal and Live wallpapers at UltryX."/>
+  <meta name="keywords" content="dark wallpapers, 4K wallpapers, HD wallpapers, free wallpapers download, car wallpapers, abstract wallpapers, nature wallpapers, city wallpapers, minimal wallpapers, desktop backgrounds"/>
+  <meta name="author" content="UltryX"/>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+  <link rel="canonical" href="https://ultryx.com/"/>
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="UltryX"/>
+  <meta property="og:title" content="UltryX | Free 4K & HD Dark Wallpapers"/>
+  <meta property="og:description" content="Download free 4K and HD dark wallpapers — Cars, Abstract, Nature, City, Minimal. Handpicked, always free."/>
+  <meta property="og:url" content="https://ultryx.com/"/>
+  <meta property="og:image" content="https://ultryx.com/og-preview.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="UltryX | Free 4K & HD Dark Wallpapers"/>
+  <meta name="twitter:description" content="Curated 4K & HD dark wallpapers for every screen. Always free."/>
+  <meta name="twitter:image" content="https://ultryx.com/og-preview.jpg"/>
+
+  <!-- ── Schema.org Structured Data ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "UltryX",
+    "url": "https://ultryx.com/",
+    "description": "Free 4K and HD dark wallpapers — Cars, Abstract, Nature, City, Minimal and Live.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://ultryx.com/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- ── Preconnect for fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0b;
+      --surface: #111114;
+      --border: #1e1e24;
+      --accent: #c8f135;
+      --accent-dim: rgba(200,241,53,0.12);
+      --text: #e8e8ec;
+      --muted: #5a5a6e;
+      --card-bg: #13131a;
+      --header-bg: rgba(10,10,11,0.85);
+    }
+    body.light {
+      --bg: #f4f4f0; --surface: #ffffff; --border: #ddddd8;
+      --accent: #6ab100; --accent-dim: rgba(106,177,0,0.10);
+      --text: #18181b; --muted: #888890; --card-bg: #ebebeb;
+      --header-bg: rgba(244,244,240,0.88);
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; min-height: 100vh; overflow-x: hidden; transition: background 0.3s, color 0.3s; }
+
+    /* ── Header ── */
+    header { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 64px; background: var(--header-bg); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border); transition: background 0.3s; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.45rem; letter-spacing: -0.02em; color: var(--text); }
+    .logo span { color: var(--accent); }
+    .theme-toggle { display: flex; align-items: center; gap: 0.55rem; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 0.35rem 0.8rem 0.35rem 0.45rem; cursor: pointer; transition: border-color 0.2s; }
+    .theme-toggle:hover { border-color: var(--accent); }
+    .toggle-track { width: 32px; height: 18px; background: var(--border); border-radius: 10px; position: relative; transition: background 0.25s; flex-shrink: 0; }
+    body.light .toggle-track { background: var(--accent); }
+    .toggle-thumb { position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: var(--muted); transition: transform 0.25s, background 0.25s; }
+    body.light .toggle-thumb { transform: translateX(14px); background: #fff; }
+    .toggle-label { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: var(--muted); white-space: nowrap; }
+
+    /* ── Hero ── */
+    .hero { text-align: center; padding: 4rem 2rem 2.5rem; position: relative; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(200,241,53,0.07) 0%, transparent 70%); pointer-events: none; }
+    .hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 0.6rem; }
+    .hero h1 span { color: var(--accent); }
+    .hero p { color: var(--muted); font-size: 0.95rem; }
+
+    /* ── Controls ── */
+    .controls { max-width: 860px; margin: 0 auto 2.5rem; padding: 0 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+    .search-wrap { position: relative; }
+    .search-wrap svg { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+    .search-wrap input { width: 100%; background: var(--surface); border: 1px solid var(--border); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.95rem; padding: 0.75rem 1rem 0.75rem 2.8rem; border-radius: 8px; outline: none; transition: border-color 0.2s; }
+    .search-wrap input:focus { border-color: var(--accent); }
+    .search-wrap input::placeholder { color: var(--muted); }
+    .filter-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .filter-btn { background: var(--surface); border: 1px solid var(--border); color: var(--muted); font-family: 'DM Sans', sans-serif; font-size: 0.82rem; padding: 0.42rem 1rem; border-radius: 20px; cursor: pointer; transition: all 0.18s; }
+    .filter-btn:hover, .filter-btn.active { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+    .sort-select { margin-left: auto; background: var(--surface); border: 1px solid var(--border); color: var(--muted); font-family: 'DM Sans', sans-serif; font-size: 0.82rem; padding: 0.42rem 0.8rem; border-radius: 6px; cursor: pointer; outline: none; }
+
+    /* ── Gallery ── */
+    .gallery-wrap { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem; }
+    .results-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 1.2rem; }
+    .results-meta strong { color: var(--text); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+
+    /* ── Card ── */
+    .card { position: relative; aspect-ratio: 16/10; overflow: hidden; cursor: pointer; background: var(--card-bg); transition: box-shadow 0.35s, transform 0.35s; }
+    .card:hover { transform: translateY(-5px) scale(1.016); box-shadow: 0 16px 48px rgba(0,0,0,0.6), 0 0 0 2px var(--accent); z-index: 2; }
+
+    /* ── Preview / Blur-up System ── */
+    /* The placeholder: a category-tinted gradient that shows immediately */
+    .card-placeholder {
+      position: absolute; inset: 0; z-index: 0;
+      background: var(--placeholder-color, #1a1a22);
+      transition: opacity 0.55s ease;
+    }
+    /* Shimmer sweep over placeholder */
+    .card-placeholder::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, transparent 20%, rgba(255,255,255,0.06) 50%, transparent 80%);
+      background-size: 200% 100%;
+      animation: shimmer 1.6s infinite linear;
+    }
+    @keyframes shimmer {
+      0%   { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+    /* Once the real image loads, hide placeholder */
+    .card.loaded .card-placeholder { opacity: 0; pointer-events: none; }
+    .card.loaded .card-placeholder::after { animation: none; }
+
+    /* Real image sits on top of placeholder */
+    .card img.card-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      transition: transform 0.5s cubic-bezier(.25,.46,.45,.94), filter 0.4s, opacity 0.5s;
+      filter: brightness(0.82) saturate(0.88);
+      opacity: 0;
+      z-index: 1;
+    }
+    .card.loaded img.card-img { opacity: 1; }
+    .card:hover img.card-img { transform: scale(1.1); filter: brightness(1.06) saturate(1.2); }
+
+    /* Shimmer shine on hover */
+    .card::after { content: ''; position: absolute; inset: 0; z-index: 3; background: linear-gradient(115deg, transparent 25%, rgba(255,255,255,0.09) 50%, transparent 75%); transform: translateX(-120%); pointer-events: none; }
+    .card:hover::after { transform: translateX(120%); transition: transform 0.6s ease; }
+
+    .card-overlay { position: absolute; inset: 0; z-index: 4; background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.2) 55%, transparent 100%); opacity: 0; transition: opacity 0.35s; display: flex; flex-direction: column; justify-content: flex-end; padding: 1rem; }
+    .card:hover .card-overlay { opacity: 1; }
+    .card-info-top { position: absolute; top: 0.75rem; left: 0.75rem; right: 0.75rem; display: flex; justify-content: space-between; align-items: center; z-index: 5; opacity: 0; transform: translateY(-8px); transition: opacity 0.35s, transform 0.35s; }
+    .card:hover .card-info-top { opacity: 1; transform: translateY(0); }
+    .card-res { font-size: 0.67rem; font-family: 'DM Sans', sans-serif; font-weight: 700; padding: 0.22rem 0.6rem; border-radius: 5px; background: rgba(0,0,0,0.72); color: var(--accent); backdrop-filter: blur(8px); border: 1px solid rgba(200,241,53,0.3); letter-spacing: 0.04em; }
+    .card-size { font-size: 0.67rem; font-family: 'DM Sans', sans-serif; font-weight: 500; padding: 0.22rem 0.6rem; border-radius: 5px; background: rgba(0,0,0,0.72); color: rgba(255,255,255,0.75); backdrop-filter: blur(8px); }
+    .card-title { font-family: 'Syne', sans-serif; font-size: 0.93rem; font-weight: 700; color: #fff; margin-bottom: 0.42rem; transform: translateY(10px); transition: transform 0.35s; }
+    .card:hover .card-title { transform: translateY(0); }
+    .card-actions { display: flex; gap: 0.5rem; align-items: center; transform: translateY(10px); transition: transform 0.35s 0.05s; }
+    .card:hover .card-actions { transform: translateY(0); }
+    .card-tag { font-size: 0.7rem; padding: 0.24rem 0.65rem; border-radius: 5px; background: rgba(255,255,255,0.13); color: rgba(255,255,255,0.88); backdrop-filter: blur(4px); text-transform: capitalize; }
+    .card-dl { font-size: 0.7rem; padding: 0.24rem 0.78rem; border-radius: 5px; background: var(--accent); color: #000; font-weight: 700; margin-left: auto; cursor: pointer; border: none; transition: opacity 0.2s, transform 0.15s; }
+    .card-dl:hover { opacity: 0.85; transform: scale(1.06); }
+
+    /* ── Live Badge ── */
+    .live-badge { position: absolute; top: 0.75rem; right: 0.75rem; z-index: 6; display: flex; align-items: center; gap: 0.3rem; background: rgba(0,0,0,0.72); border: 1px solid rgba(200,241,53,0.5); color: var(--accent); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; padding: 0.22rem 0.6rem; border-radius: 5px; backdrop-filter: blur(8px); }
+    .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: livePulse 1.4s ease-in-out infinite; }
+    @keyframes livePulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.7); } }
+
+    /* ── Live card video preview ── */
+    .card video.card-vid { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; opacity: 0; transition: opacity 0.5s; }
+    .card.loaded video.card-vid { opacity: 1; }
+    .card:hover video.card-vid { transform: scale(1.05); transition: transform 0.5s cubic-bezier(.25,.46,.45,.94), opacity 0.5s; }
+
+    /* ── Lightbox video support ── */
+    .lightbox-inner video#lbVideo { max-width: 92vw; max-height: 80vh; border-radius: 8px; border: 1px solid var(--border); display: none; }
+    .lightbox-inner video#lbVideo.active { display: block; }
+    .lightbox-inner img#lbImg.hidden { display: none; }
+
+    /* ── Empty State ── */
+    .empty-state { text-align: center; padding: 5rem 2rem; display: none; }
+    .empty-state.visible { display: block; }
+    .empty-state h3 { font-family: 'Syne', sans-serif; font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .empty-state p { color: var(--muted); font-size: 0.9rem; }
+
+    /* ── Pagination ── */
+    .pagination { display: flex; justify-content: center; align-items: center; gap: 0.5rem; padding: 2.5rem 0 3rem; }
+    .page-btn { background: var(--surface); border: 1px solid var(--border); color: var(--muted); padding: 0.5rem 1rem; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; cursor: pointer; transition: all 0.18s; }
+    .page-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+    .page-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+    .page-btn.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 600; }
+
+    /* ── Lightbox ── */
+    .lightbox { position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.94); display: none; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
+    .lightbox.open { display: flex; }
+    .lightbox-inner { position: relative; max-width: 92vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+    .lightbox-inner img { max-width: 92vw; max-height: 80vh; object-fit: contain; border-radius: 8px; border: 1px solid var(--border); }
+    .lightbox-bar { display: flex; align-items: center; gap: 1rem; width: 100%; }
+    .lb-title { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; }
+    .lb-res { color: var(--muted); font-size: 0.82rem; }
+    .lb-close { position: absolute; top: -2.5rem; right: 0; background: none; border: none; color: var(--muted); font-size: 1.5rem; cursor: pointer; transition: color 0.2s; }
+    .lb-close:hover { color: var(--text); }
+    .btn-download { background: var(--accent); color: #000; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.85rem; padding: 0.55rem 1.4rem; border: none; border-radius: 6px; cursor: pointer; transition: opacity 0.2s; margin-left: auto; text-decoration: none; display: inline-block; }
+    .btn-download:hover { opacity: 0.85; }
+
+    /* ── Footer ── */
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 2.5rem; display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 0.8rem; }
+    footer .logo { font-size: 1rem; }
+
+    @media (max-width: 600px) {
+      header { padding: 0 1rem; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Ultry<span>X</span></div>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <span class="toggle-track"><span class="toggle-thumb"></span></span>
+    <span class="toggle-label" id="toggleLabel">🌙 Dark</span>
+  </button>
+</header>
+
+<!-- Semantic hero for SEO -->
+<main>
+<section class="hero" aria-label="Hero section">
+  <h1>Curated <span>Dark Wallpapers</span><br>for Every Screen</h1>
+  <p>4K & HD wallpapers — handpicked, always free.</p>
+</section>
+
+<div class="controls" role="search" aria-label="Search and filter wallpapers">
+  <div class="search-wrap">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+    </svg>
+    <input type="search" id="searchInput" placeholder="Search wallpapers…" aria-label="Search wallpapers" autocomplete="off"/>
+  </div>
+  <div class="filter-row" role="group" aria-label="Filter by category">
+    <button class="filter-btn active" data-cat="all">All</button>
+    <button class="filter-btn" data-cat="CAR">Cars</button>
+    <button class="filter-btn" data-cat="abstract">Abstract</button>
+    <button class="filter-btn" data-cat="nature">Nature</button>
+    <button class="filter-btn" data-cat="city">City</button>
+    <button class="filter-btn" data-cat="minimal">Minimal</button>
+    <button class="filter-btn" data-cat="Live">Live</button>
+    <select class="sort-select" id="sortSelect" aria-label="Sort wallpapers">
+      <option value="new">Newest</option>
+      <option value="popular">Most Popular</option>
+      <option value="res">Highest Res</option>
+    </select>
+  </div>
+</div>
+
+<div class="gallery-wrap">
+  <p class="results-meta" id="resultsMeta" aria-live="polite"></p>
+  <div class="gallery-grid" id="galleryGrid" role="list" aria-label="Wallpaper gallery"></div>
+  <div class="empty-state" id="emptyState" role="status">
+    <h3>No Wallpapers Found</h3>
+    <p>Try adjusting your search or filters.</p>
+  </div>
+</div>
+
+<nav class="pagination" id="pagination" aria-label="Gallery pages"></nav>
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Wallpaper preview">
+  <div class="lightbox-inner">
+    <button class="lb-close" id="lbClose" aria-label="Close preview">✕</button>
+    <img id="lbImg" src="" alt="Wallpaper preview" loading="lazy" decoding="async"/>
+    <video id="lbVideo" autoplay muted loop playsinline controls></video>
+    <div class="lightbox-bar">
+      <div>
+        <div class="lb-title" id="lbTitle"></div>
+        <div class="lb-res" id="lbRes"></div>
+      </div>
+      <button class="btn-download" id="lbDownload">↓ Download High-Res</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="logo">Ultry<span style="color:var(--accent)">X</span></div>
+  <span>© 2025 UltryX. All rights reserved.</span>
+  <span>Made for dark-mode lovers.</span>
+</footer>
+
+<script>
+
+  // =====================================================
+  //   Placeholder color palette per category
+  //   (shown instantly before the image loads)
+  // =====================================================
+  const CATEGORY_COLORS = {
+    'CAR':      'linear-gradient(135deg,#1a1008 0%,#2d1c0a 40%,#1a0e04 100%)',
+    'abstract': 'linear-gradient(135deg,#0d0d1a 0%,#130d26 40%,#0a0814 100%)',
+    'nature':   'linear-gradient(135deg,#081208 0%,#0d1e0a 40%,#060e05 100%)',
+    'city':     'linear-gradient(135deg,#090912 0%,#0e0e1c 40%,#060610 100%)',
+    'minimal':  'linear-gradient(135deg,#111114 0%,#18181e 40%,#0d0d10 100%)',
+    'Live':     'linear-gradient(135deg,#08100e 0%,#0c1816 40%,#060c0a 100%)',
+    'Nature':   'linear-gradient(135deg,#081208 0%,#0d1e0a 40%,#060e05 100%)',
+    'default':  'linear-gradient(135deg,#111114 0%,#1a1a22 40%,#0d0d14 100%)',
+  };
+
+  // =====================================================
+  //   WALLPAPERS DATA
+  // =====================================================
+  const walls = [
+    { id: 1,  title: 'BMW GT3 M4',           category: 'CAR',      resolution: '5120×2880', fileSize: '4.7 MB',     img: 'bmw.jpg',               fullImg: 'bmw.jpg' },
+    { id: 2,  title: 'Quantum Void',          category: 'abstract', resolution: '4K UHD',    fileSize: '8.5 MB',    img: 'quantum.jpg',           fullImg: 'quantum.jpg' },
+    { id: 3, title: 'Balbasaur',             category: 'Live',     resolution: '2k',        fileSize: '97.6 MB',    img: 'Balbasaur.png',         fullImg: 'Balbasaur.mp4' },
+    { id: 4,  title: 'Futuristic City',       category: 'city',     resolution: '1080p',     fileSize: '6.2 MB',    img: 'futuristiccity.jpg',    fullImg: 'futuristiccity.jpg' },
+    { id: 5,  title: 'Man & Woman',           category: 'minimal',  resolution: '5120×2880', fileSize: '457 KB',    img: 'manwomen.jpg',          fullImg: 'manwomen.jpg' },
+    { id: 6,  title: 'BMW M3 E36',            category: 'Live',     resolution: '3840x2160', fileSize: '27.8 MB',   img: 'bmwm3e36.png',          fullImg: 'bmwm3e36.mp4' },
+    { id: 7, title: 'Silver Surfer',         category: 'Live',     resolution: '5120×2880', fileSize: '55.5 MB',    img: 'silversurfer.png',      fullImg: 'silversurfer.mp4' },
+    { id: 8,  title: 'Dark House',            category: 'Nature',   resolution: '1920×1080', fileSize: '2 MB',      img: 'house.png',             fullImg: 'house.png' },
+    { id: 9,  title: 'Pyramid With Palm Trees', category: 'abstract', resolution: '1920x1080', fileSize: '414 KB',  img: 'pyramid.png',           fullImg: 'pyramid.png' },
+    { id: 10, title: 'Porsche 911 GT RS',     category: 'CAR',      resolution: '2550X1440', fileSize: '1 MB',      img: 'porsche.png',           fullImg: 'porsche.png' },
+    { id: 11, title: 'BMW M4',                 category: 'Live',    resolution: '2k',        fileSize: '2.2 MB',    img: 'bmwm4.png',             fullImg: 'bmwm4.mp4' },
+    { id: 12, title: 'Island Escape',         category: 'minimal',  resolution: '1920×1080', fileSize: '670 KB',    img: 'island.jpg',            fullImg: 'island.jpg' },
+    { id: 13, title: 'Astronaut',             category: 'abstract', resolution: '4096x2304', fileSize: '696.4 KB',  img: 'anstronaut.jpg',        fullImg: 'anstronaut.jpg' },
+    { id: 14, title: 'F1 Max Verstappen',     category: 'CAR',      resolution: '4096x2728', fileSize: '1.6 MB',    img: 'f1max.png',             fullImg: 'f1max.png' },
+    { id: 15, title: 'Tropical Leaves',       category: 'nature',   resolution: '1920×1080', fileSize: '3.39 MB',   img: 'leaves.jpg',            fullImg: 'leaves.jpg' },
+    { id: 16, title: 'Neon City',             category: 'city',     resolution: '4032×3024', fileSize: '565 KB',    img: 'city.jpg',              fullImg: 'city.jpg' },
+    { id: 17, title: 'Night Street',          category: 'city',     resolution: '3840×2160', fileSize: '1.4 MB',    img: 'street.png',            fullImg: 'street.png' },
+    { id: 18, title: 'Minimal Scene',         category: 'minimal',  resolution: '1920×1080', fileSize: '365 KB',    img: 'secne.png',             fullImg: 'secne.png' },
+    { id: 19,  title: 'Mountain Peak',         category: 'nature',   resolution: '1080p',     fileSize: '3.5 MB',   img: 'mountain.jpg',          fullImg: 'mountain.jpg' },
+    { id: 20, title: 'Cherry Blossam',        category: 'Live',     resolution: '1920x1080', fileSize: '7.47 MB',   img: 'cherry.png',            fullImg: 'cherryblossom.mp4' },
+    { id: 21,  title: 'Amazon Forest',         category: 'nature',   resolution: '4K UHD',    fileSize: '10.1 MB',  img: 'amazon.jpg',            fullImg: 'amazon.jpg' },
+    { id: 22,  title: 'Dark QueeN',         category: 'Live',   resolution: '4k UHD',     fileSize: '200 MB',       img: 'darkqueen.png',         fullImg: 'darkqueen.mp4' },
+    // ── ADD MORE WALLPAPERS BELOW THIS LINE ──
+    // { id: 20, title: 'Your Title', category: 'abstract', resolution: '3840×2160', fileSize: '10 MB', img: 'your-thumb.jpg', fullImg: 'your-full.jpg' },
+  ];
+
+  // =====================================================
+
+  const PER_PAGE = 12;
+  let currentPage = 1;
+  let filtered = [...walls];
+
+  const grid         = document.getElementById('galleryGrid');
+  const meta         = document.getElementById('resultsMeta');
+  const emptyState   = document.getElementById('emptyState');
+  const paginationEl = document.getElementById('pagination');
+  const lightbox     = document.getElementById('lightbox');
+
+  // ── IntersectionObserver for lazy image loading ──
+  const imgObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const card = entry.target;
+
+      // Handle live video cards
+      const vid = card.querySelector('video.card-vid');
+      if (vid && vid.dataset.src && !vid.dataset.loaded) {
+        vid.src = vid.dataset.src;
+        vid.dataset.loaded = '1';
+        vid.play().catch(() => {});
+        vid.oncanplay = () => card.classList.add('loaded');
+        obs.unobserve(card);
+        return;
+      }
+
+      // Handle image cards
+      const img = card.querySelector('img.card-img');
+      if (!img || img.dataset.loaded) return;
+      const src = img.dataset.src;
+      if (!src) return;
+      img.src = src;
+      img.dataset.loaded = '1';
+      img.onload  = () => card.classList.add('loaded');
+      img.onerror = () => card.classList.add('loaded');
+      obs.unobserve(card);
+    });
+  }, { rootMargin: '200px' });
+
+  function applyFilters() {
+    const q    = document.getElementById('searchInput').value.toLowerCase();
+    const cat  = document.querySelector('.filter-btn.active')?.dataset.cat || 'all';
+    const sort = document.getElementById('sortSelect').value;
+    filtered = walls.filter(w => {
+      if (!w.img) return false; // skip empty entries
+      const matchQ   = (w.title||'').toLowerCase().includes(q) || (w.category||'').toLowerCase().includes(q);
+      const matchCat = cat === 'all' || (w.category||'').toLowerCase() === cat.toLowerCase();
+      return matchQ && matchCat;
+    });
+    if (sort === 'popular') filtered.sort((a,b) => (b.downloads||0) - (a.downloads||0));
+    if (sort === 'res')     filtered.sort((a,b) => parseInt(b.resolution) - parseInt(a.resolution));
+    currentPage = 1;
+    render();
+  }
+
+  function render() {
+    const start = (currentPage - 1) * PER_PAGE;
+    const page  = filtered.slice(start, start + PER_PAGE);
+    meta.innerHTML = `Showing <strong>${page.length}</strong> of <strong>${filtered.length}</strong> wallpapers`;
+    emptyState.classList.toggle('visible', filtered.length === 0);
+    grid.style.display = filtered.length === 0 ? 'none' : '';
+
+    grid.innerHTML = page.map(w => {
+      const title         = w.title || w.category || 'Wallpaper';
+      const catKey        = w.category || 'default';
+      const placeholderBg = CATEGORY_COLORS[catKey] || CATEGORY_COLORS['default'];
+      const isLive        = w.category === 'Live';
+      const mediaEl = isLive
+        ? `<video class="card-vid" data-src="${w.fullImg}" muted loop playsinline preload="none"></video>`
+        : `<img class="card-img" data-src="${w.img}" src="" alt="${title} — ${w.resolution} dark wallpaper" loading="lazy" decoding="async" width="280" height="175"/>`;
+      const liveBadge = isLive
+        ? `<div class="live-badge"><span class="live-dot"></span>LIVE</div>`
+        : '';
+      return `
+      <article class="card" onclick="openLightbox(${w.id})" role="listitem" aria-label="${title} wallpaper, ${w.resolution}">
+        <div class="card-placeholder" style="background:${placeholderBg}"></div>
+        ${mediaEl}
+        ${liveBadge}
+        <div class="card-info-top">
+          <span class="card-res">${w.resolution}</span>
+          <span class="card-size">${w.fileSize}</span>
+        </div>
+        <div class="card-overlay">
+          <div class="card-title">${title}</div>
+          <div class="card-actions">
+            <span class="card-tag">${w.category}</span>
+            <button class="card-dl" onclick="cardDownload('${w.fullImg}','${title}',this)" aria-label="Download ${title}">↓ Save</button>
+          </div>
+        </div>
+      </article>
+    `}).join('');
+
+    // Attach IntersectionObserver to each new card
+    grid.querySelectorAll('.card').forEach(card => imgObserver.observe(card));
+
+    renderPagination();
+  }
+
+  function renderPagination() {
+    const total = Math.ceil(filtered.length / PER_PAGE);
+    if (total <= 1) { paginationEl.innerHTML = ''; return; }
+    let html = `<button class="page-btn" onclick="goPage(${currentPage-1})" ${currentPage===1?'disabled':''} aria-label="Previous page">← Prev</button>`;
+    for (let i = 1; i <= total; i++) {
+      if (total > 7 && Math.abs(i - currentPage) > 2 && i !== 1 && i !== total) {
+        if (i === 2 || i === total-1) html += `<span style="color:var(--muted);padding:0 .3rem" aria-hidden="true">…</span>`;
+        continue;
+      }
+      html += `<button class="page-btn ${i===currentPage?'active':''}" onclick="goPage(${i})" aria-label="Page ${i}" ${i===currentPage?'aria-current="page"':''}>${i}</button>`;
+    }
+    html += `<button class="page-btn" onclick="goPage(${currentPage+1})" ${currentPage===total?'disabled':''} aria-label="Next page">Next →</button>`;
+    paginationEl.innerHTML = html;
+  }
+
+  function goPage(p) { currentPage = p; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+
+  function openLightbox(id) {
+    const w = walls.find(x => x.id === id);
+    if (!w) return;
+    const title   = w.title || w.category || 'Wallpaper';
+    const isLive  = w.category === 'Live';
+    const lbImg   = document.getElementById('lbImg');
+    const lbVideo = document.getElementById('lbVideo');
+
+    document.getElementById('lbTitle').textContent = title;
+    document.getElementById('lbRes').textContent   = w.resolution + ' • ' + w.fileSize + ' • ' + w.category;
+    document.getElementById('lbDownload').href     = w.fullImg;
+    document.getElementById('lbDownload').download = title;
+
+    if (isLive) {
+      lbImg.classList.add('hidden');
+      lbVideo.classList.add('active');
+      lbVideo.src = w.fullImg;
+      lbVideo.play().catch(() => {});
+    } else {
+      lbVideo.classList.remove('active');
+      lbVideo.pause();
+      lbVideo.src = '';
+      lbImg.classList.remove('hidden');
+      lbImg.src = w.fullImg;
+      lbImg.alt = title + ' — full resolution dark wallpaper';
+    }
+
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-label', 'Preview: ' + title);
+  }
+
+  // Force download via fetch+blob
+  async function downloadWall(url, name, btnEl) {
+    const origText = btnEl ? btnEl.textContent : '';
+    if (btnEl) { btnEl.textContent = '⏳'; btnEl.disabled = true; }
+    try {
+      const res  = await fetch(url, { mode: 'cors' });
+      const blob = await res.blob();
+      const ext  = blob.type.includes('mp4') || blob.type.includes('video') ? '.mp4'
+                 : blob.type.includes('png') ? '.png' : '.jpg';
+      const burl = URL.createObjectURL(blob);
+      const a    = document.createElement('a');
+      a.href = burl;
+      a.download = name.replace(/[^a-z0-9\s]/gi, '').trim() + ext;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(burl), 5000);
+      if (btnEl) { btnEl.textContent = '✓ Saved!'; setTimeout(() => { btnEl.textContent = origText; btnEl.disabled = false; }, 2000); }
+    } catch(err) {
+      window.open(url, '_blank');
+      if (btnEl) { btnEl.textContent = origText; btnEl.disabled = false; }
+    }
+  }
+
+  function cardDownload(url, name, btn) {
+    event.stopPropagation();
+    downloadWall(url, name, btn);
+  }
+
+  document.getElementById('lbDownload').addEventListener('click', function(e) {
+    e.preventDefault();
+    const lbVideo = document.getElementById('lbVideo');
+    const lbImg   = document.getElementById('lbImg');
+    const isVideoActive = lbVideo.classList.contains('active') && lbVideo.src;
+    const src = isVideoActive ? lbVideo.src : lbImg.src;
+    downloadWall(src, document.getElementById('lbTitle').textContent, this);
+  });
+
+  document.getElementById('lbClose').onclick = () => {
+    lightbox.classList.remove('open');
+    const lbVideo = document.getElementById('lbVideo');
+    lbVideo.pause(); lbVideo.src = '';
+    lbVideo.classList.remove('active');
+    document.getElementById('lbImg').classList.remove('hidden');
+  };
+  lightbox.onclick = e => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove('open');
+      const lbVideo = document.getElementById('lbVideo');
+      lbVideo.pause(); lbVideo.src = '';
+      lbVideo.classList.remove('active');
+      document.getElementById('lbImg').classList.remove('hidden');
+    }
+  };
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      lightbox.classList.remove('open');
+      const lbVideo = document.getElementById('lbVideo');
+      lbVideo.pause(); lbVideo.src = '';
+      lbVideo.classList.remove('active');
+      document.getElementById('lbImg').classList.remove('hidden');
+    }
+  });
+
+  // Theme toggle
+  const themeToggle = document.getElementById('themeToggle');
+  let isLight = false;
+  themeToggle.addEventListener('click', () => {
+    isLight = !isLight;
+    document.body.classList.toggle('light', isLight);
+    document.getElementById('toggleLabel').textContent = isLight ? '☀️ Light' : '🌙 Dark';
+  });
+
+  // Filters
+  document.getElementById('searchInput').addEventListener('input', applyFilters);
+  document.getElementById('sortSelect').addEventListener('change', applyFilters);
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    });
+  });
+
+  applyFilters();
+</script>
+</body>
+</html>
