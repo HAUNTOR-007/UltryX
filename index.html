@@ -69,6 +69,11 @@ html.sd .cp::after{animation:none}
 .card:hover img{transform:scale(1.08);filter:brightness(1.05) saturate(1.18)}
 .card.premium-card.locked img{filter:brightness(.5) saturate(.3) blur(4px)}
 .card.premium-card.locked:hover img{filter:brightness(.6) saturate(.4) blur(3px)}
+.card.premium-card.locked img{pointer-events:none;user-select:none;-webkit-user-drag:none}
+.card.premium-card.locked .lock-shield{position:absolute;inset:0;z-index:8;cursor:pointer}
+.free-shield{position:absolute;inset:0;z-index:8;cursor:pointer}
+img{-webkit-user-drag:none;user-select:none}
+#lbImg,#lbVideo{pointer-events:none;-webkit-user-drag:none;user-select:none}
 .co{position:absolute;inset:0;z-index:4;background:linear-gradient(to top,rgba(0,0,0,.88),rgba(0,0,0,.2) 55%,transparent);opacity:0;transition:opacity .3s;display:flex;flex-direction:column;justify-content:flex-end;padding:1rem}
 .card:hover .co{opacity:1}
 .ci{position:absolute;top:.75rem;left:.75rem;right:.75rem;display:flex;justify-content:space-between;align-items:center;z-index:5;opacity:0;transform:translateY(-8px);transition:opacity .3s,transform .3s}
@@ -517,8 +522,9 @@ function render(){
     const badgeHTML=isPrem?(unlocked?'<div class="unlocked-badge">&#x2713; Unlocked</div>':'<div class="premium-badge">&#x2B50; &#x20B9;'+price+'</div>'):'';
     const btnHTML=locked?'<button class="cdl buy-btn" aria-label="Buy '+ttl+'">&#x2B50; Buy &#x20B9;'+price+'</button>':'<button class="cdl" aria-label="Download '+ttl+'">&#x2193; Save</button>';
     a.innerHTML='<div class="cp" style="background:'+bg+'"></div>'+
-      '<img data-s="'+thumb+'" src="" alt="'+ttl+'" loading="lazy" decoding="async" width="280" height="175">'+
-      (isL?'<video data-s="'+fullres+'" muted loop playsinline></video><div class="lb2"><span class="ld"></span>LIVE</div>':'')+
+      '<img data-s="'+thumb+'" src="" alt="'+ttl+'" loading="lazy" decoding="async" width="280" height="175" draggable="false">'+
+      (isL?'<video data-s="'+(locked?'':fullres)+'" muted loop playsinline></video><div class="lb2"><span class="ld"></span>LIVE</div>':'')+
+      (locked?'<div class="lock-shield"></div>':'<div class="free-shield"></div>')+
       '<div class="ctl-overlay"><div class="ctl-icon">'+LOAD_SVG+'</div><span class="ctl-label">Tap to load</span></div>'+
       badgeHTML+
       '<div class="ci"><span class="cr">'+res+'</span><span class="cs">'+sz+'</span></div>'+
@@ -552,6 +558,7 @@ function openLB(id){
   const{title:ttl,category:cat,res,size:sz,thumb,fullres,premium,price}=w,isL=cat==='Live';
   const isPrem=!!premium,unlocked=isPrem&&isUnlocked(id),locked=isPrem&&!unlocked;
   LB_T.textContent=ttl;LB_R.textContent=res+' \u2022 '+sz+' \u2022 '+cat+(isPrem?' \u2022 \u2B50 Premium':'');
+  LB_IMG.dataset.wid=id;
   LX.classList.add('on');
   if(locked){LB_DL.textContent='\u2B50 Buy \u20B9'+price+' to Download';LB_DL.className='bd gold';LB_DL.onclick=e=>{e.preventDefault();closeLB();openPayModal(id);};}
   else{LB_DL.textContent='\u2193 Download High-Res';LB_DL.className='bd'+(isPrem?' gold':'');LB_DL.onclick=e=>{e.preventDefault();dlW(LB_VID.classList.contains('on')&&LB_VID.src?LB_VID.src:LB_IMG.dataset.fullres||LB_IMG.src,ttl,LB_DL);};}
@@ -651,6 +658,69 @@ document.getElementById('pmPaidBtn').onclick=()=>{
 // Close buttons
 [document.getElementById('pmClose1'),document.getElementById('pmClose2')].forEach(b=>{if(b)b.onclick=closePayModal;});
 PM.onclick=e=>{if(e.target===PM)closePayModal();};
+
+// ============================================================
+//  ANTI-THEFT PROTECTION — all wallpapers, free + premium
+// ============================================================
+
+// 1. Block right-click on ALL images, videos, and cards
+document.addEventListener('contextmenu',function(e){
+  if(e.target.tagName==='IMG'||e.target.tagName==='VIDEO'){e.preventDefault();return false;}
+  if(e.target.closest&&e.target.closest('.card')){e.preventDefault();return false;}
+  if(e.target.closest&&e.target.closest('#lx')){e.preventDefault();return false;}
+});
+
+// 2. Block drag on all images and videos globally
+document.addEventListener('dragstart',function(e){
+  if(e.target.tagName==='IMG'||e.target.tagName==='VIDEO'){e.preventDefault();return false;}
+});
+
+// 3. Block keyboard shortcuts: F12, Ctrl+U, Ctrl+Shift+I/J/C, Ctrl+S
+document.addEventListener('keydown',function(e){
+  if(e.key==='F12'){e.preventDefault();return false;}
+  if(e.ctrlKey&&e.shiftKey&&['I','J','C'].includes(e.key.toUpperCase())){e.preventDefault();return false;}
+  if(e.ctrlKey&&e.key.toLowerCase()==='u'){e.preventDefault();return false;}
+  if(e.ctrlKey&&e.key.toLowerCase()==='s'){e.preventDefault();return false;}
+});
+
+// 4. Block long-press save on mobile — all images
+document.addEventListener('touchstart',function(e){
+  if(e.target.tagName==='IMG'||e.target.tagName==='VIDEO'){
+    const el=e.target;
+    el._pt=setTimeout(()=>{},800);
+    el.addEventListener('touchend',()=>clearTimeout(el._pt),{once:true});
+  }
+},{passive:true});
+document.addEventListener('selectstart',function(e){
+  if(e.target.tagName==='IMG'||e.target.closest&&e.target.closest('.card')){e.preventDefault();}
+});
+
+// 5. Shield clicks — locked opens payment, free opens lightbox
+document.addEventListener('click',function(e){
+  if(e.target.classList.contains('lock-shield')){
+    const card=e.target.closest('.card');
+    if(card){
+      const ttl=card.querySelector('.ct2')?.textContent;
+      const w=W.find(x=>x.title===ttl&&x.premium);
+      if(w)openPayModal(w.id);
+    }
+  }
+  if(e.target.classList.contains('free-shield')){
+    const card=e.target.closest('.card');
+    if(card){
+      const ttl=card.querySelector('.ct2')?.textContent;
+      const w=W.find(x=>x.title===ttl);
+      if(w)openLB(w.id);
+    }
+  }
+});
+
+// 6. Block opening image in new tab via middle-click or Ctrl+click on cards
+document.addEventListener('mousedown',function(e){
+  if((e.button===1||e.ctrlKey)&&e.target.closest&&e.target.closest('.card')){e.preventDefault();return false;}
+});
+
+// ============================================================
 
 // Download
 async function dlW(url,name,btn){
