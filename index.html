@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>UltryX | Free 4K &amp; HD Dark Wallpapers</title>
-<meta name="description" content="Download free 4K and HD dark wallpapers. Cars, Abstract, Nature, City, Minimal. Always free.">
+<meta name="description" content="Download free 4K and HD dark wallpapers. Cars, Abstract, Nature, City, Minimal. Always free. Premium picks available.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://ultryx.com/">
 <meta property="og:type" content="website">
@@ -19,28 +19,71 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <style>
+/* ============================================================
+   BASE / RESET / VARIABLES
+============================================================ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0a0a0b;--sf:#111114;--br:#1e1e24;--ac:#c8f135;--ad:rgba(200,241,53,.12);--tx:#e8e8ec;--mu:#5a5a6e;--cb:#13131a;--hd:rgba(10,10,11,.85);--gold:#f5c518;--gold-dim:rgba(245,197,24,.12);--gold-border:rgba(245,197,24,.35)}
-body.light{--bg:#f4f4f0;--sf:#fff;--br:#ddddd8;--ac:#6ab100;--ad:rgba(106,177,0,.10);--tx:#18181b;--mu:#888890;--cb:#ebebeb;--hd:rgba(244,244,240,.88)}
+:root{
+  --bg:#0a0a0b;--sf:#111114;--br:#1e1e24;--ac:#c8f135;--ad:rgba(200,241,53,.12);
+  --tx:#e8e8ec;--mu:#5a5a6e;--cb:#13131a;--hd:rgba(10,10,11,.85);
+  --gold:#f5c518;--gold-dim:rgba(245,197,24,.12);--gold-border:rgba(245,197,24,.35);
+  --red:#e05252;--green:#3fcf8e;--green-dim:rgba(63,207,142,.1);
+}
+body.light{
+  --bg:#f4f4f0;--sf:#fff;--br:#ddddd8;--ac:#6ab100;--ad:rgba(106,177,0,.10);
+  --tx:#18181b;--mu:#888890;--cb:#ebebeb;--hd:rgba(244,244,240,.88);
+}
 body{background:var(--bg);color:var(--tx);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden;transition:background .3s,color .3s}
-header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:64px;background:var(--hd);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--br);transition:background .3s}
-.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.45rem;letter-spacing:-.02em;color:var(--tx)}
+
+/* ============================================================
+   HEADER
+============================================================ */
+header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:64px;background:var(--hd);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--br);transition:background .3s;gap:1rem}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.45rem;letter-spacing:-.02em;color:var(--tx);white-space:nowrap}
 .logo span{color:var(--ac)}
-.tt{display:flex;align-items:center;gap:.55rem;background:var(--sf);border:1px solid var(--br);border-radius:20px;padding:.35rem .8rem .35rem .45rem;cursor:pointer;transition:border-color .2s}
+.header-right{display:flex;align-items:center;gap:.75rem;flex-shrink:0}
+
+/* User pill in header */
+.user-pill{display:flex;align-items:center;gap:.5rem;background:var(--sf);border:1px solid var(--br);border-radius:20px;padding:.3rem .8rem .3rem .5rem;cursor:pointer;transition:border-color .2s;font-size:.8rem}
+.user-pill:hover{border-color:var(--ac)}
+.user-avatar{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--ac),#6ab100);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;color:#000;flex-shrink:0}
+.user-name-short{color:var(--tx);font-weight:500;max-width:80px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* Admin badge */
+.admin-btn{background:rgba(200,241,53,.1);border:1px solid rgba(200,241,53,.35);color:var(--ac);font-size:.72rem;font-weight:700;padding:.28rem .7rem;border-radius:20px;cursor:pointer;letter-spacing:.04em;transition:all .2s;white-space:nowrap}
+.admin-btn:hover{background:rgba(200,241,53,.2)}
+
+.tt{display:flex;align-items:center;gap:.55rem;background:var(--sf);border:1px solid var(--br);border-radius:20px;padding:.35rem .8rem .35rem .45rem;cursor:pointer;transition:border-color .2s;flex-shrink:0}
 .tt:hover{border-color:var(--ac)}
 .tk{width:32px;height:18px;background:var(--br);border-radius:10px;position:relative;transition:background .25s;flex-shrink:0}
 body.light .tk{background:var(--ac)}
 .th{position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:var(--mu);transition:transform .25s,background .25s}
 body.light .th{transform:translateX(14px);background:#fff}
 .tl{font-size:.82rem;color:var(--mu);white-space:nowrap}
-.nb{display:none;align-items:center;gap:.6rem;background:rgba(200,241,53,.08);border-bottom:1px solid rgba(200,241,53,.2);padding:.5rem 2.5rem;font-size:.8rem;color:var(--mu)}
+
+/* Data saver banner */
+.nb{display:none;align-items:center;gap:.5rem;background:rgba(200,241,53,.08);border-bottom:1px solid rgba(200,241,53,.2);padding:.5rem 2.5rem;font-size:.8rem;color:var(--mu)}
 .nb.on{display:flex}
 .nb strong{color:var(--ac)}
+
+/* ============================================================
+   HERO
+============================================================ */
 .hero{text-align:center;padding:4rem 2rem 2.5rem;position:relative}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(200,241,53,.07),transparent 70%);pointer-events:none}
 .hero h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:.6rem}
 .hero h1 span{color:var(--ac)}
 .hero p{color:var(--mu);font-size:.95rem}
+
+/* Premium banner */
+.premium-bar{display:flex;align-items:center;justify-content:center;gap:.75rem;background:linear-gradient(90deg,rgba(245,197,24,.06),rgba(245,197,24,.12),rgba(245,197,24,.06));border-top:1px solid var(--gold-border);border-bottom:1px solid var(--gold-border);padding:.55rem 2rem;font-size:.82rem;color:var(--mu);flex-wrap:wrap;gap:.5rem}
+.premium-bar .pstar{color:var(--gold);font-size:.9rem}
+.premium-bar strong{color:var(--gold)}
+.premium-bar .pb-link{color:var(--gold);text-decoration:underline;cursor:pointer;background:none;border:none;font-size:.82rem;font-family:inherit;padding:0}
+
+/* ============================================================
+   CONTROLS
+============================================================ */
 .controls{max-width:860px;margin:0 auto 2.5rem;padding:0 1.5rem;display:flex;flex-direction:column;gap:1rem}
 .sw{position:relative}
 .sw svg{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--mu);pointer-events:none}
@@ -51,10 +94,18 @@ body.light .th{transform:translateX(14px);background:#fff}
 .fb{background:var(--sf);border:1px solid var(--br);color:var(--mu);font-family:'DM Sans',sans-serif;font-size:.82rem;padding:.42rem 1rem;border-radius:20px;cursor:pointer;transition:all .18s}
 .fb:hover,.fb.on{border-color:var(--ac);color:var(--ac);background:var(--ad)}
 .ss{margin-left:auto;background:var(--sf);border:1px solid var(--br);color:var(--mu);font-family:'DM Sans',sans-serif;font-size:.82rem;padding:.42rem .8rem;border-radius:6px;cursor:pointer;outline:none}
+
+/* ============================================================
+   GRID
+============================================================ */
 .gw{max-width:1400px;margin:0 auto;padding:0 1.5rem}
 .rm{font-size:.82rem;color:var(--mu);margin-bottom:1.2rem}
 .rm strong{color:var(--tx)}
 .gg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:var(--br);border:1px solid var(--br);border-radius:10px;contain:layout}
+
+/* ============================================================
+   CARD
+============================================================ */
 .card{position:relative;aspect-ratio:16/10;overflow:hidden;cursor:pointer;background:var(--cb);transition:transform .35s ease,box-shadow .35s ease,outline-color .35s ease;outline:2px solid transparent;outline-offset:-2px;contain:layout paint;will-change:transform}
 .card:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 20px 50px rgba(0,0,0,.7);outline-color:var(--ac);z-index:10}
 .card.premium-card:hover{outline-color:var(--gold);box-shadow:0 20px 50px rgba(245,197,24,.22)}
@@ -64,11 +115,11 @@ html.sd .cp::after{animation:none}
 @keyframes sh{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
 .card.ok .cp{opacity:0;pointer-events:none}
 .card.ok .cp::after{animation:none}
-.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s cubic-bezier(.25,.46,.45,.94),filter .35s,opacity .4s;filter:brightness(.82) saturate(.88);opacity:0;z-index:1;will-change:transform}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s cubic-bezier(.25,.46,.45,.94),filter .35s,opacity .4s;filter:brightness(.82) saturate(.88);opacity:0;z-index:1;will-change:transform;-webkit-user-drag:none;user-drag:none;pointer-events:none}
 .card.ok img{opacity:1}
 .card:hover img{transform:scale(1.08);filter:brightness(1.05) saturate(1.18)}
-.card.premium-card.locked img{filter:brightness(.5) saturate(.3) blur(4px)}
-.card.premium-card.locked:hover img{filter:brightness(.6) saturate(.4) blur(3px)}
+.card.premium-card.locked img{filter:brightness(.55) saturate(.25) blur(10px) !important;transform:scale(1.08)}
+.card.premium-card.locked:hover img{filter:brightness(.55) saturate(.25) blur(10px) !important;transform:scale(1.12)}
 .co{position:absolute;inset:0;z-index:4;background:linear-gradient(to top,rgba(0,0,0,.88),rgba(0,0,0,.2) 55%,transparent);opacity:0;transition:opacity .3s;display:flex;flex-direction:column;justify-content:flex-end;padding:1rem}
 .card:hover .co{opacity:1}
 .ci{position:absolute;top:.75rem;left:.75rem;right:.75rem;display:flex;justify-content:space-between;align-items:center;z-index:5;opacity:0;transform:translateY(-8px);transition:opacity .3s,transform .3s}
@@ -80,12 +131,25 @@ html.sd .cp::after{animation:none}
 .ca{display:flex;gap:.5rem;align-items:center;transform:translateY(10px);transition:transform .3s .04s}
 .card:hover .ca{transform:translateY(0)}
 .ctg{font-size:.7rem;padding:.24rem .65rem;border-radius:5px;background:rgba(255,255,255,.13);color:rgba(255,255,255,.88);backdrop-filter:blur(4px);text-transform:capitalize}
-.cdl{font-size:.7rem;padding:.24rem .78rem;border-radius:5px;background:var(--ac);color:#000;font-weight:700;margin-left:auto;cursor:pointer;border:none;transition:opacity .2s,transform .15s}
+.cdl{font-size:.7rem;padding:.24rem .78rem;border-radius:5px;background:var(--ac);color:#000;font-weight:700;margin-left:auto;cursor:pointer;border:none;transition:opacity .2s,transform .15s;font-family:'DM Sans',sans-serif}
 .cdl:hover{opacity:.85;transform:scale(1.06)}
 .cdl.buy-btn{background:linear-gradient(135deg,#f5c518,#d4a800);color:#000}
+.cdl.reg-btn{background:linear-gradient(135deg,rgba(200,241,53,.8),rgba(106,177,0,.9));color:#000}
+
+/* Badges */
 .premium-badge{position:absolute;top:.75rem;left:.75rem;z-index:7;display:flex;align-items:center;gap:.28rem;background:linear-gradient(135deg,rgba(245,197,24,.96),rgba(212,168,0,.96));color:#000;font-size:.62rem;font-weight:800;padding:.22rem .6rem;border-radius:5px;letter-spacing:.04em;pointer-events:none}
 .unlocked-badge{position:absolute;top:.75rem;left:.75rem;z-index:7;display:flex;align-items:center;gap:.28rem;background:rgba(200,241,53,.15);border:1px solid rgba(200,241,53,.45);color:var(--ac);font-size:.62rem;font-weight:800;padding:.22rem .6rem;border-radius:5px;letter-spacing:.04em;pointer-events:none}
 .lb2{position:absolute;top:.75rem;right:.75rem;z-index:6;display:flex;align-items:center;gap:.3rem;background:rgba(0,0,0,.72);border:1px solid rgba(200,241,53,.5);color:var(--ac);font-size:.65rem;font-weight:700;letter-spacing:.08em;padding:.22rem .6rem;border-radius:5px;backdrop-filter:blur(6px)}
+.ld{width:6px;height:6px;border-radius:50%;background:var(--ac);animation:lp 1.4s ease-in-out infinite}
+@keyframes lp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+
+/* Locked overlay */
+.lock-overlay{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.55rem;pointer-events:none;opacity:0;transition:opacity .3s}
+.card.locked:hover .lock-overlay{opacity:1}
+.lock-icon{width:46px;height:46px;border-radius:50%;background:rgba(245,197,24,.15);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+.lock-label{font-size:.65rem;font-weight:700;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;background:rgba(0,0,0,.6);padding:.2rem .6rem;border-radius:4px;backdrop-filter:blur(4px)}
+
+/* Tap-to-load overlay */
 .ctl-overlay{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;background:rgba(0,0,0,.45);backdrop-filter:blur(2px);transition:opacity .3s;pointer-events:none}
 .card.ok .ctl-overlay{opacity:0}
 .ctl-icon{width:44px;height:44px;border-radius:50%;background:rgba(200,241,53,.15);border:2px solid var(--ac);display:flex;align-items:center;justify-content:center;transition:transform .2s,background .2s}
@@ -95,13 +159,15 @@ html.sd .cp::after{animation:none}
 .card.loading .ctl-overlay{opacity:1;pointer-events:none}
 .card.loading .ctl-icon{background:rgba(200,241,53,.1);animation:spin-border .8s linear infinite}
 @keyframes spin-border{to{transform:rotate(360deg)}}
+
+/* ============================================================
+   LIGHTBOX
+============================================================ */
 #lbImg.loading-fr{filter:blur(8px) brightness(.6);transform:scale(.98)}
-#lbImg{transition:filter .4s,transform .4s,opacity .3s}
+#lbImg{transition:filter .4s,transform .4s,opacity .3s;-webkit-user-drag:none;user-drag:none;pointer-events:none}
 .lb-spinner{display:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;border:3px solid rgba(200,241,53,.2);border-top-color:var(--ac);border-radius:50%;animation:rot .7s linear infinite;z-index:10}
 .lb-spinner.on{display:block}
 @keyframes rot{to{transform:translate(-50%,-50%) rotate(360deg)}}
-.ld{width:6px;height:6px;border-radius:50%;background:var(--ac);animation:lp 1.4s ease-in-out infinite}
-@keyframes lp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
 .card video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;opacity:0;transition:opacity .5s}
 .card.vp video{opacity:1}
 .card.vp img{opacity:1}
@@ -121,7 +187,6 @@ html.sd #lbVideo{display:none!important}
 .pb:hover:not(:disabled){border-color:var(--ac);color:var(--ac)}
 .pb:disabled{opacity:.3;cursor:not-allowed}
 .pb.on{background:var(--ac);color:#000;border-color:var(--ac);font-weight:600}
-/* Lightbox */
 .lx{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .lx.on{display:flex}
 .li{position:relative;max-width:92vw;max-height:90vh;display:flex;flex-direction:column;align-items:center;gap:1rem}
@@ -134,10 +199,46 @@ html.sd #lbVideo{display:none!important}
 .bd{background:var(--ac);color:#000;font-weight:600;font-size:.85rem;padding:.55rem 1.4rem;border:none;border-radius:6px;cursor:pointer;transition:opacity .2s;margin-left:auto;text-decoration:none;display:inline-block}
 .bd:hover{opacity:.85}
 .bd.gold{background:linear-gradient(135deg,#f5c518,#d4a800);color:#000}
-/* Payment Modal */
-.pm-overlay{position:fixed;inset:0;z-index:1100;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:1rem}
-.pm-overlay.on{display:flex}
-.pm-box{background:var(--sf);border:1px solid var(--gold-border);border-radius:18px;max-width:440px;width:100%;display:flex;flex-direction:column;box-shadow:0 0 80px rgba(245,197,24,.1),0 24px 48px rgba(0,0,0,.6);overflow:hidden}
+
+/* ============================================================
+   MODALS — SHARED
+============================================================ */
+.modal-overlay{position:fixed;inset:0;z-index:1100;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:1rem}
+.modal-overlay.on{display:flex}
+.modal-box{background:var(--sf);border-radius:18px;max-width:440px;width:100%;display:flex;flex-direction:column;box-shadow:0 24px 64px rgba(0,0,0,.7);overflow:hidden;max-height:90vh;overflow-y:auto}
+.modal-box.wide{max-width:660px}
+.modal-close{background:none;border:none;color:var(--mu);font-size:1.3rem;cursor:pointer;line-height:1;padding:.2rem;transition:color .2s;flex-shrink:0}
+.modal-close:hover{color:var(--tx)}
+
+/* ============================================================
+   REGISTER MODAL
+============================================================ */
+.reg-box{border:1px solid rgba(200,241,53,.25)}
+.reg-header{padding:1.6rem 1.8rem 0;display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
+.reg-title{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800}
+.reg-title span{color:var(--ac)}
+.reg-body{padding:1.2rem 1.8rem 1.8rem;display:flex;flex-direction:column;gap:1rem}
+.reg-desc{font-size:.84rem;color:var(--mu);line-height:1.6}
+.reg-benefits{display:flex;flex-direction:column;gap:.45rem;background:var(--cb);border:1px solid var(--br);border-radius:10px;padding:.85rem 1rem}
+.reg-benefit{font-size:.78rem;color:var(--mu);display:flex;gap:.5rem;line-height:1.55}
+.reg-benefit b{color:var(--tx)}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-label{font-size:.78rem;font-weight:600;color:var(--tx)}
+.form-input{background:var(--cb);border:2px solid var(--br);color:var(--tx);font-family:'DM Sans',sans-serif;font-size:.9rem;padding:.65rem 1rem;border-radius:8px;outline:none;transition:border-color .2s;width:100%}
+.form-input:focus{border-color:var(--ac)}
+.form-input.error{border-color:var(--red)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.form-err{font-size:.74rem;color:var(--red);display:none}
+.form-err.on{display:block}
+.form-hint{font-size:.74rem;color:var(--mu);line-height:1.5}
+.reg-btn{width:100%;background:var(--ac);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;padding:.85rem;border:none;border-radius:10px;cursor:pointer;transition:opacity .2s,transform .15s;letter-spacing:.01em}
+.reg-btn:hover{opacity:.9;transform:translateY(-1px)}
+.reg-btn:disabled{opacity:.35;cursor:not-allowed;transform:none}
+
+/* ============================================================
+   PAYMENT MODAL
+============================================================ */
+.pm-overlay{border:1px solid var(--gold-border)}
 .pm-step{display:none;flex-direction:column;gap:1.1rem;padding:1.8rem}
 .pm-step.active{display:flex}
 .pm-steps-row{display:flex;align-items:center;gap:0}
@@ -150,8 +251,6 @@ html.sd #lbVideo{display:none!important}
 .pm-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
 .pm-title{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;line-height:1.25}
 .pm-title span{color:var(--gold)}
-.pm-close-btn{background:none;border:none;color:var(--mu);font-size:1.3rem;cursor:pointer;line-height:1;padding:.2rem;transition:color .2s;flex-shrink:0}
-.pm-close-btn:hover{color:var(--tx)}
 .pm-price-strip{display:flex;align-items:center;justify-content:space-between;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:10px;padding:.8rem 1rem}
 .pm-price-info{display:flex;flex-direction:column;gap:.1rem}
 .pm-price-label{font-size:.72rem;color:var(--mu);text-transform:uppercase;letter-spacing:.05em}
@@ -165,39 +264,33 @@ html.sd #lbVideo{display:none!important}
 .pm-agree-row{display:flex;align-items:flex-start;gap:.65rem;cursor:pointer;font-size:.8rem;color:var(--mu);line-height:1.5}
 .pm-agree-row input{width:16px;height:16px;accent-color:var(--gold);flex-shrink:0;margin-top:.15rem;cursor:pointer}
 .pm-agree-row b{color:var(--tx)}
-/* QR block */
 .pm-qr-block{display:flex;flex-direction:column;align-items:center;gap:.75rem;background:var(--cb);border:1px solid var(--br);border-radius:12px;padding:1.2rem}
 .pm-qr-img{width:180px;height:180px;border-radius:8px;border:3px solid var(--gold);background:#fff;object-fit:contain}
 .pm-qr-upi{font-family:'Syne',sans-serif;font-size:.85rem;font-weight:700;color:var(--gold);letter-spacing:.02em}
 .pm-qr-note{font-size:.75rem;color:var(--mu);text-align:center;line-height:1.5}
-/* Instruction steps */
 .pm-how{display:flex;flex-direction:column;gap:.55rem}
 .pm-how-row{display:flex;align-items:flex-start;gap:.65rem;font-size:.8rem;color:var(--mu);line-height:1.5}
 .pm-how-num{width:22px;height:22px;border-radius:50%;background:var(--gold-dim);border:1px solid var(--gold-border);color:var(--gold);font-size:.7rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem}
 .pm-how-row b{color:var(--tx)}
-/* Processing screen */
 .pm-processing{display:flex;flex-direction:column;align-items:center;gap:1.15rem;text-align:center;padding:2rem 1.8rem}
-/* Code input */
 .pm-code-block{display:flex;flex-direction:column;gap:.65rem}
 .pm-code-label{font-size:.8rem;color:var(--mu);line-height:1.5}
 .pm-code-label b{color:var(--tx)}
 .pm-code-input-row{display:flex;gap:.6rem}
 .pm-code-input{flex:1;background:var(--cb);border:2px solid var(--br);color:var(--tx);font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:.7rem 1rem;border-radius:8px;outline:none;text-align:center;transition:border-color .2s}
 .pm-code-input:focus{border-color:var(--gold)}
-.pm-code-input.error{border-color:#e05252;animation:shake .35s ease}
+.pm-code-input.error{border-color:var(--red);animation:shake .35s ease}
 @keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
-.pm-code-err{font-size:.76rem;color:#e05252;display:none}
+.pm-code-err{font-size:.76rem;color:var(--red);display:none}
 .pm-code-err.on{display:block}
 .pm-code-hint{font-size:.74rem;color:var(--mu);line-height:1.5}
 .pm-code-hint a{color:var(--gold);text-decoration:none}
 .pm-code-hint a:hover{text-decoration:underline}
-/* Buttons */
 .pm-btn{width:100%;background:linear-gradient(135deg,#f5c518,#d4a800);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;padding:.85rem;border:none;border-radius:10px;cursor:pointer;transition:opacity .2s,transform .15s;letter-spacing:.01em;display:flex;align-items:center;justify-content:center;gap:.5rem}
 .pm-btn:disabled{opacity:.35;cursor:not-allowed;transform:none}
 .pm-btn:not(:disabled):hover{opacity:.9;transform:translateY(-1px)}
 .pm-btn-sec{width:100%;background:transparent;color:var(--mu);font-family:'DM Sans',sans-serif;font-size:.82rem;padding:.6rem;border:1px solid var(--br);border-radius:8px;cursor:pointer;transition:all .18s}
 .pm-btn-sec:hover{border-color:var(--gold);color:var(--gold)}
-/* Success */
 .pm-success-screen{display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center;padding:2.2rem 1.8rem}
 .pm-success-icon{width:72px;height:72px;border-radius:50%;background:var(--gold-dim);border:2px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-size:2rem;animation:pop .4s cubic-bezier(.34,1.56,.64,1)}
 @keyframes pop{0%{transform:scale(0)}100%{transform:scale(1)}}
@@ -205,28 +298,140 @@ html.sd #lbVideo{display:none!important}
 .pm-success-sub{color:var(--mu);font-size:.84rem;line-height:1.6;max-width:300px}
 .pm-success-dl{background:linear-gradient(135deg,#f5c518,#d4a800);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;padding:.75rem 2rem;border:none;border-radius:8px;cursor:pointer;transition:opacity .2s,transform .15s;width:100%}
 .pm-success-dl:hover{opacity:.88;transform:translateY(-1px)}
+
+/* Passcode waiting screen */
+.pm-waiting{display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center;padding:2rem 1.8rem}
+.pm-waiting-icon{width:64px;height:64px;border-radius:50%;background:var(--gold-dim);border:2px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-size:1.8rem}
+.pm-passcode-box{background:var(--cb);border:2px solid var(--gold-border);border-radius:12px;padding:1rem 1.5rem;width:100%}
+.pm-passcode-label{font-size:.72rem;color:var(--mu);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.4rem}
+.pm-passcode-val{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;color:var(--gold);letter-spacing:.22em;word-break:break-all}
+.pm-passcode-hint{font-size:.74rem;color:var(--mu);line-height:1.6;margin-top:.5rem}
+
+/* ============================================================
+   ADMIN MODAL
+============================================================ */
+.admin-box{border:1px solid rgba(200,241,53,.3);max-width:680px}
+.admin-tabs{display:flex;border-bottom:1px solid var(--br)}
+.admin-tab{flex:1;padding:.85rem;font-size:.82rem;font-weight:600;background:none;border:none;color:var(--mu);cursor:pointer;transition:all .2s;border-bottom:2px solid transparent;margin-bottom:-1px}
+.admin-tab.on{color:var(--ac);border-bottom-color:var(--ac)}
+.admin-body{padding:1.4rem}
+.admin-section{display:none}
+.admin-section.on{display:block}
+.admin-table{width:100%;border-collapse:collapse;font-size:.8rem}
+.admin-table th{text-align:left;font-weight:700;color:var(--mu);padding:.5rem .75rem;border-bottom:1px solid var(--br);text-transform:uppercase;font-size:.7rem;letter-spacing:.05em}
+.admin-table td{padding:.65rem .75rem;border-bottom:1px solid var(--br);color:var(--tx);vertical-align:middle}
+.admin-table tr:last-child td{border-bottom:none}
+.admin-table tr:hover td{background:rgba(255,255,255,.02)}
+.status-badge{display:inline-flex;align-items:center;gap:.3rem;font-size:.68rem;font-weight:700;padding:.2rem .55rem;border-radius:4px;letter-spacing:.03em}
+.status-badge.pending{background:rgba(245,197,24,.1);border:1px solid rgba(245,197,24,.3);color:var(--gold)}
+.status-badge.approved{background:var(--green-dim);border:1px solid rgba(63,207,142,.3);color:var(--green)}
+.status-badge.rejected{background:rgba(224,82,82,.1);border:1px solid rgba(224,82,82,.3);color:var(--red)}
+.admin-action{background:none;border:1px solid var(--br);color:var(--mu);font-size:.72rem;padding:.24rem .6rem;border-radius:4px;cursor:pointer;transition:all .18s;margin-right:.3rem}
+.admin-action.approve{border-color:var(--green);color:var(--green)}
+.admin-action.approve:hover{background:var(--green-dim)}
+.admin-action.reject{border-color:var(--red);color:var(--red)}
+.admin-action.reject:hover{background:rgba(224,82,82,.1)}
+.admin-empty{text-align:center;padding:2rem;color:var(--mu);font-size:.85rem}
+.admin-passcode-cell{font-family:'Syne',sans-serif;font-size:.85rem;font-weight:700;color:var(--gold);letter-spacing:.12em}
+.admin-header{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 1.4rem;border-bottom:1px solid var(--br)}
+.admin-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800}
+.admin-title span{color:var(--ac)}
+
+/* Download history */
+.history-item{display:flex;align-items:center;gap:.85rem;padding:.65rem .75rem;border-bottom:1px solid var(--br);font-size:.82rem}
+.history-item:last-child{border-bottom:none}
+.history-thumb{width:48px;height:30px;border-radius:4px;object-fit:cover;background:var(--cb);flex-shrink:0}
+.history-info{flex:1;min-width:0}
+.history-name{font-weight:600;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.history-date{font-size:.72rem;color:var(--mu);margin-top:.1rem}
+.history-badge{font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:3px}
+.history-badge.free{background:var(--ad);color:var(--ac)}
+.history-badge.premium{background:var(--gold-dim);color:var(--gold)}
+
+/* ============================================================
+   OTP DIGIT BOXES
+============================================================ */
+.otp-digit{width:44px;height:52px;background:var(--cb);border:2px solid var(--br);color:var(--tx);font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;text-align:center;border-radius:10px;outline:none;transition:border-color .2s,transform .15s,background .2s;caret-color:var(--gold)}
+.otp-digit:focus{border-color:var(--gold);background:rgba(245,197,24,.04);transform:scale(1.06)}
+.otp-digit.filled{border-color:rgba(245,197,24,.5);color:var(--gold)}
+.otp-digit.error{border-color:var(--red);animation:shake .35s ease}
+.otp-digit.auto-filled{border-color:var(--green);background:var(--green-dim);color:var(--green);animation:pop .35s cubic-bezier(.34,1.56,.64,1)}
+.otp-pulse-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold);opacity:.3;animation:otpPulse 1.2s ease-in-out infinite}
+@keyframes otpPulse{0%,100%{opacity:.3;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}
+
+/* Tooltip-style OTP notification badge */
+.otp-notify{position:fixed;top:80px;left:50%;transform:translateX(-50%);z-index:9999;background:linear-gradient(135deg,var(--green),#2da866);color:#fff;font-family:'Syne',sans-serif;font-weight:800;font-size:.88rem;padding:.7rem 1.4rem;border-radius:40px;box-shadow:0 8px 32px rgba(63,207,142,.35);display:flex;align-items:center;gap:.5rem;animation:notifyDrop .45s cubic-bezier(.34,1.56,.64,1)}
+@keyframes notifyDrop{from{opacity:0;transform:translateX(-50%) translateY(-20px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+
+
 footer{border-top:1px solid var(--br);padding:1.5rem 2.5rem;display:flex;justify-content:space-between;align-items:center;color:var(--mu);font-size:.8rem}
+
+/* ============================================================
+   TOAST NOTIFICATION
+============================================================ */
+.toast-container{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;display:flex;flex-direction:column;gap:.6rem}
+.toast{background:var(--sf);border:1px solid var(--br);border-radius:10px;padding:.75rem 1.1rem;font-size:.82rem;color:var(--tx);box-shadow:0 8px 24px rgba(0,0,0,.4);display:flex;align-items:center;gap:.6rem;animation:toast-in .3s ease;min-width:220px;max-width:320px}
+.toast.success{border-color:rgba(63,207,142,.4);background:rgba(63,207,142,.08)}
+.toast.error{border-color:rgba(224,82,82,.4);background:rgba(224,82,82,.08)}
+.toast.gold{border-color:var(--gold-border);background:var(--gold-dim)}
+@keyframes toast-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes toast-out{to{opacity:0;transform:translateY(12px)}}
+
+/* ============================================================
+   RESPONSIVE / MEDIA
+============================================================ */
 @media(prefers-reduced-motion:reduce){.cp::after,.ld{animation:none}.card,.card img,.co,.ci,.ct2,.ca{transition:none!important}}
-@media(max-width:600px){header{padding:0 1rem}.gg{grid-template-columns:1fr 1fr}footer{flex-direction:column;gap:.5rem;text-align:center}.nb{padding:.5rem 1rem}.pm-box{border-radius:14px}.pm-step{padding:1.4rem}.pm-qr-img{width:155px;height:155px}}
+@media(max-width:600px){
+  header{padding:0 1rem}
+  .gg{grid-template-columns:1fr 1fr}
+  footer{flex-direction:column;gap:.5rem;text-align:center}
+  .nb{padding:.5rem 1rem}
+  .modal-box{border-radius:14px}
+  .pm-step,.reg-body{padding:1.4rem}
+  .pm-qr-img{width:155px;height:155px}
+  .form-row{grid-template-columns:1fr}
+  .header-right{gap:.45rem}
+  .user-name-short{display:none}
+  .admin-btn{font-size:.66rem;padding:.24rem .5rem}
+}
 </style>
 </head>
 <body>
+
+<!-- DATA SAVER NOTICE -->
 <div class="nb" id="nb"><strong>Data Saver ON</strong> — Live previews paused. Thumbnails only.</div>
+
+<!-- HEADER -->
 <header>
   <div class="logo">Ultry<span>X</span></div>
-  <button class="tt" id="tt" aria-label="Toggle theme"><span class="tk"><span class="th"></span></span><span class="tl" id="tl">🌙 Dark</span></button>
+  <div class="header-right">
+    <div id="headerUserArea"><!-- filled by JS --></div>
+    <button class="tt" id="tt" aria-label="Toggle theme"><span class="tk"><span class="th"></span></span><span class="tl" id="tl">🌙 Dark</span></button>
+  </div>
 </header>
+
 <main>
+  <!-- PREMIUM BAR -->
+  <div class="premium-bar">
+    <span class="pstar">⭐</span>
+    <strong>Premium Wallpapers</strong>
+    <span>available — register free to unlock exclusive 4K picks.</span>
+    <button class="pb-link" id="premiumBarBtn">Learn more →</button>
+  </div>
+
+  <!-- HERO -->
   <section class="hero">
     <h1>Curated <span>Dark Wallpapers</span><br>for Every Screen</h1>
     <p>4K &amp; HD — handpicked, always free. ⭐ Premium picks available.</p>
   </section>
+
+  <!-- CONTROLS -->
   <div class="controls">
     <div class="sw">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="search" id="si" placeholder="Search wallpapers…" autocomplete="off" inputmode="search" aria-label="Search wallpapers">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" id="si" placeholder="Search wallpapers…" autocomplete="off" aria-label="Search wallpapers">
     </div>
-    <div class="fr" role="group" aria-label="Filter by category">
+    <div class="fr">
       <button class="fb on" data-c="all">All</button>
       <button class="fb" data-c="CAR">Cars</button>
       <button class="fb" data-c="abstract">Abstract</button>
@@ -241,6 +446,7 @@ footer{border-top:1px solid var(--br);padding:1.5rem 2.5rem;display:flex;justify
       </select>
     </div>
   </div>
+
   <div class="gw">
     <p class="rm" id="rm" aria-live="polite"></p>
     <div class="gg" id="gg" role="list"></div>
@@ -249,7 +455,7 @@ footer{border-top:1px solid var(--br);padding:1.5rem 2.5rem;display:flex;justify
   <nav class="pg" id="pg" aria-label="Pagination"></nav>
 </main>
 
-<!-- Lightbox -->
+<!-- LIGHTBOX -->
 <div class="lx" id="lx" role="dialog" aria-modal="true" aria-label="Wallpaper preview">
   <div class="li">
     <button class="lc" id="lc" aria-label="Close preview">&#x2715;</button>
@@ -264,20 +470,58 @@ footer{border-top:1px solid var(--br);padding:1.5rem 2.5rem;display:flex;justify
   </div>
 </div>
 
-<!-- Payment Modal -->
-<div class="pm-overlay" id="pmOverlay" role="dialog" aria-modal="true" aria-label="Purchase wallpaper">
-  <div class="pm-box">
+<!-- ============================================================
+     REGISTER MODAL
+============================================================ -->
+<div class="modal-overlay" id="regOverlay" role="dialog" aria-modal="true" aria-label="Register for premium access">
+  <div class="modal-box reg-box">
+    <div class="reg-header">
+      <div class="reg-title">Create Free Account <span>— Unlock Premium</span></div>
+      <button class="modal-close" id="regClose">&#x2715;</button>
+    </div>
+    <div class="reg-body">
+      <p class="reg-desc">Register once — no password required. Access premium wallpapers after admin approval.</p>
+      <div class="reg-benefits">
+        <div class="reg-benefit">⭐ <span><b>Premium picks</b> — exclusive 4K wallpapers</span></div>
+        <div class="reg-benefit">📥 <span><b>Download history</b> — track your downloads</span></div>
+        <div class="reg-benefit">🔑 <span><b>Passcode system</b> — receive unlock codes via admin</span></div>
+        <div class="reg-benefit">🆓 <span><b>Always free to browse</b> — no login needed for free walls</span></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="regUsername">Username</label>
+          <input class="form-input" id="regUsername" type="text" placeholder="e.g. darkuser" maxlength="24" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="regEmail">Email</label>
+          <input class="form-input" id="regEmail" type="email" placeholder="you@email.com" autocomplete="email">
+        </div>
+      </div>
+      <div class="form-err" id="regErr">Please enter a valid username and email.</div>
+      <p class="form-hint">We only collect this to verify your identity for premium access. No spam, ever.</p>
+      <button class="reg-btn" id="regSubmit">✓ Create Account — It's Free</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     PAYMENT MODAL
+============================================================ -->
+<div class="modal-overlay" id="pmOverlay" role="dialog" aria-modal="true" aria-label="Purchase wallpaper">
+  <div class="modal-box pm-overlay">
 
     <!-- Step 1: Terms -->
     <div class="pm-step active" id="pmStep1">
       <div class="pm-head">
         <div class="pm-title">Unlock <span id="pmTitle1">Wallpaper</span></div>
-        <button class="pm-close-btn" id="pmClose1" aria-label="Close">&#x2715;</button>
+        <button class="modal-close" id="pmClose1">&#x2715;</button>
       </div>
       <div class="pm-steps-row">
         <div class="pm-step-dot active">1</div>
         <div class="pm-step-line"></div>
         <div class="pm-step-dot pending">2</div>
+        <div class="pm-step-line"></div>
+        <div class="pm-step-dot pending">3</div>
       </div>
       <div class="pm-price-strip">
         <div class="pm-price-info">
@@ -287,95 +531,175 @@ footer{border-top:1px solid var(--br);padding:1.5rem 2.5rem;display:flex;justify
         <div class="pm-price-amt"><sup>&#x20B9;</sup><span id="pmAmt">20</span></div>
       </div>
       <div class="pm-terms">
-        <div class="pm-terms-hd">&#x1F4CB; Payment Terms &mdash; Please Read</div>
-        <div class="pm-term">&#x1F512; <b>One-time charge only.</b>&nbsp;You will never be billed again for this wallpaper.</div>
-        <div class="pm-term">&#x267E;&#xFE0F; <b>Unlimited downloads.</b>&nbsp;Re-download as many times as you want on this device.</div>
-        <div class="pm-term">&#x1F6AB; <b>No refunds &mdash; all sales are final.</b>&nbsp;Non-refundable once the code is delivered.</div>
-        <div class="pm-term">&#x1F5BC;&#xFE0F; <b>Personal use only.</b>&nbsp;Not licensed for commercial use or redistribution.</div>
-        <div class="pm-term">&#x1F4BE; <b>Stored in your browser.</b>&nbsp;Clearing site data may remove your unlock on this device.</div>
+        <div class="pm-terms-hd">📋 Payment Terms — Please Read</div>
+        <div class="pm-term">🔒 <b>One-time charge only.</b>&nbsp;You will never be billed again for this wallpaper.</div>
+        <div class="pm-term">♾️ <b>Unlimited downloads.</b>&nbsp;Re-download as many times as you want on this device.</div>
+        <div class="pm-term">🚫 <b>No refunds — all sales are final.</b>&nbsp;Non-refundable once the code is delivered.</div>
+        <div class="pm-term">🖼️ <b>Personal use only.</b>&nbsp;Not licensed for commercial use or redistribution.</div>
+        <div class="pm-term">💾 <b>Stored in your browser.</b>&nbsp;Clearing site data may remove your unlock on this device.</div>
       </div>
       <label class="pm-agree-row">
         <input type="checkbox" id="pmAgree">
         <span>I have read and agree to the payment terms. I understand this is <b>non-refundable</b>.</span>
       </label>
-      <button class="pm-btn" id="pmNextBtn" disabled>Continue to Payment &#x2192;</button>
+      <button class="pm-btn" id="pmNextBtn" disabled>Continue to Payment →</button>
     </div>
 
-    <!-- Step 2: QR + instructions -->
+    <!-- Step 2: QR Payment -->
     <div class="pm-step" id="pmStep2">
       <div class="pm-head">
         <div class="pm-title">Pay &#x20B9;<span id="pmAmt2">20</span> via <span>FamPay</span></div>
-        <button class="pm-close-btn" id="pmClose2" aria-label="Close">&#x2715;</button>
+        <button class="modal-close" id="pmClose2">&#x2715;</button>
       </div>
       <div class="pm-steps-row">
-        <div class="pm-step-dot done">&#x2713;</div>
+        <div class="pm-step-dot done">✓</div>
         <div class="pm-step-line done"></div>
         <div class="pm-step-dot active">2</div>
+        <div class="pm-step-line"></div>
+        <div class="pm-step-dot pending">3</div>
       </div>
-
-      <!-- QR code -->
       <div class="pm-qr-block">
-        <!--
-          HOW TO ADD YOUR FAMPAY QR:
-          1. Open FamPay app > tap profile > Receive Money > My QR
-          2. Screenshot the QR
-          3. Save it as  fampay-qr.png  in your website folder
-        -->
-        <img class="pm-qr-img" src="qr.jpeg" alt="FamPay QR Code"
-          onerror="this.style.display='none';document.getElementById('qrFallback').style.display='flex'">
+        <img class="pm-qr-img" src="qr.jpeg" alt="FamPay QR Code" onerror="this.style.display='none';document.getElementById('qrFallback').style.display='flex'">
         <div id="qrFallback" style="display:none;width:180px;height:180px;border-radius:8px;border:3px dashed var(--gold);background:var(--cb);align-items:center;justify-content:center;flex-direction:column;gap:.5rem;text-align:center;padding:1rem">
-          <div style="font-size:1.5rem">&#x1F4F7;</div>
-          <div style="font-size:.72rem;color:var(--mu);line-height:1.4">Add <b style="color:var(--tx)">fampay-qr.png</b> to your site folder</div>
+          <div style="font-size:1.5rem">📷</div>
+          <div style="font-size:.72rem;color:var(--mu);line-height:1.4">Add <b style="color:var(--tx)">qr.jpeg</b> to your site folder</div>
         </div>
         <div class="pm-qr-upi" id="upiIdDisplay">8799058434@fam</div>
-        <div class="pm-qr-note">Scan with any UPI app &mdash; PhonePe, GPay, Paytm, FamPay</div>
+        <div class="pm-qr-note">Scan with any UPI app — PhonePe, GPay, Paytm, FamPay</div>
       </div>
-
-      <!-- Simple instruction -->
       <div class="pm-how">
         <div class="pm-how-row"><div class="pm-how-num">1</div><span>Scan the QR above <b>or open any UPI app</b> and send &#x20B9;<span class="pm-inline-amt">20</span> to the UPI ID shown.</span></div>
-        <div class="pm-how-row"><div class="pm-how-num">2</div><span>Tap <b>I've Paid</b> below. Your payment will be verified automatically.</span></div>
+        <div class="pm-how-row"><div class="pm-how-num">2</div><span>Tap <b>"I've Paid"</b> below. A unique passcode will be generated for admin verification.</span></div>
+        <div class="pm-how-row"><div class="pm-how-num">3</div><span>Admin verifies payment and approves. <b>Your passcode unlocks the wallpaper.</b></span></div>
       </div>
-
-      <!-- I've Paid button — triggers 5s processing screen -->
-      <button class="pm-btn" id="pmPaidBtn">&#x2705; I&apos;ve Paid &mdash; Verify Payment</button>
-      <button class="pm-btn-sec" id="pmBackBtn">&#x2190; Back</button>
+      <button class="pm-btn" id="pmPaidBtn">✅ I've Paid — Generate Passcode</button>
+      <button class="pm-btn-sec" id="pmBackBtn">← Back</button>
     </div>
 
-
-    <!-- Processing screen (between step 2 and 3) -->
+    <!-- Processing -->
     <div class="pm-processing" id="pmProcessing" style="display:none">
-      <!-- Animated SVG ring with percentage fill -->
       <div style="position:relative;width:88px;height:88px;flex-shrink:0">
         <svg width="88" height="88" viewBox="0 0 88 88" style="transform:rotate(-90deg)" aria-hidden="true">
           <circle cx="44" cy="44" r="36" fill="none" stroke="var(--br)" stroke-width="6"/>
-          <circle cx="44" cy="44" r="36" fill="none" stroke="var(--gold)" stroke-width="6"
-            stroke-linecap="round"
-            stroke-dasharray="226.2"
-            stroke-dashoffset="226.2"
-            id="pmProgressCircle"/>
+          <circle cx="44" cy="44" r="36" fill="none" stroke="var(--gold)" stroke-width="6" stroke-linecap="round" stroke-dasharray="226.2" stroke-dashoffset="226.2" id="pmProgressCircle"/>
         </svg>
-        <div id="pmProgressEmoji" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.6rem">&#x23F3;</div>
+        <div id="pmProgressEmoji" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.6rem">⏳</div>
       </div>
-      <div style="font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800" id="pmProcessingTitle">Verifying Payment...</div>
-      <div style="color:var(--mu);font-size:.82rem;line-height:1.6;max-width:240px" id="pmProcessingSub">Please wait while we confirm your payment with FamPay.</div>
-      <!-- Progress bar -->
+      <div style="font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800" id="pmProcessingTitle">Generating Passcode...</div>
+      <div style="color:var(--mu);font-size:.82rem;line-height:1.6;max-width:240px" id="pmProcessingSub">Creating your unique unlock code.</div>
       <div style="width:100%;max-width:260px;height:5px;background:var(--br);border-radius:4px;overflow:hidden">
         <div id="pmProgressBar" style="height:100%;background:linear-gradient(90deg,#f5c518,#d4a800);border-radius:4px;width:0%"></div>
       </div>
       <div style="font-size:.75rem;color:var(--mu)" id="pmProgressLabel">0%</div>
     </div>
 
-    <!-- Success screen -->
-    <div class="pm-success-screen" id="pmSuccessScreen" style="display:none">
-      <div class="pm-success-icon">&#x2B50;</div>
-      <div class="pm-success-title">Unlocked!</div>
-      <p class="pm-success-sub">Your wallpaper <b id="pmSuccessTitle"></b> is now yours forever &mdash; download it as many times as you want.</p>
-      <button class="pm-success-dl" id="pmSuccessDl">&#x2193; Download Now</button>
+    <!-- Step 3: OTP Waiting + Auto-delivery -->
+    <div class="pm-step" id="pmStep3">
+      <div class="pm-head">
+        <div class="pm-title">Step 3 — <span>Waiting for OTP</span></div>
+        <button class="modal-close" id="pmClose3">&#x2715;</button>
+      </div>
+      <div class="pm-steps-row">
+        <div class="pm-step-dot done">✓</div>
+        <div class="pm-step-line done"></div>
+        <div class="pm-step-dot done">✓</div>
+        <div class="pm-step-line done"></div>
+        <div class="pm-step-dot active">3</div>
+      </div>
+
+      <!-- Waiting state (shown until admin sends OTP) -->
+      <div id="otpWaitingState">
+        <div class="pm-waiting" style="padding:1rem 0">
+          <div class="pm-waiting-icon" id="otpWaitIcon">⏳</div>
+          <div style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:800" id="otpWaitTitle">Waiting for Admin...</div>
+          <div style="color:var(--mu);font-size:.8rem;line-height:1.6;max-width:280px;text-align:center" id="otpWaitSub">Your payment is being reviewed. Your OTP will appear here automatically once admin approves — no refresh needed.</div>
+
+          <!-- Pulse dots to show it's live -->
+          <div style="display:flex;gap:.4rem;align-items:center;margin:.25rem 0">
+            <span class="otp-pulse-dot" style="animation-delay:0s"></span>
+            <span class="otp-pulse-dot" style="animation-delay:.2s"></span>
+            <span class="otp-pulse-dot" style="animation-delay:.4s"></span>
+          </div>
+
+          <!-- Ref box -->
+          <div class="pm-passcode-box" style="width:100%">
+            <div class="pm-passcode-label">Your Reference ID</div>
+            <div class="pm-passcode-val" id="pmPasscodeDisplay" style="font-size:1.3rem;letter-spacing:.15em">----</div>
+            <div class="pm-passcode-hint">Show this to admin if asked. Your OTP will auto-appear below once approved.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OTP Received state (shown when admin sends OTP) -->
+      <div id="otpReceivedState" style="display:none">
+        <div class="pm-waiting" style="padding:1rem 0">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--green-dim);border:2px solid var(--green);display:flex;align-items:center;justify-content:center;font-size:1.5rem;animation:pop .4s cubic-bezier(.34,1.56,.64,1)">✅</div>
+          <div style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:var(--green)">OTP Received!</div>
+          <div style="color:var(--mu);font-size:.8rem">Your 6-digit OTP has been delivered. Enter it below to unlock.</div>
+        </div>
+      </div>
+
+      <!-- OTP Input (always visible) -->
+      <div style="display:flex;flex-direction:column;gap:.75rem;padding:0 0 .5rem">
+        <div class="pm-code-label" id="otpInputLabel"><b>Enter your 6-digit OTP</b> once received:</div>
+        <!-- 6 individual digit boxes -->
+        <div id="otpBoxRow" style="display:flex;gap:.45rem;justify-content:center">
+          <input class="otp-digit" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" data-index="0">
+          <input class="otp-digit" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" data-index="1">
+          <input class="otp-digit" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" data-index="2">
+          <input class="otp-digit" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" data-index="3">
+          <input class="otp-digit" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" data-index="4">
+          <input class="otp-digit" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" data-index="5">
+        </div>
+        <div class="pm-code-err" id="pmCodeErr">Incorrect OTP. Please try again.</div>
+        <button class="pm-btn" id="pmVerifyBtn" disabled>🔓 Verify OTP &amp; Unlock</button>
+        <div style="font-size:.74rem;color:var(--mu);text-align:center">OTP auto-appears once admin approves your payment</div>
+      </div>
     </div>
 
+    <!-- Success -->
+    <div class="pm-success-screen" id="pmSuccessScreen" style="display:none">
+      <div class="pm-success-icon">⭐</div>
+      <div class="pm-success-title">Unlocked!</div>
+      <p class="pm-success-sub">Your wallpaper <b id="pmSuccessTitle"></b> is now yours forever — download it as many times as you want.</p>
+      <button class="pm-success-dl" id="pmSuccessDl">↓ Download Now</button>
+    </div>
   </div>
 </div>
+
+<!-- ============================================================
+     ADMIN DASHBOARD MODAL
+============================================================ -->
+<div class="modal-overlay" id="adminOverlay" role="dialog" aria-modal="true" aria-label="Admin Dashboard">
+  <div class="modal-box wide admin-box">
+    <div class="admin-header">
+      <div class="admin-title">UltryX <span>Admin Dashboard</span></div>
+      <button class="modal-close" id="adminClose">&#x2715;</button>
+    </div>
+    <div class="admin-tabs">
+      <button class="admin-tab on" data-tab="users">👥 Users</button>
+      <button class="admin-tab" data-tab="payments">💰 Payments</button>
+      <button class="admin-tab" data-tab="history">📥 Downloads</button>
+    </div>
+    <div class="admin-body">
+      <!-- Users tab -->
+      <div class="admin-section on" id="adminUsers">
+        <div id="adminUsersContent"></div>
+      </div>
+      <!-- Payments tab -->
+      <div class="admin-section" id="adminPayments">
+        <div id="adminPaymentsContent"></div>
+      </div>
+      <!-- Downloads tab -->
+      <div class="admin-section" id="adminDownloads">
+        <div id="adminDownloadsContent"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST CONTAINER -->
+<div class="toast-container" id="toastContainer"></div>
 
 <footer>
   <div class="logo">Ultry<span style="color:var(--ac)">X</span></div>
@@ -383,105 +707,271 @@ footer{border-top:1px solid var(--br);padding:1.5rem 2.5rem;display:flex;justify
   <span>Made for dark-mode lovers.</span>
 </footer>
 
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
 <script>
 // ============================================================
-//  OWNER CONFIG  — update before going live
+//  OWNER CONFIG — update before going live
 // ============================================================
-const YOUR_UPI_ID    = 'yourname@fam';  // your FamPay UPI ID
+const YOUR_UPI_ID  = '8799058434@fam';
+const ADMIN_SECRET = 'ULTRYX2025';  // change this! Admin passcode to open dashboard
 
-// UNLOCK CODES — add your own random 4-UPPERCASE-letter codes per wallpaper ID
-// When a buyer pays, send them ONE code. Each code works once per device.
+// UNLOCK CODES — per wallpaper ID. Each code works once per device.
+// Format: { wallpaperId: ['CODE1','CODE2', ...] }
 const UNLOCK_CODES = {
   1: ['KBWX','MZPQ','NRFT','VLHD','CJSX','WTQM','BPZK','GYRN'],
-  // 2: ['ABCD','EFGH'],  // add more wallpapers here when needed
+  // Add more: 2: ['ABCD','EFGH'],
 };
 // ============================================================
 
-// Update UPI ID dynamically
+// ============================================================
+//  ANTI-THEFT PROTECTION
+// ============================================================
 (function(){
-  document.querySelectorAll('#upiIdDisplay').forEach(el=>{el.textContent=YOUR_UPI_ID;});
+  // Disable right-click
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  // Disable drag on all images
+  document.addEventListener('dragstart', e => { if(e.target.tagName==='IMG') e.preventDefault(); });
+  // Keyboard shortcuts disable (F12, Ctrl+Shift+I/J/C/U, Ctrl+S, Ctrl+U)
+  document.addEventListener('keydown', e => {
+    if(e.key==='F12') { e.preventDefault(); return; }
+    if(e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key)) { e.preventDefault(); return; }
+    if(e.ctrlKey && ['U','S','u','s'].includes(e.key)) { e.preventDefault(); return; }
+  });
+  // DevTools detection via console timing trick
+  let devOpen = false;
+  const threshold = 160;
+  setInterval(()=>{
+    const start = performance.now();
+    // eslint-disable-next-line no-debugger
+    debugger;
+    if(performance.now()-start > threshold && !devOpen){
+      devOpen = true;
+      // Optionally handle dev tools open state
+    }
+  }, 1000);
 })();
 
-// Data-saver detection
+// ============================================================
+//  DATA SAVER DETECTION
+// ============================================================
 (function(){
-  var c=navigator.connection||navigator.mozConnection||navigator.webkitConnection,s=false;
+  const c=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
+  let s=false;
   if(c&&(c.saveData||c.effectiveType==='2g'||c.effectiveType==='slow-2g'||(+c.downlink<1.5)))s=true;
   if(s){document.documentElement.classList.add('sd');document.getElementById('nb').classList.add('on');}
   window.SD=s;
 })();
 
-const CC={CAR:'#1a1008',abstract:'#0d0d1a',nature:'#081208',city:'#090912',minimal:'#111114',Live:'#08100e',Nature:'#081208',default:'#111114'};
+// Update UPI display
+document.querySelectorAll('#upiIdDisplay').forEach(el=>el.textContent=YOUR_UPI_ID);
+
+// ============================================================
+//  STORAGE HELPERS
+// ============================================================
+function store(key,val){try{localStorage.setItem(key,JSON.stringify(val));}catch{}}
+function load(key,def){try{const v=localStorage.getItem(key);return v?JSON.parse(v):def;}catch{return def;}}
+
+// User state
+function getUser(){return load('ultryx_user',null);}
+function saveUser(u){store('ultryx_user',u);}
+function isRegistered(){return !!getUser();}
+
+// Unlocked wallpapers
+function getUnlocked(){return load('ultryx_unlocked',[]);}
+function isUnlocked(id){return getUnlocked().includes(id);}
+function markUnlocked(id){const ids=getUnlocked();if(!ids.includes(id)){ids.push(id);store('ultryx_unlocked',ids);}}
+
+// Used codes
+function getUsedCodes(){return load('ultryx_used_codes',[]);}
+function isCodeUsed(code){return getUsedCodes().includes(code.toUpperCase());}
+function markCodeUsed(code){const c=getUsedCodes();c.push(code.toUpperCase());store('ultryx_used_codes',c);}
+
+// Admin DB (stored in localStorage — in production replace with real backend)
+function getAdminDB(){return load('ultryx_admin_db',{users:[],payments:[],history:[]});}
+function saveAdminDB(db){store('ultryx_admin_db',db);}
+
+function addUserToDB(u){
+  const db=getAdminDB();
+  if(!db.users.find(x=>x.email===u.email)){db.users.push(u);saveAdminDB(db);}
+}
+function addPaymentToDB(p){
+  const db=getAdminDB();
+  db.payments.push(p);saveAdminDB(db);
+}
+function addDownloadHistory(item){
+  const db=getAdminDB();
+  db.history.unshift(item);
+  if(db.history.length>100)db.history=db.history.slice(0,100);
+  saveAdminDB(db);
+}
+function approvePayment(payId){
+  const db=getAdminDB();
+  const p=db.payments.find(x=>x.id===payId);
+  if(p){p.status='approved';saveAdminDB(db);}
+}
+function rejectPayment(payId){
+  const db=getAdminDB();
+  const p=db.payments.find(x=>x.id===payId);
+  if(p){p.status='rejected';saveAdminDB(db);}
+}
+function verifyCode(wid,input){
+  const codes=UNLOCK_CODES[wid];
+  if(!codes)return false;
+  const c=input.toUpperCase().trim();
+  if(isCodeUsed(c))return false;
+  if(codes.includes(c)){markCodeUsed(c);return true;}
+  return false;
+}
+
+// Generate random passcode
+function genPasscode(){
+  const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  let r='';for(let i=0;i<6;i++)r+=chars[Math.floor(Math.random()*chars.length)];
+  return r;
+}
+
+// Download history helper
+function recordDownload(wallpaper,type){
+  const u=getUser();
+  addDownloadHistory({
+    id:Date.now(),
+    wallId:wallpaper.id,
+    title:wallpaper.title,
+    thumb:wallpaper.thumb,
+    type:type, // 'free' or 'premium'
+    user:u?u.username:'Guest',
+    date:new Date().toLocaleString()
+  });
+}
+
+// ============================================================
+//  TOAST
+// ============================================================
+function toast(msg,type='',dur=3000){
+  const t=document.createElement('div');
+  t.className='toast'+(type?' '+type:'');
+  t.innerHTML=msg;
+  const c=document.getElementById('toastContainer');
+  c.appendChild(t);
+  setTimeout(()=>{t.style.animation='toast-out .3s ease forwards';setTimeout(()=>t.remove(),300);},dur);
+}
+
+// ============================================================
+//  HEADER USER AREA
+// ============================================================
+function renderHeader(){
+  const area=document.getElementById('headerUserArea');
+  const u=getUser();
+  if(u){
+    area.innerHTML=
+      '<div class="user-pill" id="userPillBtn" title="Signed in as '+u.username+'">'+
+      '<div class="user-avatar">'+u.username[0].toUpperCase()+'</div>'+
+      '<span class="user-name-short">'+u.username+'</span>'+
+      '</div>'+
+      '<button class="admin-btn" id="adminDashBtn">⚙ Admin</button>';
+    document.getElementById('userPillBtn').onclick=()=>showToast();
+    document.getElementById('adminDashBtn').onclick=openAdmin;
+  } else {
+    area.innerHTML='<button class="admin-btn" style="background:rgba(200,241,53,.08);border-color:rgba(200,241,53,.25)" id="headerRegBtn">+ Register Free</button>'+
+      '<button class="admin-btn" id="adminDashBtn">⚙ Admin</button>';
+    document.getElementById('headerRegBtn').onclick=openRegModal;
+    document.getElementById('adminDashBtn').onclick=openAdmin;
+  }
+}
+function showToast(){
+  const u=getUser();
+  if(u)toast('👤 Signed in as <b>'+u.username+'</b>','',2500);
+}
+
+// ============================================================
+//  REGISTER MODAL
+// ============================================================
+const regOverlay=document.getElementById('regOverlay');
+let afterRegCallback=null;
+
+function openRegModal(cb){
+  afterRegCallback=cb||null;
+  regOverlay.classList.add('on');
+  document.body.style.overflow='hidden';
+  document.getElementById('regUsername').focus();
+}
+function closeRegModal(){
+  regOverlay.classList.remove('on');
+  document.body.style.overflow='';
+  afterRegCallback=null;
+}
+document.getElementById('regClose').onclick=closeRegModal;
+regOverlay.onclick=e=>{if(e.target===regOverlay)closeRegModal();};
+
+document.getElementById('regSubmit').onclick=()=>{
+  const un=document.getElementById('regUsername').value.trim();
+  const em=document.getElementById('regEmail').value.trim();
+  const err=document.getElementById('regErr');
+  if(!un||un.length<2||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){
+    err.classList.add('on');
+    document.getElementById(un.length<2?'regUsername':'regEmail').classList.add('error');
+    return;
+  }
+  err.classList.remove('on');
+  const u={username:un,email:em,id:'u_'+Date.now(),joinedAt:new Date().toLocaleString()};
+  saveUser(u);
+  addUserToDB(u);
+  renderHeader();
+  closeRegModal();
+  toast('🎉 Welcome, <b>'+un+'</b>! Account created.','success');
+  if(afterRegCallback)afterRegCallback();
+};
+['regUsername','regEmail'].forEach(id=>{
+  document.getElementById(id).oninput=()=>document.getElementById(id).classList.remove('error');
+  document.getElementById(id).onkeydown=e=>{if(e.key==='Enter')document.getElementById('regSubmit').click();};
+});
 
 // ============================================================
 //  WALLPAPER LIBRARY
-//
-//  Fields: id, title, category, res, size, thumb, fullres
-//  Premium: add  premium:true, price:20  (price in rupees)
-//
-//  Static  → thumb & fullres usually same file
-//  Live    → thumb = image preview, fullres = .mp4
 // ============================================================
+const CC={CAR:'#1a1008',abstract:'#0d0d1a',nature:'#081208',city:'#090912',minimal:'#111114',Live:'#08100e',Nature:'#081208',default:'#111114'};
 const W=[
   // Cars
-  { id:1,  title:'BMW GT3 M4',        category:'CAR',      res:'5120x2880', size:'4.7MB',   thumb:'bmw.jpg',            fullres:'bmw.jpg',           premium:true, price:20 },
-  { id:10, title:'Porsche 911 GT RS', category:'CAR',      res:'2550x1440', size:'1MB',     thumb:'porsche.png',        fullres:'porsche.png'        },
-  { id:14, title:'F1 Max Verstappen', category:'CAR',      res:'4096x2728', size:'1.6MB',   thumb:'f1max.png',          fullres:'f1max.png'          },
+  {id:1,  title:'BMW GT3 M4',        category:'CAR',      res:'5120x2880',size:'4.7MB',   thumb:'bmw.jpg',            fullres:'bmw.jpg',           premium:true, price:20},
+  {id:10, title:'Porsche 911 GT RS', category:'CAR',      res:'2550x1440',size:'1MB',     thumb:'porsche.png',        fullres:'porsche.png'},
+  {id:14, title:'F1 Max Verstappen', category:'CAR',      res:'4096x2728',size:'1.6MB',   thumb:'f1max.png',          fullres:'f1max.png'},
   // Abstract
-  { id:2,  title:'Quantum Void',            category:'abstract', res:'4K UHD',    size:'8.5MB',   thumb:'quantum.jpg',        fullres:'quantum.jpg'        },
-  { id:9,  title:'Pyramid With Palm Trees', category:'abstract', res:'1920x1080', size:'414KB',   thumb:'pyramid.png',        fullres:'pyramid.png'        },
-  { id:13, title:'Astronaut',               category:'abstract', res:'4096x2304', size:'696KB',   thumb:'anstronaut.jpg',     fullres:'anstronaut.jpg'     },
+  {id:2,  title:'Quantum Void',            category:'abstract',res:'4K UHD',   size:'8.5MB',   thumb:'quantum.jpg',        fullres:'quantum.jpg'},
+  {id:9,  title:'Pyramid With Palm Trees', category:'abstract',res:'1920x1080',size:'414KB',   thumb:'pyramid.png',        fullres:'pyramid.png'},
+  {id:13, title:'Astronaut',               category:'abstract',res:'4096x2304',size:'696KB',   thumb:'anstronaut.jpg',     fullres:'anstronaut.jpg'},
   // Nature
-  { id:8,  title:'Dark House',         category:'Nature',   res:'1920x1080', size:'2MB',     thumb:'house.png',          fullres:'house.png'          },
-  { id:15, title:'Tropical Leaves',    category:'nature',   res:'1920x1080', size:'3.4MB',   thumb:'leaves.jpg',         fullres:'leaves.jpg'         },
-  { id:19, title:'Mountain Peak',      category:'nature',   res:'1080p',     size:'3.5MB',   thumb:'mountain.jpg',       fullres:'mountain.jpg'       },
-  { id:21, title:'Amazon Forest',      category:'nature',   res:'4K UHD',    size:'10.1MB',  thumb:'amazon.jpg',         fullres:'amazon.jpg'         },
+  {id:8,  title:'Dark House',         category:'Nature',   res:'1920x1080',size:'2MB',     thumb:'house.png',          fullres:'house.png'},
+  {id:15, title:'Tropical Leaves',    category:'nature',   res:'1920x1080',size:'3.4MB',   thumb:'leaves.jpg',         fullres:'leaves.jpg'},
+  {id:19, title:'Mountain Peak',      category:'nature',   res:'1080p',    size:'3.5MB',   thumb:'mountain.jpg',       fullres:'mountain.jpg'},
+  {id:21, title:'Amazon Forest',      category:'nature',   res:'4K UHD',   size:'10.1MB',  thumb:'amazon.jpg',         fullres:'amazon.jpg'},
   // City
-  { id:4,  title:'Futuristic City',    category:'city',     res:'1080p',     size:'6.2MB',   thumb:'futuristiccity.jpg', fullres:'futuristiccity.jpg' },
-  { id:16, title:'Neon City',          category:'city',     res:'4032x3024', size:'565KB',   thumb:'city.jpg',           fullres:'city.jpg'           },
-  { id:17, title:'Night Street',       category:'city',     res:'3840x2160', size:'1.4MB',   thumb:'street.png',         fullres:'street.png'         },
+  {id:4,  title:'Futuristic City',    category:'city',     res:'1080p',    size:'6.2MB',   thumb:'futuristiccity.jpg', fullres:'futuristiccity.jpg'},
+  {id:16, title:'Neon City',          category:'city',     res:'4032x3024',size:'565KB',   thumb:'city.jpg',           fullres:'city.jpg'},
+  {id:17, title:'Night Street',       category:'city',     res:'3840x2160',size:'1.4MB',   thumb:'street.png',         fullres:'street.png'},
   // Minimal
-  { id:5,  title:'Man & Woman',        category:'minimal',  res:'5120x2880', size:'457KB',   thumb:'manwomen.jpg',       fullres:'manwomen.jpg'       },
-  { id:12, title:'Island Escape',      category:'minimal',  res:'1920x1080', size:'670KB',   thumb:'island.jpg',         fullres:'island.jpg'         },
-  { id:18, title:'Minimal Scene',      category:'minimal',  res:'1920x1080', size:'365KB',   thumb:'secne.png',          fullres:'secne.png'          },
+  {id:5,  title:'Man & Woman',        category:'minimal',  res:'5120x2880',size:'457KB',   thumb:'manwomen.jpg',       fullres:'manwomen.jpg'},
+  {id:12, title:'Island Escape',      category:'minimal',  res:'1920x1080',size:'670KB',   thumb:'island.jpg',         fullres:'island.jpg'},
+  {id:18, title:'Minimal Scene',      category:'minimal',  res:'1920x1080',size:'365KB',   thumb:'secne.png',          fullres:'secne.png'},
   // Live
-  { id:3,  title:'Balbasaur',          category:'Live',     res:'2k',        size:'97.6MB',  thumb:'Balbasaur.png',      fullres:'Balbasaur.mp4'      },
-  { id:6,  title:'BMW M3 E36',         category:'Live',     res:'3840x2160', size:'27.8MB',  thumb:'bmwm3e36.png',       fullres:'bmwm3e36.mp4'       },
-  { id:7,  title:'Silver Surfer',      category:'Live',     res:'5120x2880', size:'55.5MB',  thumb:'silversurfer.png',   fullres:'silversurfer.mp4'   },
-  { id:11, title:'BMW M4',             category:'Live',     res:'2k',        size:'2.2MB',   thumb:'bmwm4.png',          fullres:'bmwm4.mp4'          },
-  { id:20, title:'Cherry Blossom',     category:'Live',     res:'1920x1080', size:'7.5MB',   thumb:'cherry.png',         fullres:'cherryblossom.mp4'  },
-  { id:22, title:'Dark QueeN',         category:'Live',     res:'4k UHD',    size:'200MB',   thumb:'darkqueen.png',      fullres:'darkqueen.mp4'      },
-  // Add new wallpapers below:
-  // { id:23, title:'Your Title', category:'CAR', res:'4K UHD', size:'5MB', thumb:'yourthumb.jpg', fullres:'yourfile.jpg' },
-  // { id:24, title:'Premium Ex', category:'abstract', res:'4K UHD', size:'12MB', thumb:'ex.jpg', fullres:'ex.jpg', premium:true, price:20 },
+  {id:3,  title:'Balbasaur',          category:'Live',     res:'2k',       size:'97.6MB',  thumb:'Balbasaur.png',      fullres:'Balbasaur.mp4'},
+  {id:6,  title:'BMW M3 E36',         category:'Live',     res:'3840x2160',size:'27.8MB',  thumb:'bmwm3e36.png',       fullres:'bmwm3e36.mp4'},
+  {id:7,  title:'Silver Surfer',      category:'Live',     res:'5120x2880',size:'55.5MB',  thumb:'silversurfer.png',   fullres:'silversurfer.mp4'},
+  {id:11, title:'BMW M4',             category:'Live',     res:'2k',       size:'2.2MB',   thumb:'bmwm4.png',          fullres:'bmwm4.mp4'},
+  {id:20, title:'Cherry Blossom',     category:'Live',     res:'1920x1080',size:'7.5MB',   thumb:'cherry.png',         fullres:'cherryblossom.mp4'},
+  {id:22, title:'Dark QueeN',         category:'Live',     res:'4k UHD',   size:'200MB',   thumb:'darkqueen.png',      fullres:'darkqueen.mp4'},
 ];
 
-// Purchase state
-function getUnlocked(){try{return JSON.parse(localStorage.getItem('ultryx_unlocked')||'[]');}catch{return[];}}
-function saveUnlocked(ids){localStorage.setItem('ultryx_unlocked',JSON.stringify(ids));}
-function isUnlocked(id){return getUnlocked().includes(id);}
-function markUnlocked(id){const ids=getUnlocked();if(!ids.includes(id)){ids.push(id);saveUnlocked(ids);}}
-function getUsedCodes(){try{return JSON.parse(localStorage.getItem('ultryx_used_codes')||'[]');}catch{return[];}}
-function markCodeUsed(code){const c=getUsedCodes();c.push(code.toUpperCase());localStorage.setItem('ultryx_used_codes',JSON.stringify(c));}
-function isCodeUsed(code){return getUsedCodes().includes(code.toUpperCase());}
-function verifyCode(wid,input){
-  const code=input.trim().toUpperCase();
-  if(!code||code.length!==4)return false;
-  if(isCodeUsed(code))return false;
-  return (UNLOCK_CODES[wid]||[]).includes(code);
-}
-
-// DOM refs
-const PP=12; let cp=1,fl=[...W];
+// ============================================================
+//  LAZY LOAD / INTERSECTION OBSERVER
+// ============================================================
+const PP=12;let cp=1,fl=[...W];
 const G=document.getElementById('gg'),RM=document.getElementById('rm'),ES=document.getElementById('es'),
       PG=document.getElementById('pg'),LX=document.getElementById('lx'),LB_IMG=document.getElementById('lbImg'),
       LB_VID=document.getElementById('lbVideo'),LB_SP=document.getElementById('lbSpinner'),
-      LB_T=document.getElementById('lbT'),LB_R=document.getElementById('lbR'),LB_DL=document.getElementById('lbD'),
-      PM=document.getElementById('pmOverlay'),
-      S1=document.getElementById('pmStep1'),S2=document.getElementById('pmStep2'),
-      PROC=document.getElementById('pmProcessing'),
-      SUC=document.getElementById('pmSuccessScreen');
+      LB_T=document.getElementById('lbT'),LB_R=document.getElementById('lbR'),LB_DL=document.getElementById('lbD');
 
-// Lazy load
 const ob=new IntersectionObserver((entries,observer)=>{
   entries.forEach(e=>{
     const cd=e.target,v=cd.querySelector('video');
@@ -502,6 +992,9 @@ const ob=new IntersectionObserver((entries,observer)=>{
 
 const LOAD_SVG='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>';
 
+// ============================================================
+//  RENDER
+// ============================================================
 function render(){
   const st=(cp-1)*PP,pg=fl.slice(st,st+PP);
   RM.innerHTML='Showing <strong>'+pg.length+'</strong> of <strong>'+fl.length+'</strong> wallpapers';
@@ -514,19 +1007,37 @@ function render(){
     const a=document.createElement('article');
     a.className='card'+(isPrem?' premium-card':'')+(locked?' locked':'');
     a.setAttribute('role','listitem');
-    const badgeHTML=isPrem?(unlocked?'<div class="unlocked-badge">&#x2713; Unlocked</div>':'<div class="premium-badge">&#x2B50; &#x20B9;'+price+'</div>'):'';
-    const btnHTML=locked?'<button class="cdl buy-btn" aria-label="Buy '+ttl+'">&#x2B50; Buy &#x20B9;'+price+'</button>':'<button class="cdl" aria-label="Download '+ttl+'">&#x2193; Save</button>';
-    a.innerHTML='<div class="cp" style="background:'+bg+'"></div>'+
+    const badgeHTML=isPrem?(unlocked?'<div class="unlocked-badge">✓ Unlocked</div>':'<div class="premium-badge">⭐ ₹'+price+'</div>'):'';
+    let btnHTML;
+    if(locked){
+      if(isRegistered()){
+        btnHTML='<button class="cdl buy-btn" aria-label="Buy '+ttl+'">⭐ Buy ₹'+price+'</button>';
+      } else {
+        btnHTML='<button class="cdl reg-btn" aria-label="Register to unlock '+ttl+'">🔓 Register to Unlock</button>';
+      }
+    } else {
+      btnHTML='<button class="cdl" aria-label="Download '+ttl+'">↓ Save</button>';
+    }
+    a.innerHTML=
+      '<div class="cp" style="background:'+bg+'"></div>'+
       '<img data-s="'+thumb+'" src="" alt="'+ttl+'" loading="lazy" decoding="async" width="280" height="175">'+
       (isL?'<video data-s="'+fullres+'" muted loop playsinline></video><div class="lb2"><span class="ld"></span>LIVE</div>':'')+
       '<div class="ctl-overlay"><div class="ctl-icon">'+LOAD_SVG+'</div><span class="ctl-label">Tap to load</span></div>'+
       badgeHTML+
+      (locked?'<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-label">Register to Unlock</div></div>':'')+
       '<div class="ci"><span class="cr">'+res+'</span><span class="cs">'+sz+'</span></div>'+
       '<div class="co"><div class="ct2">'+ttl+'</div><div class="ca"><span class="ctg">'+cat+'</span>'+btnHTML+'</div></div>';
     a.onclick=()=>openLB(id);
     const btn=a.querySelector('.cdl');
-    if(locked){btn.onclick=ev=>{ev.stopPropagation();openPayModal(id);};}
-    else{btn.onclick=ev=>{ev.stopPropagation();dlW(fullres,ttl,ev.target);};}
+    if(locked){
+      btn.onclick=ev=>{
+        ev.stopPropagation();
+        if(!isRegistered()){openRegModal(()=>openPayModal(id));}
+        else{openPayModal(id);}
+      };
+    } else {
+      btn.onclick=ev=>{ev.stopPropagation();doDownload(w,ev.target);};
+    }
     frag.appendChild(a);
   });
   G.innerHTML='';G.appendChild(frag);
@@ -536,144 +1047,19 @@ function render(){
 
 function renderPg(){
   const tot=Math.ceil(fl.length/PP);if(tot<=1){PG.innerHTML='';return;}
-  const parts=['<button class="pb" onclick="gp('+(cp-1)+')" '+(cp===1?'disabled':'')+'>&#x2190; Prev</button>'];
+  const parts=['<button class="pb" onclick="gp('+(cp-1)+')" '+(cp===1?'disabled':'')+'>← Prev</button>'];
   for(let i=1;i<=tot;i++){
-    if(tot>7&&Math.abs(i-cp)>2&&i!==1&&i!==tot){if(i===2||i===tot-1)parts.push('<span style="color:var(--mu);padding:0 .3rem">&#8230;</span>');continue;}
+    if(tot>7&&Math.abs(i-cp)>2&&i!==1&&i!==tot){if(i===2||i===tot-1)parts.push('<span style="color:var(--mu);padding:0 .3rem">…</span>');continue;}
     parts.push('<button class="pb '+(i===cp?'on':'')+'" onclick="gp('+i+')"'+(i===cp?' aria-current="page"':'')+'>'+i+'</button>');
   }
-  parts.push('<button class="pb" onclick="gp('+(cp+1)+')" '+(cp===tot?'disabled':'')+'>Next &#x2192;</button>');
+  parts.push('<button class="pb" onclick="gp('+(cp+1)+')" '+(cp===tot?'disabled':'')+'>Next →</button>');
   PG.innerHTML=parts.join('');
 }
 function gp(p){cp=p;render();window.scrollTo({top:0,behavior:'smooth'});}
 
-// Lightbox
-function openLB(id){
-  const w=W.find(x=>x.id===id);if(!w)return;
-  const{title:ttl,category:cat,res,size:sz,thumb,fullres,premium,price}=w,isL=cat==='Live';
-  const isPrem=!!premium,unlocked=isPrem&&isUnlocked(id),locked=isPrem&&!unlocked;
-  LB_T.textContent=ttl;LB_R.textContent=res+' \u2022 '+sz+' \u2022 '+cat+(isPrem?' \u2022 \u2B50 Premium':'');
-  LX.classList.add('on');
-  if(locked){LB_DL.textContent='\u2B50 Buy \u20B9'+price+' to Download';LB_DL.className='bd gold';LB_DL.onclick=e=>{e.preventDefault();closeLB();openPayModal(id);};}
-  else{LB_DL.textContent='\u2193 Download High-Res';LB_DL.className='bd'+(isPrem?' gold':'');LB_DL.onclick=e=>{e.preventDefault();dlW(LB_VID.classList.contains('on')&&LB_VID.src?LB_VID.src:LB_IMG.dataset.fullres||LB_IMG.src,ttl,LB_DL);};}
-  if(isL&&!window.SD){LB_IMG.classList.add('hi');LB_VID.classList.add('on');LB_SP.classList.add('on');LB_VID.src=fullres;LB_VID.load();LB_VID.oncanplay=()=>{LB_SP.classList.remove('on');LB_VID.play().catch(()=>{});};}
-  else if(isL){LB_VID.classList.remove('on');LB_VID.src='';LB_IMG.classList.remove('hi');LB_IMG.src=thumb;LB_IMG.classList.add('loading-fr');LB_SP.classList.add('on');const hq=new Image();hq.src=thumb;hq.onload=()=>{LB_IMG.src=thumb;LB_IMG.classList.remove('loading-fr');LB_SP.classList.remove('on');};}
-  else{LB_VID.classList.remove('on');LB_VID.pause();LB_VID.src='';LB_IMG.classList.remove('hi');const loadSrc=locked?thumb:fullres;LB_IMG.src=thumb;LB_IMG.dataset.fullres=loadSrc;LB_IMG.classList.add('loading-fr');LB_SP.classList.add('on');const hq=new Image();hq.onload=()=>{LB_IMG.src=loadSrc;LB_IMG.classList.remove('loading-fr');LB_SP.classList.remove('on');};hq.onerror=()=>{LB_IMG.classList.remove('loading-fr');LB_SP.classList.remove('on');};hq.src=loadSrc;}
-}
-function closeLB(){LX.classList.remove('on');LB_VID.pause();LB_VID.src='';LB_VID.load();LB_VID.classList.remove('on');LB_IMG.classList.remove('hi','loading-fr');LB_IMG.src='';LB_SP.classList.remove('on');}
-document.getElementById('lc').onclick=closeLB;
-LX.onclick=e=>{if(e.target===LX)closeLB();};
-document.onkeydown=e=>{if(e.key==='Escape'){closeLB();closePayModal();}};
-
-// Payment modal
-let pmCurrentId=null,pmCurrentW=null;
-
-function showStep(n){
-  [S1,S2,PROC,SUC].forEach(el=>{el.style.display='none';el.classList.remove('active');});
-  if(n===1){S1.style.display='';S1.classList.add('active');}
-  else if(n===2){S2.style.display='';S2.classList.add('active');}
-  else if(n==='processing'){PROC.style.display='flex';}
-  else if(n==='success'){SUC.style.display='flex';}
-}
-
-function openPayModal(id){
-  const w=W.find(x=>x.id===id);if(!w||!w.premium)return;
-  if(isUnlocked(id)){dlW(w.fullres,w.title,null);return;}
-  pmCurrentId=id;pmCurrentW=w;
-  document.getElementById('pmTitle1').textContent=w.title;
-  document.getElementById('pmAmt').textContent=w.price;
-  document.getElementById('pmAmt2').textContent=w.price;
-  document.querySelectorAll('.pm-inline-amt').forEach(el=>{el.textContent=w.price;});
-  document.getElementById('pmAgree').checked=false;
-  document.getElementById('pmNextBtn').disabled=true;
-  document.getElementById('pmCodeInput') && (document.getElementById('pmCodeInput').value='');
-  showStep(1);PM.classList.add('on');document.body.style.overflow='hidden';
-}
-function closePayModal(){PM.classList.remove('on');document.body.style.overflow='';pmCurrentId=null;pmCurrentW=null;}
-
-// Step 1
-document.getElementById('pmAgree').onchange=function(){document.getElementById('pmNextBtn').disabled=!this.checked;};
-document.getElementById('pmNextBtn').onclick=()=>showStep(2);
-
-// Step 2 — I've Paid triggers 5s processing screen
-document.getElementById('pmBackBtn').onclick=()=>showStep(1);
-document.getElementById('pmPaidBtn').onclick=()=>{
-  showStep('processing');
-  const circle=document.getElementById('pmProgressCircle');
-  const bar=document.getElementById('pmProgressBar');
-  const label=document.getElementById('pmProgressLabel');
-  const titleEl=document.getElementById('pmProcessingTitle');
-  const subEl=document.getElementById('pmProcessingSub');
-  const emoji=document.getElementById('pmProgressEmoji');
-  const DUR=5000;
-  const CIRCUM=226.2;
-  // Reset before animating
-  circle.style.transition='none';
-  circle.style.strokeDashoffset=String(CIRCUM);
-  bar.style.transition='none';
-  bar.style.width='0%';
-  label.textContent='0%';
-  titleEl.textContent='Verifying Payment...';
-  subEl.textContent='Please wait while we confirm your payment with FamPay.';
-  emoji.textContent='\u23F3';
-  // Trigger animation on next paint
-  requestAnimationFrame(()=>{
-    requestAnimationFrame(()=>{
-      circle.style.transition='stroke-dashoffset '+DUR+'ms linear';
-      circle.style.strokeDashoffset='0';
-      bar.style.transition='width '+DUR+'ms linear';
-      bar.style.width='100%';
-    });
-  });
-  // Tick percentage and swap messages
-  const startTime=Date.now();
-  const ticker=setInterval(()=>{
-    const pct=Math.min(100,Math.round(((Date.now()-startTime)/DUR)*100));
-    label.textContent=pct+'%';
-    if(pct>=40&&pct<70){titleEl.textContent='Checking Transaction...';subEl.textContent='Connecting to payment network.';emoji.textContent='\uD83D\uDD0D';}
-    else if(pct>=70&&pct<95){titleEl.textContent='Almost There...';subEl.textContent='Confirming your payment details.';emoji.textContent='\uD83D\uDCE1';}
-    else if(pct>=95){titleEl.textContent='Payment Received!';subEl.textContent='Unlocking your wallpaper now.';emoji.textContent='\u2705';}
-    if(pct>=100)clearInterval(ticker);
-  },100);
-  // After 5s -> go directly to success (admin verifies in background)
-  setTimeout(()=>{
-    clearInterval(ticker);
-    label.textContent='100%';
-    if(pmCurrentId&&pmCurrentW){
-      markUnlocked(pmCurrentId);
-      document.getElementById('pmSuccessTitle').textContent=pmCurrentW.title;
-      document.getElementById('pmSuccessDl').onclick=()=>{closePayModal();dlW(pmCurrentW.fullres,pmCurrentW.title,null);};
-      render();
-    }
-    showStep('success');
-  },DUR);
-};
-
-// Close buttons
-[document.getElementById('pmClose1'),document.getElementById('pmClose2')].forEach(b=>{if(b)b.onclick=closePayModal;});
-PM.onclick=e=>{if(e.target===PM)closePayModal();};
-
-// Download
-async function dlW(url,name,btn){
-  const orig=btn?btn.textContent:'';
-  if(btn){btn.textContent='...';btn.disabled=true;}
-  try{
-    const r=await fetch(url,{mode:'cors'});const b=await r.blob();
-    const ext=b.type.includes('mp4')||b.type.includes('video')?'.mp4':b.type.includes('png')?'.png':'.jpg';
-    const u=URL.createObjectURL(b);const a=document.createElement('a');
-    a.href=u;a.download=name.replace(/[^a-z0-9\s]/gi,'').trim()+ext;
-    document.body.appendChild(a);a.click();document.body.removeChild(a);
-    setTimeout(()=>URL.revokeObjectURL(u),5000);
-    if(btn){btn.textContent='Done!';setTimeout(()=>{btn.textContent=orig;btn.disabled=false;},2000);}
-  }catch{window.open(url,'_blank');if(btn){btn.textContent=orig;btn.disabled=false;}}
-}
-
-// Theme
-let il=localStorage.getItem('theme')==='light';
-if(il)document.body.classList.add('light');
-document.getElementById('tl').innerHTML=il?'&#9728;&#65039; Light':'&#127769; Dark';
-document.getElementById('tt').onclick=()=>{il=!il;document.body.classList.toggle('light',il);document.getElementById('tl').innerHTML=il?'&#9728;&#65039; Light':'&#127769; Dark';localStorage.setItem('theme',il?'light':'dark');};
-
-// Search / filter / sort
+// ============================================================
+//  FILTER / SEARCH / SORT
+// ============================================================
 let st2;
 document.getElementById('si').oninput=()=>{clearTimeout(st2);st2=setTimeout(af,150);};
 document.getElementById('so').onchange=af;
@@ -692,6 +1078,445 @@ function af(){
   cp=1;render();
 }
 requestAnimationFrame(af);
-</script>
-</body>
-</html>
+
+// ============================================================
+//  LIGHTBOX
+// ============================================================
+function openLB(id){
+  const w=W.find(x=>x.id===id);if(!w)return;
+  const{title:ttl,category:cat,res,size:sz,thumb,fullres,premium,price}=w,isL=cat==='Live';
+  const isPrem=!!premium,unlocked=isPrem&&isUnlocked(id),locked=isPrem&&!unlocked;
+  LB_T.textContent=ttl;
+  LB_R.textContent=res+' • '+sz+' • '+cat+(isPrem?' • ⭐ Premium':'');
+  LX.classList.add('on');
+  if(locked){
+    LB_DL.textContent='⭐ '+(isRegistered()?'Buy ₹'+price+' to Download':'Register to Unlock');
+    LB_DL.className='bd gold';
+    LB_DL.onclick=e=>{
+      e.preventDefault();
+      closeLB();
+      if(!isRegistered()){openRegModal(()=>openPayModal(id));}
+      else{openPayModal(id);}
+    };
+  } else {
+    LB_DL.textContent='↓ Download High-Res';
+    LB_DL.className='bd'+(isPrem?' gold':'');
+    LB_DL.onclick=e=>{e.preventDefault();doDownload(w,LB_DL);};
+  }
+  if(isL&&!window.SD){
+    LB_IMG.classList.add('hi');LB_VID.classList.add('on');LB_SP.classList.add('on');
+    LB_VID.src=fullres;LB_VID.load();
+    LB_VID.oncanplay=()=>{LB_SP.classList.remove('on');LB_VID.play().catch(()=>{});};
+  } else if(isL){
+    LB_VID.classList.remove('on');LB_VID.src='';LB_IMG.classList.remove('hi');
+    LB_IMG.src=thumb;LB_IMG.classList.add('loading-fr');LB_SP.classList.add('on');
+    const hq=new Image();hq.src=thumb;hq.onload=()=>{LB_IMG.src=thumb;LB_IMG.classList.remove('loading-fr');LB_SP.classList.remove('on');};
+  } else {
+    LB_VID.classList.remove('on');LB_VID.pause();LB_VID.src='';LB_IMG.classList.remove('hi');
+    const loadSrc=locked?thumb:fullres;
+    LB_IMG.src=thumb;LB_IMG.dataset.fullres=loadSrc;LB_IMG.classList.add('loading-fr');LB_SP.classList.add('on');
+    const hq=new Image();
+    hq.onload=()=>{LB_IMG.src=loadSrc;LB_IMG.classList.remove('loading-fr');LB_SP.classList.remove('on');};
+    hq.onerror=()=>{LB_IMG.classList.remove('loading-fr');LB_SP.classList.remove('on');};
+    hq.src=loadSrc;
+  }
+}
+function closeLB(){
+  LX.classList.remove('on');LB_VID.pause();LB_VID.src='';LB_VID.load();
+  LB_VID.classList.remove('on');LB_IMG.classList.remove('hi','loading-fr');LB_IMG.src='';LB_SP.classList.remove('on');
+}
+document.getElementById('lc').onclick=closeLB;
+LX.onclick=e=>{if(e.target===LX)closeLB();};
+document.onkeydown=e=>{if(e.key==='Escape'){closeLB();closePayModal();closeAdmin();}};
+
+// ============================================================
+//  SECURE DOWNLOAD
+// ============================================================
+async function doDownload(w,btn){
+  // Validate: premium must be unlocked
+  if(w.premium&&!isUnlocked(w.id)){
+    toast('⭐ This is a premium wallpaper. Please unlock it first.','gold');
+    return;
+  }
+  // Record in history
+  recordDownload(w, w.premium?'premium':'free');
+  // Proceed with download
+  const orig=btn?btn.textContent:'';
+  if(btn){btn.textContent='...';btn.disabled=true;}
+  try{
+    const r=await fetch(w.fullres,{mode:'cors'});
+    const b=await r.blob();
+    const ext=b.type.includes('mp4')||b.type.includes('video')?'.mp4':b.type.includes('png')?'.png':'.jpg';
+    const u=URL.createObjectURL(b);
+    const a=document.createElement('a');
+    a.href=u;a.download=w.title.replace(/[^a-z0-9\s]/gi,'').trim()+ext;
+    document.body.appendChild(a);a.click();document.body.removeChild(a);
+    setTimeout(()=>URL.revokeObjectURL(u),5000);
+    if(btn){btn.textContent='Done!';setTimeout(()=>{btn.textContent=orig;btn.disabled=false;},2000);}
+    toast('↓ Downloading <b>'+w.title+'</b>…','success');
+  }catch{
+    window.open(w.fullres,'_blank');
+    if(btn){btn.textContent=orig;btn.disabled=false;}
+  }
+}
+
+// ============================================================
+//  PAYMENT MODAL
+// ============================================================
+const PM=document.getElementById('pmOverlay');
+const S1=document.getElementById('pmStep1'),S2=document.getElementById('pmStep2'),
+      S3=document.getElementById('pmStep3'),PROC=document.getElementById('pmProcessing'),
+      SUC=document.getElementById('pmSuccessScreen');
+let pmCurrentId=null,pmCurrentW=null,pmCurrentPasscode=null;
+
+function showPmStep(n){
+  [S1,S2,S3,PROC,SUC].forEach(el=>{el.style.display='none';el.classList.remove('active');});
+  if(n===1){S1.style.display='';S1.classList.add('active');}
+  else if(n===2){S2.style.display='';S2.classList.add('active');}
+  else if(n===3){S3.style.display='';S3.classList.add('active');}
+  else if(n==='processing'){PROC.style.display='flex';}
+  else if(n==='success'){SUC.style.display='flex';}
+}
+
+function openPayModal(id){
+  const w=W.find(x=>x.id===id);if(!w||!w.premium)return;
+  if(isUnlocked(id)){doDownload(w,null);return;}
+  if(!isRegistered()){openRegModal(()=>openPayModal(id));return;}
+  pmCurrentId=id;pmCurrentW=w;pmCurrentPasscode=null;
+  document.getElementById('pmTitle1').textContent=w.title;
+  document.getElementById('pmAmt').textContent=w.price;
+  document.getElementById('pmAmt2').textContent=w.price;
+  document.querySelectorAll('.pm-inline-amt').forEach(el=>el.textContent=w.price);
+  document.getElementById('pmAgree').checked=false;
+  document.getElementById('pmNextBtn').disabled=true;
+  const ci=document.getElementById('pmCodeInput');if(ci)ci.value='';
+  const ce=document.getElementById('pmCodeErr');if(ce)ce.classList.remove('on');
+  showPmStep(1);
+  PM.classList.add('on');document.body.style.overflow='hidden';
+}
+function closePayModal(){PM.classList.remove('on');document.body.style.overflow='';pmCurrentId=null;pmCurrentW=null;stopOTPPolling();clearOTPBoxes();document.getElementById('otpWaitingState').style.display='block';document.getElementById('otpReceivedState').style.display='none';document.getElementById('otpInputLabel').innerHTML='<b>Enter your 6-digit OTP</b> once received:';document.getElementById('pmVerifyBtn').style.background='';document.getElementById('pmCodeErr').classList.remove('on');}
+
+document.getElementById('pmAgree').onchange=function(){document.getElementById('pmNextBtn').disabled=!this.checked;};
+document.getElementById('pmNextBtn').onclick=()=>showPmStep(2);
+document.getElementById('pmBackBtn').onclick=()=>showPmStep(1);
+
+document.getElementById('pmPaidBtn').onclick=()=>{
+  // Generate passcode & record payment
+  pmCurrentPasscode=genPasscode();
+  const u=getUser();
+  const payRecord={
+    id:'pay_'+Date.now(),
+    passcode:pmCurrentPasscode,
+    wallpaperId:pmCurrentId,
+    wallpaperTitle:pmCurrentW.title,
+    amount:pmCurrentW.price,
+    user:u?u.username:'Guest',
+    email:u?u.email:'',
+    status:'pending',
+    date:new Date().toLocaleString()
+  };
+  addPaymentToDB(payRecord);
+
+  // Show processing animation
+  showPmStep('processing');
+  const circle=document.getElementById('pmProgressCircle');
+  const bar=document.getElementById('pmProgressBar');
+  const label=document.getElementById('pmProgressLabel');
+  const titleEl=document.getElementById('pmProcessingTitle');
+  const subEl=document.getElementById('pmProcessingSub');
+  const emoji=document.getElementById('pmProgressEmoji');
+  const DUR=3000,CIRCUM=226.2;
+  circle.style.transition='none';circle.style.strokeDashoffset=String(CIRCUM);
+  bar.style.transition='none';bar.style.width='0%';
+  label.textContent='0%';
+  titleEl.textContent='Generating Passcode...';
+  subEl.textContent='Creating your unique unlock code.';
+  emoji.textContent='⏳';
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    circle.style.transition='stroke-dashoffset '+DUR+'ms linear';
+    circle.style.strokeDashoffset='0';
+    bar.style.transition='width '+DUR+'ms linear';
+    bar.style.width='100%';
+  }));
+  const startTime=Date.now();
+  const ticker=setInterval(()=>{
+    const pct=Math.min(100,Math.round(((Date.now()-startTime)/DUR)*100));
+    label.textContent=pct+'%';
+    if(pct>=50&&pct<90){titleEl.textContent='Registering Payment...';subEl.textContent='Saving your reference code.';emoji.textContent='🔍';}
+    else if(pct>=90){titleEl.textContent='Code Ready!';subEl.textContent='Admin will verify shortly.';emoji.textContent='✅';}
+    if(pct>=100)clearInterval(ticker);
+  },80);
+  setTimeout(()=>{
+    clearInterval(ticker);
+    label.textContent='100%';
+    document.getElementById('pmPasscodeDisplay').textContent=pmCurrentPasscode;
+    showPmStep(3);
+    // Start polling for admin-sent OTP
+    startOTPPolling(pmCurrentId, pmCurrentPasscode);
+  },DUR);
+};
+
+// ============================================================
+//  OTP DIGIT BOX LOGIC
+// ============================================================
+let otpPollTimer=null;
+
+// Wire up the 6 digit boxes
+(function(){
+  const digits=document.querySelectorAll('.otp-digit');
+  digits.forEach((box,i)=>{
+    box.addEventListener('input',e=>{
+      const val=e.target.value.replace(/\D/g,'');
+      e.target.value=val;
+      if(val){
+        e.target.classList.add('filled');
+        if(i<5)digits[i+1].focus();
+      } else {
+        e.target.classList.remove('filled');
+      }
+      updateVerifyBtn();
+    });
+    box.addEventListener('keydown',e=>{
+      if(e.key==='Backspace'&&!box.value&&i>0){
+        digits[i-1].focus();
+        digits[i-1].value='';
+        digits[i-1].classList.remove('filled');
+        updateVerifyBtn();
+      }
+      if(e.key==='Enter') document.getElementById('pmVerifyBtn').click();
+    });
+    box.addEventListener('paste',e=>{
+      e.preventDefault();
+      const txt=(e.clipboardData||window.clipboardData).getData('text').replace(/\D/g,'').slice(0,6);
+      txt.split('').forEach((ch,j)=>{
+        if(digits[j]){digits[j].value=ch;digits[j].classList.add('filled');}
+      });
+      if(digits[Math.min(txt.length,5)])digits[Math.min(txt.length,5)].focus();
+      updateVerifyBtn();
+    });
+  });
+})();
+
+function getOTPValue(){
+  return Array.from(document.querySelectorAll('.otp-digit')).map(d=>d.value).join('');
+}
+function clearOTPBoxes(){
+  document.querySelectorAll('.otp-digit').forEach(d=>{d.value='';d.className='otp-digit';});
+  updateVerifyBtn();
+}
+function updateVerifyBtn(){
+  const val=getOTPValue();
+  document.getElementById('pmVerifyBtn').disabled=val.length<6;
+}
+function setOTPError(){
+  document.querySelectorAll('.otp-digit').forEach(d=>d.classList.add('error'));
+  document.getElementById('pmCodeErr').classList.add('on');
+  setTimeout(()=>document.querySelectorAll('.otp-digit').forEach(d=>d.classList.remove('error')),400);
+}
+
+// Verify OTP button
+document.getElementById('pmVerifyBtn').onclick=()=>{
+  const val=getOTPValue();
+  if(val.length<6)return;
+  document.getElementById('pmCodeErr').classList.remove('on');
+
+  // Check against admin-issued OTP stored in DB
+  const db=getAdminDB();
+  const pay=db.payments.find(p=>p.passcode===pmCurrentPasscode&&p.wallpaperId===pmCurrentId);
+
+  if(pay && pay.status==='approved' && pay.otp && pay.otp===val && !pay.otpUsed){
+    // Mark OTP as used
+    pay.otpUsed=true;
+    saveAdminDB(db);
+    markUnlocked(pmCurrentId);
+    stopOTPPolling();
+    render();
+    document.getElementById('pmSuccessTitle').textContent=pmCurrentW.title;
+    document.getElementById('pmSuccessDl').onclick=()=>{closePayModal();doDownload(pmCurrentW,null);};
+    showPmStep('success');
+    toast('⭐ Unlocked <b>'+pmCurrentW.title+'</b>!','gold');
+  } else {
+    setOTPError();
+  }
+};
+
+// ============================================================
+//  OTP POLLING — checks every 3s if admin has sent OTP
+// ============================================================
+function startOTPPolling(wallId, passcode){
+  stopOTPPolling();
+  otpPollTimer=setInterval(()=>{
+    const db=getAdminDB();
+    const pay=db.payments.find(p=>p.passcode===passcode&&p.wallpaperId===wallId);
+    if(pay && pay.otp && !pay.otpUsed){
+      stopOTPPolling();
+      // Auto-fill OTP digits
+      autoFillOTP(pay.otp);
+    }
+  },3000);
+}
+function stopOTPPolling(){
+  if(otpPollTimer){clearInterval(otpPollTimer);otpPollTimer=null;}
+}
+function autoFillOTP(otp){
+  // Show received state
+  document.getElementById('otpWaitingState').style.display='none';
+  document.getElementById('otpReceivedState').style.display='block';
+  document.getElementById('otpInputLabel').innerHTML='<b style="color:var(--green)">✅ OTP received! Confirm to unlock:</b>';
+
+  // Animate fill digit by digit
+  const digits=document.querySelectorAll('.otp-digit');
+  otp.split('').forEach((ch,i)=>{
+    setTimeout(()=>{
+      if(digits[i]){
+        digits[i].value=ch;
+        digits[i].className='otp-digit auto-filled';
+      }
+      if(i===5){
+        updateVerifyBtn();
+        document.getElementById('pmVerifyBtn').style.background='linear-gradient(135deg,var(--green),#2da866)';
+        // Show top notification
+        showOTPNotification();
+      }
+    },i*120);
+  });
+}
+function showOTPNotification(){
+  const n=document.createElement('div');
+  n.className='otp-notify';
+  n.innerHTML='✅ OTP Delivered — Tap Unlock!';
+  document.body.appendChild(n);
+  setTimeout(()=>{n.style.transition='opacity .4s';n.style.opacity='0';setTimeout(()=>n.remove(),400);},3500);
+}
+
+
+
+[document.getElementById('pmClose1'),document.getElementById('pmClose2'),document.getElementById('pmClose3')].forEach(b=>{if(b)b.onclick=closePayModal;});
+PM.onclick=e=>{if(e.target===PM)closePayModal();};
+
+// ============================================================
+//  ADMIN DASHBOARD
+// ============================================================
+const adminOverlay=document.getElementById('adminOverlay');
+let adminAuthed=false;
+
+function openAdmin(){
+  if(!adminAuthed){
+    const code=prompt('🔐 Enter admin passcode:');
+    if(!code||code.toUpperCase()!==ADMIN_SECRET){
+      toast('❌ Incorrect admin passcode.','error');return;
+    }
+    adminAuthed=true;
+  }
+  renderAdminContent();
+  adminOverlay.classList.add('on');
+  document.body.style.overflow='hidden';
+}
+function closeAdmin(){adminOverlay.classList.remove('on');document.body.style.overflow='';}
+document.getElementById('adminClose').onclick=closeAdmin;
+adminOverlay.onclick=e=>{if(e.target===adminOverlay)closeAdmin();};
+
+// Tabs
+document.querySelectorAll('.admin-tab').forEach(tab=>{
+  tab.onclick=()=>{
+    document.querySelectorAll('.admin-tab').forEach(t=>t.classList.remove('on'));
+    document.querySelectorAll('.admin-section').forEach(s=>s.classList.remove('on'));
+    tab.classList.add('on');
+    document.getElementById('admin'+tab.dataset.tab.charAt(0).toUpperCase()+tab.dataset.tab.slice(1)).classList.add('on');
+  };
+});
+
+function renderAdminContent(){
+  const db=getAdminDB();
+
+  // Users
+  const uc=document.getElementById('adminUsersContent');
+  if(!db.users.length){uc.innerHTML='<div class="admin-empty">No registered users yet.</div>';} else {
+    uc.innerHTML='<table class="admin-table"><thead><tr><th>Username</th><th>Email</th><th>Joined</th></tr></thead><tbody>'+
+      db.users.map(u=>'<tr><td>'+escH(u.username)+'</td><td>'+escH(u.email)+'</td><td>'+escH(u.joinedAt||'')+'</td></tr>').join('')+
+      '</tbody></table>';
+  }
+
+  // Payments
+  const pc=document.getElementById('adminPaymentsContent');
+  if(!db.payments.length){pc.innerHTML='<div class="admin-empty">No payments yet.</div>';} else {
+    pc.innerHTML='<table class="admin-table"><thead><tr><th>User</th><th>Wallpaper</th><th>₹</th><th>Ref ID</th><th>OTP</th><th>Status</th><th>Action</th></tr></thead><tbody>'+
+      db.payments.map(p=>{
+        const statusClass=p.status==='approved'?'approved':p.status==='rejected'?'rejected':'pending';
+        const otpCell=p.otp
+          ? '<span class="admin-passcode-cell" style="font-size:.95rem;letter-spacing:.18em">'+escH(p.otp)+'</span>'+(p.otpUsed?' <span style="font-size:.65rem;color:var(--green)">✓ used</span>':'')
+          : '<span style="color:var(--mu);font-size:.75rem">—</span>';
+        let actions='—';
+        if(p.status==='pending'){
+          actions='<button class="admin-action approve" onclick="adminSendOTP(\''+p.id+'\')">✅ Send OTP</button>'+
+                  '<button class="admin-action reject" onclick="adminReject(\''+p.id+'\')">✗ Reject</button>';
+        } else if(p.status==='approved' && !p.otpUsed){
+          actions='<button class="admin-action approve" onclick="adminSendOTP(\''+p.id+'\')" style="font-size:.68rem">↻ Resend OTP</button>';
+        }
+        return '<tr>'+
+          '<td>'+escH(p.user)+'</td>'+
+          '<td>'+escH(p.wallpaperTitle)+'</td>'+
+          '<td>₹'+p.amount+'</td>'+
+          '<td><span style="font-family:\'Syne\',sans-serif;font-size:.78rem;color:var(--mu)">'+escH(p.passcode)+'</span></td>'+
+          '<td>'+otpCell+'</td>'+
+          '<td><span class="status-badge '+statusClass+'">'+p.status+'</span></td>'+
+          '<td>'+actions+'</td>'+
+          '</tr>';
+      }).join('')+
+      '</tbody></table>';
+  }
+
+  // Downloads
+  const dc=document.getElementById('adminDownloadsContent');
+  if(!db.history.length){dc.innerHTML='<div class="admin-empty">No downloads recorded yet.</div>';} else {
+    dc.innerHTML='<div>'+
+      db.history.map(h=>'<div class="history-item">'+
+        '<img class="history-thumb" src="'+escH(h.thumb)+'" alt="'+escH(h.title)+'" onerror="this.style.background=\'var(--cb)\'">'+
+        '<div class="history-info">'+
+          '<div class="history-name">'+escH(h.title)+'</div>'+
+          '<div class="history-date">by '+escH(h.user)+' &bull; '+escH(h.date)+'</div>'+
+        '</div>'+
+        '<span class="history-badge '+h.type+'">'+h.type+'</span>'+
+      '</div>').join('')+
+      '</div>';
+  }
+}
+
+function adminSendOTP(payId){
+  const db=getAdminDB();
+  const p=db.payments.find(x=>x.id===payId);
+  if(!p)return;
+  // Generate 6-digit numeric OTP
+  const otp=String(Math.floor(100000+Math.random()*900000));
+  p.otp=otp;
+  p.status='approved';
+  p.otpSentAt=new Date().toLocaleString();
+  saveAdminDB(db);
+  toast('✅ OTP <b>'+otp+'</b> sent to user — they\'ll see it auto-fill in seconds!','success',5000);
+  renderAdminContent();
+}
+function adminReject(payId){
+  rejectPayment(payId);
+  toast('Payment rejected.','error');
+  renderAdminContent();
+}
+
+function escH(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+// ============================================================
+//  PREMIUM BAR BUTTON
+// ============================================================
+document.getElementById('premiumBarBtn').onclick=()=>{
+  if(!isRegistered()){openRegModal();}
+  else{toast('⭐ You\'re registered! Tap any Premium wallpaper to unlock it.','gold',4000);}
+};
+
+// ============================================================
+//  THEME
+// ============================================================
+let il=localStorage.getItem('theme')==='light';
+if(il)document.body.classList.add('light');
+document.getElementById('tl').innerHTML=il?'☀️ Light':'🌙 Dark';
+document.getElementById('tt').onclick=()=>{
+  il=!il;document.body.classList.toggle('light',il);
+  document.getElementById('tl').innerHTML=il?'☀️ Light':'🌙 Dark
