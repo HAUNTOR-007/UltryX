@@ -24,7 +24,7 @@
 body.light{--bg:#f4f4f0;--sf:#fff;--br:#ddddd8;--ac:#6ab100;--ad:rgba(106,177,0,.10);--tx:#18181b;--mu:#888890;--cb:#ebebeb;--hd:rgba(244,244,240,.88)}
 body{background:var(--bg);color:var(--tx);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden;transition:background .3s,color .3s}
 header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:64px;background:var(--hd);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--br);transition:background .3s}
-.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.45rem;letter-spacing:-.02em;color:var(--tx)}
+/* .logo moved to upgrade block */
 .logo span{color:var(--ac)}
 .tt{display:flex;align-items:center;gap:.55rem;background:var(--sf);border:1px solid var(--br);border-radius:20px;padding:.35rem .8rem .35rem .45rem;cursor:pointer;transition:border-color .2s}
 .tt:hover{border-color:var(--ac)}
@@ -48,25 +48,20 @@ body.light .th{transform:translateX(14px);background:#fff}
 .sw input:focus{border-color:var(--ac)}
 .sw input::placeholder{color:var(--mu)}
 .fr{display:flex;gap:.6rem;flex-wrap:wrap}
-.fb{background:var(--sf);border:1px solid var(--br);color:var(--mu);font-family:'DM Sans',sans-serif;font-size:.82rem;padding:.42rem 1rem;border-radius:20px;cursor:pointer;transition:all .18s}
-.fb:hover,.fb.on{border-color:var(--ac);color:var(--ac);background:var(--ad)}
+/* .fb moved to upgrade block */
 .ss{margin-left:auto;background:var(--sf);border:1px solid var(--br);color:var(--mu);font-family:'DM Sans',sans-serif;font-size:.82rem;padding:.42rem .8rem;border-radius:6px;cursor:pointer;outline:none}
 .gw{max-width:1400px;margin:0 auto;padding:0 1.5rem}
 .rm{font-size:.82rem;color:var(--mu);margin-bottom:1.2rem}
 .rm strong{color:var(--tx)}
 .gg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:var(--br);border:1px solid var(--br);border-radius:10px;contain:layout}
-.card{position:relative;aspect-ratio:16/10;overflow:hidden;cursor:pointer;background:var(--cb);transition:transform .35s ease,box-shadow .35s ease,outline-color .35s ease;outline:2px solid transparent;outline-offset:-2px;contain:layout paint;will-change:transform}
-.card:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 20px 50px rgba(0,0,0,.7);outline-color:var(--ac);z-index:10}
-.card.premium-card:hover{outline-color:var(--gold);box-shadow:0 20px 50px rgba(245,197,24,.22)}
+.card.premium-card.locked img{pointer-events:none;user-select:none}/* card base moved to upgrade block */
 .cp{position:absolute;inset:0;z-index:0;background:#1a1a22;transition:opacity .45s}
 .cp::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 20%,rgba(255,255,255,.055) 50%,transparent 80%);animation:sh 1.8s infinite linear;will-change:transform}
 html.sd .cp::after{animation:none}
 @keyframes sh{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
 .card.ok .cp{opacity:0;pointer-events:none}
 .card.ok .cp::after{animation:none}
-.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s cubic-bezier(.25,.46,.45,.94),filter .35s,opacity .4s;filter:brightness(.82) saturate(.88);opacity:0;z-index:1;will-change:transform}
-.card.ok img{opacity:1}
-.card:hover img{transform:scale(1.08);filter:brightness(1.05) saturate(1.18)}
+/* img hover moved to upgrade block */
 .card.premium-card.locked img{filter:brightness(.5) saturate(.3) blur(4px)}
 .card.premium-card.locked:hover img{filter:brightness(.6) saturate(.4) blur(3px)}
 .card.premium-card.locked img{pointer-events:none;user-select:none;-webkit-user-drag:none}
@@ -85,8 +80,7 @@ img{-webkit-user-drag:none;user-select:none}
 .ca{display:flex;gap:.5rem;align-items:center;transform:translateY(10px);transition:transform .3s .04s}
 .card:hover .ca{transform:translateY(0)}
 .ctg{font-size:.7rem;padding:.24rem .65rem;border-radius:5px;background:rgba(255,255,255,.13);color:rgba(255,255,255,.88);backdrop-filter:blur(4px);text-transform:capitalize}
-.cdl{font-size:.7rem;padding:.24rem .78rem;border-radius:5px;background:var(--ac);color:#000;font-weight:700;margin-left:auto;cursor:pointer;border:none;transition:opacity .2s,transform .15s}
-.cdl:hover{opacity:.85;transform:scale(1.06)}
+/* .cdl moved to upgrade block */
 .cdl.buy-btn{background:linear-gradient(135deg,#f5c518,#d4a800);color:#000}
 .premium-badge{position:absolute;top:.75rem;left:.75rem;z-index:7;display:flex;align-items:center;gap:.28rem;background:linear-gradient(135deg,rgba(245,197,24,.96),rgba(212,168,0,.96));color:#000;font-size:.62rem;font-weight:800;padding:.22rem .6rem;border-radius:5px;letter-spacing:.04em;pointer-events:none}
 .unlocked-badge{position:absolute;top:.75rem;left:.75rem;z-index:7;display:flex;align-items:center;gap:.28rem;background:rgba(200,241,53,.15);border:1px solid rgba(200,241,53,.45);color:var(--ac);font-size:.62rem;font-weight:800;padding:.22rem .6rem;border-radius:5px;letter-spacing:.04em;pointer-events:none}
@@ -122,10 +116,7 @@ html.sd #lbVideo{display:none!important}
 .es h3{font-family:'Syne',sans-serif;font-size:1.2rem;margin-bottom:.5rem}
 .es p{color:var(--mu);font-size:.9rem}
 .pg{display:flex;justify-content:center;align-items:center;gap:.5rem;padding:2.5rem 0 3rem}
-.pb{background:var(--sf);border:1px solid var(--br);color:var(--mu);padding:.5rem 1rem;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:.85rem;cursor:pointer;transition:all .18s}
-.pb:hover:not(:disabled){border-color:var(--ac);color:var(--ac)}
-.pb:disabled{opacity:.3;cursor:not-allowed}
-.pb.on{background:var(--ac);color:#000;border-color:var(--ac);font-weight:600}
+/* .pb moved to upgrade block */
 /* Lightbox */
 .lx{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .lx.on{display:flex}
@@ -210,6 +201,57 @@ html.sd #lbVideo{display:none!important}
 .pm-success-sub{color:var(--mu);font-size:.84rem;line-height:1.6;max-width:300px}
 .pm-success-dl{background:linear-gradient(135deg,#f5c518,#d4a800);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;padding:.75rem 2rem;border:none;border-radius:8px;cursor:pointer;transition:opacity .2s,transform .15s;width:100%}
 .pm-success-dl:hover{opacity:.88;transform:translateY(-1px)}
+.sec-header{grid-column:1/-1;display:flex;align-items:center;gap:1rem;padding:1rem 1.4rem;background:linear-gradient(90deg,rgba(10,10,20,.96),rgba(15,15,28,.85));border:1px solid rgba(255,255,255,.08);border-left:3px solid var(--sec-color,var(--ac));border-radius:10px;margin:.6rem 0;position:relative;overflow:hidden;transition:border-color .3s}
+.sec-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 40% 80% at 0% 50%,rgba(255,255,255,.04),transparent 70%);pointer-events:none}
+.sec-header-icon{font-size:1.4rem;flex-shrink:0;filter:drop-shadow(0 0 8px currentColor)}
+.sec-header-text{display:flex;flex-direction:column;gap:.15rem;flex:1}
+.sec-header-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;letter-spacing:.04em;text-shadow:0 0 20px currentColor}
+.sec-header-sub{font-size:.73rem;color:var(--mu)}
+
+/* ── Enhanced card hover ── */
+.card{position:relative;aspect-ratio:16/10;overflow:hidden;cursor:pointer;background:var(--cb);transition:transform .38s cubic-bezier(.34,1.4,.64,1),box-shadow .38s ease,outline-color .3s ease;outline:2px solid transparent;outline-offset:-2px;contain:layout paint;will-change:transform}
+.card::after{content:'';position:absolute;inset:0;z-index:6;background:radial-gradient(ellipse 70% 50% at 50% 120%,rgba(200,241,53,.18),transparent 65%);opacity:0;transition:opacity .35s;pointer-events:none}
+.card:hover{transform:translateY(-8px) scale(1.04);box-shadow:0 24px 60px rgba(0,0,0,.8),0 0 0 1px rgba(200,241,53,.2);outline-color:var(--ac);z-index:10}
+.card:hover::after{opacity:1}
+.card.premium-card:hover{outline-color:var(--gold);box-shadow:0 24px 60px rgba(245,197,24,.25),0 0 0 1px rgba(245,197,24,.3)}
+.card.premium-card:hover::after{background:radial-gradient(ellipse 70% 50% at 50% 120%,rgba(245,197,24,.2),transparent 65%)}
+
+/* ── Card image zoom ── */
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.25,.46,.45,.94),filter .4s,opacity .4s;filter:brightness(.8) saturate(.85);opacity:0;z-index:1;will-change:transform}
+.card.ok img{opacity:1}
+.card:hover img{transform:scale(1.1);filter:brightness(1.08) saturate(1.25)}
+
+/* ── Filter buttons ── */
+.fb{background:var(--sf);border:1px solid var(--br);color:var(--mu);font-family:'DM Sans',sans-serif;font-size:.82rem;padding:.42rem 1rem;border-radius:20px;cursor:pointer;transition:all .22s cubic-bezier(.34,1.4,.64,1);position:relative;overflow:hidden}
+.fb::before{content:'';position:absolute;inset:0;background:var(--ac);opacity:0;transition:opacity .2s;border-radius:20px}
+.fb:hover{border-color:var(--ac);color:var(--ac);background:var(--ad);transform:translateY(-2px);box-shadow:0 4px 16px rgba(200,241,53,.15)}
+.fb.on{border-color:var(--ac);color:#000;background:var(--ac);font-weight:600;transform:translateY(-2px);box-shadow:0 4px 18px rgba(200,241,53,.3)}
+
+/* ── Logo glow on hover ── */
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.45rem;letter-spacing:-.02em;color:var(--tx);transition:filter .3s}
+.logo:hover{filter:drop-shadow(0 0 12px var(--ac))}
+
+/* ── Hero gradient upgrade ── */
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 0%,rgba(200,241,53,.1),transparent 65%),radial-gradient(ellipse 40% 30% at 20% 80%,rgba(200,241,53,.04),transparent 60%);pointer-events:none}
+
+/* ── Download button pulse ── */
+.cdl{font-size:.7rem;padding:.24rem .78rem;border-radius:5px;background:var(--ac);color:#000;font-weight:700;margin-left:auto;cursor:pointer;border:none;transition:all .22s cubic-bezier(.34,1.4,.64,1)}
+.cdl:hover{opacity:.9;transform:scale(1.1);box-shadow:0 4px 14px rgba(200,241,53,.45)}
+.cdl.buy-btn{background:linear-gradient(135deg,#f5c518,#d4a800);color:#000}
+.cdl.buy-btn:hover{box-shadow:0 4px 14px rgba(245,197,24,.4)}
+
+/* ── Lightbox close button ── */
+.lc{position:absolute;top:-2.5rem;right:0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:var(--mu);font-size:1.2rem;cursor:pointer;transition:all .2s;border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center}
+.lc:hover{color:#fff;background:rgba(255,80,80,.35);border-color:rgba(255,80,80,.5);transform:rotate(90deg)}
+
+/* ── Search bar glow ── */
+.sw input:focus{border-color:var(--ac);box-shadow:0 0 0 3px rgba(200,241,53,.1)}
+
+/* ── Pagination ── */
+.pb{background:var(--sf);border:1px solid var(--br);color:var(--mu);padding:.5rem 1rem;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:.85rem;cursor:pointer;transition:all .22s cubic-bezier(.34,1.4,.64,1)}
+.pb:hover:not(:disabled){border-color:var(--ac);color:var(--ac);transform:translateY(-2px);box-shadow:0 4px 12px rgba(200,241,53,.15)}
+.pb.on{background:var(--ac);color:#000;border-color:var(--ac);font-weight:600;box-shadow:0 4px 16px rgba(200,241,53,.3)}
+
 footer{border-top:1px solid var(--br);padding:1.5rem 2.5rem;display:flex;justify-content:space-between;align-items:center;color:var(--mu);font-size:.8rem}
 @media(prefers-reduced-motion:reduce){.cp::after,.ld{animation:none}.card,.card img,.co,.ci,.ct2,.ca{transition:none!important}}
 @media(max-width:600px){header{padding:0 1rem}.gg{grid-template-columns:1fr 1fr}footer{flex-direction:column;gap:.5rem;text-align:center}.nb{padding:.5rem 1rem}.pm-box{border-radius:14px}.pm-step{padding:1.4rem}.pm-qr-img{width:155px;height:155px}}
@@ -239,6 +281,7 @@ footer{border-top:1px solid var(--br);padding:1.5rem 2.5rem;display:flex;justify
       <button class="fb" data-c="city">City</button>
       <button class="fb" data-c="minimal">Minimal</button>
       <button class="fb" data-c="Live">Live</button>
+      <button class="fb" data-c="blueprint">Mechanical Canvas</button>
       <select class="ss" id="so" aria-label="Sort wallpapers">
         <option value="new">Newest</option>
         <option value="popular">Popular</option>
@@ -415,7 +458,7 @@ const UNLOCK_CODES = {
   window.SD=s;
 })();
 
-const CC={CAR:'#1a1008',abstract:'#0d0d1a',nature:'#081208',city:'#090912',minimal:'#111114',Live:'#08100e',Nature:'#081208',default:'#111114'};
+const CC={CAR:'#1a1008',abstract:'#0d0d1a',nature:'#081208',city:'#090912',minimal:'#111114',Live:'#08100e',Nature:'#081208',blueprint:'#050d1a',default:'#111114'};
 
 // ============================================================
 //  WALLPAPER LIBRARY
@@ -428,35 +471,42 @@ const CC={CAR:'#1a1008',abstract:'#0d0d1a',nature:'#081208',city:'#090912',minim
 // ============================================================
 const W=[
   // Cars
-   { id:1,  title:'Audi',        category:'CAR',      res:'5120x2880', size:'4.7MB',        thumb:'Audi.jpeg',            fullres:'Audi.jpeg',            },
-  { id:2,  title:'BMW GT3 M4',        category:'CAR',      res:'5120x2880', size:'4.7MB',   thumb:'bmw.jpg',            fullres:'bmw.jpg',           premium:true, price:20 },
+   
+  { id:2,  title:'BMW GT3 M4',       category:'CAR',      res:'5120x2880', size:'4.7MB',   thumb:'bmw.jpg',            fullres:'bmw.jpg',           premium:true, price:20 },
   { id:3, title:'Porsche 911 GT RS', category:'CAR',      res:'2550x1440', size:'1MB',     thumb:'porsche.png',        fullres:'porsche.png'        },
-  { id:14, title:'F1 Max Verstappen', category:'CAR',      res:'4096x2728', size:'1.6MB',   thumb:'f1max.png',          fullres:'f1max.png'          },
+  { id:14, title:'F1 Max Verstappen',category:'CAR',      res:'4096x2728', size:'1.6MB',   thumb:'f1max.png',          fullres:'f1max.png'          },
    { id:4, title:'F1',               category:'CAR',      res:'2616x1472', size:'532 KB',  thumb:'f1.jpg',             fullres:'f1.jpg'             },
   // Abstract
   { id:5,  title:'Quantum Void',            category:'abstract', res:'4K UHD',    size:'8.5MB',   thumb:'quantum.jpg',        fullres:'quantum.jpg'        },
   { id:6,  title:'Pyramid With Palm Trees', category:'abstract', res:'1920x1080', size:'414KB',   thumb:'pyramid.png',        fullres:'pyramid.png'        },
-  { id:7, title:'Astronaut',               category:'abstract', res:'4096x2304', size:'696KB',   thumb:'anstronaut.jpg',     fullres:'anstronaut.jpg'     },
+  { id:7, title:'Astronaut',                category:'abstract', res:'4096x2304', size:'696KB',   thumb:'anstronaut.jpg',     fullres:'anstronaut.jpg'     },
   // Nature
   { id:8,  title:'Dark House',         category:'Nature',   res:'1920x1080', size:'2MB',     thumb:'house.png',          fullres:'house.png'          },
-  { id:9, title:'Tropical Leaves',    category:'nature',   res:'1920x1080', size:'3.4MB',   thumb:'leaves.jpg',         fullres:'leaves.jpg'         },
+  { id:9, title:'Tropical Leaves',     category:'nature',   res:'1920x1080', size:'3.4MB',   thumb:'leaves.jpg',         fullres:'leaves.jpg'         },
   { id:10, title:'Mountain Peak',      category:'nature',   res:'1080p',     size:'3.5MB',   thumb:'mountain.jpg',       fullres:'mountain.jpg'       },
   { id:11, title:'Amazon Forest',      category:'nature',   res:'4K UHD',    size:'10.1MB',  thumb:'amazon.jpg',         fullres:'amazon.jpg'         },
   // City
-  { id:12,  title:'Futuristic City',    category:'city',     res:'1080p',     size:'6.2MB',   thumb:'futuristiccity.jpg', fullres:'futuristiccity.jpg' },
+  { id:12,  title:'Futuristic City',   category:'city',     res:'1080p',     size:'6.2MB',   thumb:'futuristiccity.jpg', fullres:'futuristiccity.jpg' },
   { id:13, title:'Neon City',          category:'city',     res:'4032x3024', size:'565KB',   thumb:'city.jpg',           fullres:'city.jpg'           },
   { id:14, title:'Night Street',       category:'city',     res:'3840x2160', size:'1.4MB',   thumb:'street.png',         fullres:'street.png'         },
   // Mini5mal
-  { id:15,  title:'Man & Woman',        category:'minimal',  res:'5120x2880', size:'457KB',   thumb:'manwomen.jpg',       fullres:'manwomen.jpg'       },
+  { id:15,  title:'Man & Woman',       category:'minimal',  res:'5120x2880', size:'457KB',   thumb:'manwomen.jpg',       fullres:'manwomen.jpg'       },
   { id:16, title:'Island Escape',      category:'minimal',  res:'1920x1080', size:'670KB',   thumb:'island.jpg',         fullres:'island.jpg'         },
   { id:18, title:'Minimal Scene',      category:'minimal',  res:'1920x1080', size:'365KB',   thumb:'secne.png',          fullres:'secne.png'          },
   // Live
   { id:17,  title:'Balbasaur',          category:'Live',     res:'2k',        size:'97.6MB',  thumb:'Balbasaur.png',      fullres:'Balbasaur.mp4'      },
   { id:18,  title:'BMW M3 E36',         category:'Live',     res:'3840x2160', size:'27.8MB',  thumb:'bmwm3e36.png',       fullres:'bmwm3e36.mp4'       },
   { id:19,  title:'Silver Surfer',      category:'Live',     res:'5120x2880', size:'55.5MB',  thumb:'silversurfer.png',   fullres:'silversurfer.mp4'   },
-  { id:20, title:'BMW M4',             category:'Live',     res:'2k',        size:'2.2MB',   thumb:'bmwm4.png',          fullres:'bmwm4.mp4'          },
-  { id:21, title:'Cherry Blossom',     category:'Live',     res:'1920x1080', size:'7.5MB',   thumb:'cherry.png',         fullres:'cherryblossom.mp4'  },
-  { id:22, title:'Dark QueeN',         category:'Live',     res:'4k UHD',    size:'200MB',   thumb:'darkqueen.png',      fullres:'darkqueen.mp4'      },
+  { id:20, title:'BMW M4',              category:'Live',     res:'2k',        size:'2.2MB',   thumb:'bmwm4.png',          fullres:'bmwm4.mp4'          },
+  { id:21, title:'Cherry Blossom',      category:'Live',     res:'1920x1080', size:'7.5MB',   thumb:'cherry.png',         fullres:'cherryblossom.mp4'  },
+  { id:22, title:'Dark QueeN',          category:'Live',     res:'4k UHD',    size:'200MB',   thumb:'darkqueen.png',      fullres:'darkqueen.mp4'      },
+  // Mechanical Canvas (Car Blueprints)
+  { id:1,  title:'Audi',                  category:'blueprint', res:'5120x2880', size:'4.7MB', thumb:'Audi.jpeg',             fullres:'Audi.jpeg',            },
+  { id:30, title:'GT-R ',                 category:'blueprint', res:'3840x2160', size:'2.1MB', thumb:'GTR.png',               fullres:'GTR.png'     },
+  { id:31, title:'Ferrari F40',           category:'blueprint', res:'3840x2160', size:'1.8MB', thumb:'F40.png',               fullres:'F40.png' },
+  { id:32, title:'Lamborghini',           category:'blueprint', res:'3840x2160', size:'2.4MB', thumb:'LAMBORGHINI.png',       fullres:'LAMBORGHINI.png'   },
+  { id:33, title:'Italian V12',           category:'blueprint', res:'2560x1440', size:'1.5MB', thumb:'V12.png',               fullres:'V12.png'  },
+  { id:34, title:'1986 Ford Mustang',     category:'blueprint', res:'3840x2160', size:'2.2MB', thumb:'1986 ford.png',         fullres:'1986 ford.png'  },
   // Add new wallpapers below:
   // { id:23, title:'Your Title', category:'CAR', res:'4K UHD', size:'5MB', thumb:'yourthumb.jpg', fullres:'yourfile.jpg' },
   // { id:24, title:'Premium Ex', category:'abstract', res:'4K UHD', size:'12MB', thumb:'ex.jpg', fullres:'ex.jpg', premium:true, price:20 },
@@ -514,8 +564,30 @@ function render(){
   RM.innerHTML='Showing <strong>'+pg.length+'</strong> of <strong>'+fl.length+'</strong> wallpapers';
   ES.classList.toggle('on',!fl.length);G.style.display=fl.length?'':'none';
   const frag=document.createDocumentFragment();
+  const SEC_META={
+    'CAR':      {icon:'&#x1F3CE;&#xFE0F;', title:'Cars',             sub:'High-octane machines built for your screen',            color:'#ff6b35'},
+    'abstract': {icon:'&#x1F300;',          title:'Abstract',         sub:'Surreal forms and infinite geometry',                    color:'#a855f7'},
+    'nature':   {icon:'&#x1F333;',          title:'Nature',           sub:'Earth\'s finest moments, captured in 4K',               color:'#22c55e'},
+    'Nature':   {icon:'&#x1F333;',          title:'Nature',           sub:'Earth\'s finest moments, captured in 4K',               color:'#22c55e'},
+    'city':     {icon:'&#x1F306;',          title:'City',             sub:'Urban jungles glowing after dark',                      color:'#38bdf8'},
+    'minimal':  {icon:'&#x25FB;&#xFE0F;',   title:'Minimal',          sub:'Less noise, more clarity',                              color:'#94a3b8'},
+    'Live':     {icon:'&#x25B6;&#xFE0F;',   title:'Live Wallpapers',  sub:'Motion art that breathes on your desktop',              color:'#c8f135'},
+    'blueprint':{icon:'&#x1F4D0;',          title:'Mechanical Canvas',sub:'Technical car blueprint wallpapers — engineering as art',color:'#5b9cf6'},
+  };
+  const seenCats=new Set();
+  const cat2=document.querySelector('.fb.on')?.dataset.c||'all';
   pg.forEach(w=>{
     const{id,title:ttl,category:cat,res,size:sz,thumb,fullres,premium,price}=w;
+    // Insert section header before first card of each category (only in "all" view)
+    if(cat2==='all'&&!seenCats.has(cat)&&SEC_META[cat]){
+      seenCats.add(cat);
+      const m=SEC_META[cat];
+      const hdr=document.createElement('div');
+      hdr.className='sec-header';
+      hdr.style.setProperty('--sec-color',m.color);
+      hdr.innerHTML='<div class="sec-header-icon">'+m.icon+'</div><div class="sec-header-text"><div class="sec-header-title" style="color:'+m.color+'">'+m.title+'</div><div class="sec-header-sub">'+m.sub+'</div></div><div class="sec-header-count"></div>';
+      frag.appendChild(hdr);
+    }
     const isL=cat==='Live',bg=CC[cat]||CC.default;
     const isPrem=!!premium,unlocked=isPrem&&isUnlocked(id),locked=isPrem&&!unlocked;
     const a=document.createElement('article');
