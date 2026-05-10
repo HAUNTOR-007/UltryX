@@ -255,6 +255,51 @@ html.sd #lbVideo{display:none!important}
 footer{border-top:1px solid var(--br);padding:1.5rem 2.5rem;display:flex;justify-content:space-between;align-items:center;color:var(--mu);font-size:.8rem}
 @media(prefers-reduced-motion:reduce){.cp::after,.ld{animation:none}.card,.card img,.co,.ci,.ct2,.ca{transition:none!important}}
 @media(max-width:600px){header{padding:0 1rem}.gg{grid-template-columns:1fr 1fr}footer{flex-direction:column;gap:.5rem;text-align:center}.nb{padding:.5rem 1rem}.pm-box{border-radius:14px}.pm-step{padding:1.4rem}.pm-qr-img{width:155px;height:155px}}
+
+/* ── Phone Wallpaper Section ── */
+.phone-section{max-width:1400px;margin:3rem auto 0;padding:0 1.5rem 3rem}
+.phone-section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem}
+.phone-section-title{display:flex;align-items:center;gap:.75rem}
+.phone-section-title h2{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;letter-spacing:-.02em}
+.phone-section-title h2 span{color:var(--ac)}
+.phone-section-badge{display:inline-flex;align-items:center;gap:.35rem;background:rgba(200,241,53,.1);border:1px solid rgba(200,241,53,.3);color:var(--ac);font-size:.7rem;font-weight:700;padding:.25rem .7rem;border-radius:20px;letter-spacing:.05em;text-transform:uppercase}
+.phone-filters{display:flex;gap:.5rem;flex-wrap:wrap}
+.pfb{background:var(--sf);border:1px solid var(--br);color:var(--mu);font-family:'DM Sans',sans-serif;font-size:.78rem;padding:.35rem .9rem;border-radius:20px;cursor:pointer;transition:all .22s cubic-bezier(.34,1.4,.64,1)}
+.pfb:hover{border-color:var(--ac);color:var(--ac);background:var(--ad);transform:translateY(-2px)}
+.pfb.on{border-color:var(--ac);color:#000;background:var(--ac);font-weight:600;transform:translateY(-2px);box-shadow:0 4px 18px rgba(200,241,53,.3)}
+.phone-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1px;background:var(--br);border:1px solid var(--br);border-radius:10px;overflow:hidden}
+.pcard{position:relative;aspect-ratio:9/16;overflow:hidden;cursor:pointer;background:var(--cb);transition:transform .38s cubic-bezier(.34,1.4,.64,1),box-shadow .38s ease,outline-color .3s ease;outline:2px solid transparent;outline-offset:-2px}
+.pcard::after{content:'';position:absolute;inset:0;z-index:6;background:radial-gradient(ellipse 70% 50% at 50% 110%,rgba(200,241,53,.18),transparent 65%);opacity:0;transition:opacity .35s;pointer-events:none}
+.pcard:hover{transform:translateY(-8px) scale(1.04);box-shadow:0 24px 60px rgba(0,0,0,.8),0 0 0 1px rgba(200,241,53,.2);outline-color:var(--ac);z-index:10}
+.pcard:hover::after{opacity:1}
+.pcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.25,.46,.45,.94),filter .4s,opacity .4s;filter:brightness(.8) saturate(.85);opacity:0;z-index:1}
+.pcard.ok img{opacity:1}
+.pcard:hover img{transform:scale(1.08);filter:brightness(1.08) saturate(1.2)}
+.pcard-shimmer{position:absolute;inset:0;z-index:0;background:#1a1a22}
+.pcard-shimmer::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,rgba(255,255,255,.055) 50%,transparent 80%);animation:psh 1.8s infinite linear}
+.pcard.ok .pcard-shimmer{opacity:0;pointer-events:none}
+@keyframes psh{0%{transform:translateY(-100%)}100%{transform:translateY(100%)}}
+.pcard-overlay{position:absolute;inset:0;z-index:4;background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.2) 45%,transparent 70%);opacity:0;transition:opacity .3s;display:flex;flex-direction:column;justify-content:flex-end;padding:.85rem .8rem}
+.pcard:hover .pcard-overlay{opacity:1}
+.pcard-top{position:absolute;top:.65rem;left:.65rem;right:.65rem;display:flex;justify-content:space-between;align-items:center;z-index:5;opacity:0;transform:translateY(-6px);transition:opacity .3s,transform .3s}
+.pcard:hover .pcard-top{opacity:1;transform:translateY(0)}
+.pcard-res{font-size:.6rem;font-weight:700;padding:.2rem .5rem;border-radius:4px;background:rgba(0,0,0,.72);color:var(--ac);backdrop-filter:blur(6px);border:1px solid rgba(200,241,53,.3);letter-spacing:.04em}
+.pcard-tag{font-size:.6rem;padding:.2rem .5rem;border-radius:4px;background:rgba(0,0,0,.72);color:rgba(255,255,255,.75);backdrop-filter:blur(6px);text-transform:capitalize}
+.pcard-name{font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;color:#fff;margin-bottom:.45rem;transform:translateY(8px);transition:transform .3s;line-height:1.25}
+.pcard:hover .pcard-name{transform:translateY(0)}
+.pcard-actions{display:flex;gap:.4rem;transform:translateY(8px);transition:transform .3s .04s}
+.pcard:hover .pcard-actions{transform:translateY(0)}
+.pcard-dl{font-size:.65rem;padding:.22rem .7rem;border-radius:5px;background:var(--ac);color:#000;font-weight:700;cursor:pointer;border:none;transition:all .2s}
+.pcard-dl:hover{opacity:.88;transform:scale(1.08)}
+.phone-section-divider{display:flex;align-items:center;gap:1rem;margin-bottom:2rem}
+.phone-section-divider::before,.phone-section-divider::after{content:'';flex:1;height:1px;background:var(--br)}
+.phone-section-divider span{font-size:.75rem;color:var(--mu);white-space:nowrap;letter-spacing:.08em;text-transform:uppercase}
+.phone-empty{text-align:center;padding:4rem 2rem;display:none}
+.phone-empty.on{display:block}
+.phone-empty h3{font-family:'Syne',sans-serif;font-size:1.1rem;margin-bottom:.4rem}
+.phone-empty p{color:var(--mu);font-size:.85rem}
+@media(max-width:600px){.phone-grid{grid-template-columns:repeat(3,1fr)}.phone-section-header{flex-direction:column;align-items:flex-start}}
+@media(max-width:380px){.phone-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -296,6 +341,46 @@ footer{border-top:1px solid var(--br);padding:1.5rem 2.5rem;display:flex;justify
   </div>
   <nav class="pg" id="pg" aria-label="Pagination"></nav>
 </main>
+
+<!-- Phone Wallpaper Section -->
+<section class="phone-section" aria-label="Phone wallpapers">
+  <div class="phone-section-divider"><span>📱 Phone Wallpapers</span></div>
+  <div class="phone-section-header">
+    <div class="phone-section-title">
+      <h2>Phone <span>Wallpapers</span></h2>
+      <span class="phone-section-badge">📱 9:16 Portrait</span>
+    </div>
+    <div class="phone-filters" role="group" aria-label="Filter phone wallpapers">
+      <button class="pfb on" data-pc="all">All</button>
+      <button class="pfb" data-pc="amoled">AMOLED</button>
+      <button class="pfb" data-pc="abstract">Abstract</button>
+      <button class="pfb" data-pc="minimal">Minimal</button>
+      <button class="pfb" data-pc="city">City</button>
+      <button class="pfb" data-pc="cars">🚗 Cars</button>
+      <button class="pfb" data-pc="darkfantasy">🗡️ Dark Fantasy</button>
+      <button class="pfb" data-pc="architecture">🏛️ Architecture</button>
+      <button class="pfb" data-pc="anime">⛩️ Anime</button>
+      <button class="pfb" data-pc="space">🌌 Space</button>
+    </div>
+  </div>
+  <div class="phone-grid" id="phoneGrid" role="list"></div>
+  <div class="phone-empty" id="phoneEmpty">
+    <h3>No Phone Wallpapers Found</h3>
+    <p>Try a different filter.</p>
+  </div>
+</section>
+
+<!-- Phone Lightbox -->
+<div class="lx" id="plx" role="dialog" aria-modal="true" aria-label="Phone wallpaper preview">
+  <div class="li" style="align-items:center">
+    <button class="lc" id="plc" aria-label="Close preview">&#x2715;</button>
+    <img id="plbImg" src="" alt="" decoding="async" style="max-height:80vh;max-width:min(92vw,420px);object-fit:contain;border-radius:18px;border:1px solid var(--br)">
+    <div class="lbar">
+      <div><div class="ltit" id="plbT"></div><div class="lres" id="plbR"></div></div>
+      <button class="bd" id="plbD">&#x2193; Download</button>
+    </div>
+  </div>
+</div>
 
 <!-- Lightbox -->
 <div class="lx" id="lx" role="dialog" aria-modal="true" aria-label="Wallpaper preview">
@@ -458,7 +543,7 @@ const UNLOCK_CODES = {
   window.SD=s;
 })();
 
-const CC={CAR:'#1a1008',abstract:'#0d0d1a',nature:'#081208',city:'#090912',minimal:'#111114',Live:'#08100e',Nature:'#081208',blueprint:'#050d1a',default:'#111114'};
+const CC={CAR:'#1a1008',abstract:'#0d0d1a',nature:'#081208',city:'#090912',minimal:'#111114',Live:'#08100e',blueprint:'#050d1a',default:'#111114'};
 
 // ============================================================
 //  WALLPAPER LIBRARY
@@ -481,7 +566,6 @@ const W=[
   { id:6,  title:'Pyramid With Palm Trees', category:'abstract', res:'1920x1080', size:'414KB',   thumb:'pyramid.png',        fullres:'pyramid.png'        },
   { id:7, title:'Astronaut',                category:'abstract', res:'4096x2304', size:'696KB',   thumb:'anstronaut.jpg',     fullres:'anstronaut.jpg'     },
   // Nature
-  { id:8,  title:'Dark House',         category:'Nature',   res:'1920x1080', size:'2MB',     thumb:'house.png',          fullres:'house.png'          },
   { id:9, title:'Tropical Leaves',     category:'nature',   res:'1920x1080', size:'3.4MB',   thumb:'leaves.jpg',         fullres:'leaves.jpg'         },
   { id:10, title:'Mountain Peak',      category:'nature',   res:'1080p',     size:'3.5MB',   thumb:'mountain.jpg',       fullres:'mountain.jpg'       },
   { id:11, title:'Amazon Forest',      category:'nature',   res:'4K UHD',    size:'10.1MB',  thumb:'amazon.jpg',         fullres:'amazon.jpg'         },
@@ -569,7 +653,6 @@ function render(){
     'CAR':      {icon:'&#x1F3CE;&#xFE0F;', title:'Cars',             sub:'High-octane machines built for your screen',            color:'#ff6b35'},
     'abstract': {icon:'&#x1F300;',          title:'Abstract',         sub:'Surreal forms and infinite geometry',                    color:'#a855f7'},
     'nature':   {icon:'&#x1F333;',          title:'Nature',           sub:'Earth\'s finest moments, captured in 4K',               color:'#22c55e'},
-    'Nature':   {icon:'&#x1F333;',          title:'Nature',           sub:'Earth\'s finest moments, captured in 4K',               color:'#22c55e'},
     'city':     {icon:'&#x1F306;',          title:'City',             sub:'Urban jungles glowing after dark',                      color:'#38bdf8'},
     'minimal':  {icon:'&#x25FB;&#xFE0F;',   title:'Minimal',          sub:'Less noise, more clarity',                              color:'#94a3b8'},
     'Live':     {icon:'&#x25B6;&#xFE0F;',   title:'Live Wallpapers',  sub:'Motion art that breathes on your desktop',              color:'#c8f135'},
@@ -811,6 +894,111 @@ async function dlW(url,name,btn){
     if(btn){btn.textContent='Done!';setTimeout(()=>{btn.textContent=orig;btn.disabled=false;},2000);}
   }catch{window.open(url,'_blank');if(btn){btn.textContent=orig;btn.disabled=false;}}
 }
+
+// ============================================================
+//  PHONE WALLPAPERS
+// ============================================================
+
+// ── Phone wallpaper data — add your own entries here ──
+// To add a wallpaper:
+//   { id:'pw1', title:'Your Title', category:'amoled', thumb:'phone/thumb1.jpg', fullres:'phone/full1.jpg', res:'2160×3840' }
+// Supported categories: amoled, nature, abstract, minimal, city
+const PW = [
+  { id:'pw1',  title:'Void AMOLED',        category:'amoled',       thumb:'VOID AMOLED.jpg', fullres:'VOID AMOLED.jpg', res:'2160×3840' },
+
+  { id:'pw3',  title:'Dark Night',         category:'abstract',     thumb:'Dark Night.jpg', fullres:'Dark Night.jpg', res:'1440×3200' },
+  { id:'pw4',  title:'Midnight Lines',     category:'minimal',      thumb:'MID LINES.avif', fullres:'MID LINES.avif', res:'1440×3200' },
+  { id:'pw5',  title:'Neon City Rain',     category:'city',         thumb:'CITY RAIN.jpg', fullres:'CITY RAIN.jpg', res:'2160×3840' },
+  { id:'pw6',  title:'Deep Space',         category:'amoled',       thumb:'DEEPSPACE.jpg', fullres:'DEEPSPACE.jpg', res:'2160×3840' },
+
+  { id:'pw8',  title:'Liquid Glass',       category:'abstract',     thumb:'LIQUIDGLASS.jpg', fullres:'LIQUIDGLASS.jpg', res:'1440×3200' },
+  { id:'pw9',  title:'Pure Dark',          category:'minimal',      thumb:'DARK.jpg', fullres:'DARK.jpg', res:'2160×3840' },
+  { id:'pw10', title:'Rainy Street',       category:'city',         thumb:'RAINYNIGHT.jpg', fullres:'RAINYNIGHT.jpg', res:'1440×3200' },
+  // 🚗 Cars
+  { id:'pw11', title:'Porcshe',  category:'cars',         thumb:'PORCSHE.jpg', fullres:'PORCSHE.jpg', res:'2160×3840' },
+  { id:'pw12', title:'Neon Drift',         category:'cars',         thumb:'neondrift.jpg', fullres:'neondrift.jpg', res:'1440×3200' },
+  { id:'pw13', title:'Dark Garage',        category:'cars',         thumb:'DARKGARAGE.png', fullres:'DARKGARAGE.png', res:'2160×3840' },
+  // 🗡️ Dark Fantasy
+  { id:'pw14', title:'Shadow Realm',       category:'darkfantasy',  thumb:'fantacy.jpg', fullres:'fantacy.jpg', res:'2160×3840' },
+  { id:'pw15', title:'Dragon Fog',         category:'darkfantasy',  thumb:'dragonfog.jpg', fullres:'dragonfog.jpg', res:'1440×3200' },
+  { id:'pw16', title:'Dark Castle',        category:'darkfantasy',  thumb:'dark castle.jpg', fullres:'dark castle.jpg', res:'2160×3840' },
+  // 🏛️ Architecture
+  { id:'pw17', title:'Tower',        category:'architecture', thumb:'build.avif', fullres:'build.avif', res:'2160×3840' },
+  { id:'pw18', title:'Brutalist Dark',     category:'architecture', thumb:'darkarche.jpg', fullres:'darkarche.jpg', res:'1440×3200' },
+  { id:'pw19', title:'Cathedral Night',    category:'architecture', thumb:'cathedral.jpg', fullres:'cathedral.jpg', res:'2160×3840' },
+  // ⛩️ Anime
+  { id:'pw20', title:'Samurai',      category:'anime',        thumb:'samurai.jpg', fullres:'samurai.jpg', res:'2160×3840' },
+  { id:'pw21', title:'Rain Alley',         category:'anime',        thumb:'rainy alley.jpg', fullres:'rainy alley.jpg', res:'1440×3200' },
+  { id:'pw22', title:'Sakura Night',       category:'anime',        thumb:'sakuranight.jpg', fullres:'sakuranight.jpg', res:'2160×3840' },
+  // 🌌 Space & Galaxy
+  { id:'pw23', title:'Black Hole',        category:'space',        thumb:'blackhole.jpg', fullres:'blackhole.jpg', res:'2160×3840' },
+  { id:'pw24', title:'Milky Way Arc',      category:'space',        thumb:'milkyway.jpg', fullres:'milkyway.jpg', res:'1440×3200' },
+  { id:'pw25', title:'B2',      category:'space',        thumb:'B2.png', fullres:'B2.png', res:'2160×3840' },
+];
+
+let pfCat='all';
+
+function renderPhoneGrid(){
+  const grid=document.getElementById('phoneGrid');
+  const empty=document.getElementById('phoneEmpty');
+  const filtered=pfCat==='all'?PW:PW.filter(p=>p.category===pfCat);
+  if(!filtered.length){grid.innerHTML='';empty.classList.add('on');return;}
+  empty.classList.remove('on');
+  grid.innerHTML=filtered.map(p=>`
+    <div class="pcard" role="listitem" data-pid="${p.id}" tabindex="0" aria-label="${p.title}">
+      <div class="pcard-shimmer"></div>
+      <img src="${p.thumb}" alt="${p.title}" loading="lazy" decoding="async" onload="this.closest('.pcard').classList.add('ok')">
+      <div class="pcard-top">
+        <span class="pcard-res">${p.res}</span>
+        <span class="pcard-tag">${p.category}</span>
+      </div>
+      <div class="pcard-overlay">
+        <div class="pcard-name">${p.title}</div>
+        <div class="pcard-actions">
+          <button class="pcard-dl" onclick="event.stopPropagation();dlW('${p.fullres}','${p.title}',this)">&#x2193; Download</button>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+// Filter buttons
+document.querySelectorAll('.pfb').forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll('.pfb').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    pfCat=b.dataset.pc;
+    renderPhoneGrid();
+  };
+});
+
+// Phone lightbox
+function openPhoneLB(pid){
+  const p=PW.find(x=>x.id===pid);if(!p)return;
+  const plx=document.getElementById('plx');
+  const img=document.getElementById('plbImg');
+  document.getElementById('plbT').textContent=p.title;
+  document.getElementById('plbR').textContent=p.res+' · Phone Wallpaper';
+  document.getElementById('plbD').onclick=()=>dlW(p.fullres,p.title,document.getElementById('plbD'));
+  img.src='';
+  plx.classList.add('on');
+  document.body.style.overflow='hidden';
+  img.onload=()=>img.style.opacity=1;
+  img.style.opacity=0;
+  img.style.transition='opacity .4s';
+  img.src=p.fullres;
+}
+document.getElementById('plc').onclick=()=>{
+  document.getElementById('plx').classList.remove('on');
+  document.body.style.overflow='';
+};
+document.getElementById('plx').onclick=e=>{if(e.target===document.getElementById('plx')){document.getElementById('plx').classList.remove('on');document.body.style.overflow='';}};
+
+document.getElementById('phoneGrid').addEventListener('click',e=>{
+  const card=e.target.closest('.pcard');
+  if(card&&!e.target.classList.contains('pcard-dl'))openPhoneLB(card.dataset.pid);
+});
+
+renderPhoneGrid();
 
 // Theme
 let il=localStorage.getItem('theme')==='light';
