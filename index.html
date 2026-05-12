@@ -905,35 +905,38 @@ async function dlW(url,name,btn){
 // Supported categories: amoled, nature, abstract, minimal, city
 const PW = [
   { id:'pw1',  title:'Void AMOLED',        category:'amoled',       thumb:'VOID AMOLED.jpg', fullres:'VOID AMOLED.jpg', res:'2160×3840' },
+  { id:'pw2',  title:'Void AMOLED',        category:'amoled',       thumb:'ha.jpg',          fullres:'ha.jpg',          res:'2160×3840' },
 
   { id:'pw3',  title:'Dark Night',         category:'abstract',     thumb:'Dark Night.jpg', fullres:'Dark Night.jpg', res:'1440×3200' },
-  { id:'pw4',  title:'Midnight Lines',     category:'minimal',      thumb:'MID LINES.avif', fullres:'MID LINES.avif', res:'1440×3200' },
-  { id:'pw5',  title:'Neon City Rain',     category:'city',         thumb:'CITY RAIN.jpg', fullres:'CITY RAIN.jpg', res:'2160×3840' },
-  { id:'pw6',  title:'Deep Space',         category:'amoled',       thumb:'DEEPSPACE.jpg', fullres:'DEEPSPACE.jpg', res:'2160×3840' },
+  { id:'pw4',  title:'Sea Wave',         category:'abstract',     thumb:'ab.jpg',         fullres:'ab.jpg',         res:'1440×3200' },
+  { id:'pw5',  title:'Midnight Lines',     category:'minimal',      thumb:'MID LINES.avif', fullres:'MID LINES.avif', res:'1440×3200' },
+  { id:'pw6',  title:'Neon City Rain',     category:'city',         thumb:'CITY RAIN.jpg', fullres:'CITY RAIN.jpg', res:'2160×3840' },
+  { id:'pw7',  title:'Deep Space',         category:'amoled',       thumb:'DEEPSPACE.jpg', fullres:'DEEPSPACE.jpg', res:'2160×3840' },
 
   { id:'pw8',  title:'Liquid Glass',       category:'abstract',     thumb:'LIQUIDGLASS.jpg', fullres:'LIQUIDGLASS.jpg', res:'1440×3200' },
   { id:'pw9',  title:'Pure Dark',          category:'minimal',      thumb:'DARK.jpg', fullres:'DARK.jpg', res:'2160×3840' },
-  { id:'pw10', title:'Rainy Street',       category:'city',         thumb:'RAINYNIGHT.jpg', fullres:'RAINYNIGHT.jpg', res:'1440×3200' },
+  { id:'pw10',  title:'Noon',          category:'minimal',      thumb:'rm175-noon-11.jpg', fullres:'rm175-noon-11.jpg', res:'2160×3840' },
+  { id:'pw11', title:'Rainy Street',       category:'city',         thumb:'RAINYNIGHT.jpg', fullres:'RAINYNIGHT.jpg', res:'1440×3200' },
   // 🚗 Cars
-  { id:'pw11', title:'Porcshe',  category:'cars',         thumb:'PORCSHE.jpg', fullres:'PORCSHE.jpg', res:'2160×3840' },
-  { id:'pw12', title:'Neon Drift',         category:'cars',         thumb:'neondrift.jpg', fullres:'neondrift.jpg', res:'1440×3200' },
-  { id:'pw13', title:'Dark Garage',        category:'cars',         thumb:'DARKGARAGE.png', fullres:'DARKGARAGE.png', res:'2160×3840' },
+  { id:'pw12', title:'Porcshe',  category:'cars',         thumb:'PORCSHE.jpg', fullres:'PORCSHE.jpg', res:'2160×3840' },
+  { id:'pw13', title:'Neon Drift',         category:'cars',         thumb:'neondrift.jpg', fullres:'neondrift.jpg', res:'1440×3200' },
+  { id:'pw14', title:'Dark Garage',        category:'cars',         thumb:'DARKGARAGE.png', fullres:'DARKGARAGE.png', res:'2160×3840' },
   // 🗡️ Dark Fantasy
-  { id:'pw14', title:'Shadow Realm',       category:'darkfantasy',  thumb:'fantacy.jpg', fullres:'fantacy.jpg', res:'2160×3840' },
-  { id:'pw15', title:'Dragon Fog',         category:'darkfantasy',  thumb:'dragonfog.jpg', fullres:'dragonfog.jpg', res:'1440×3200' },
-  { id:'pw16', title:'Dark Castle',        category:'darkfantasy',  thumb:'dark castle.jpg', fullres:'dark castle.jpg', res:'2160×3840' },
+  { id:'pw15', title:'Shadow Realm',       category:'darkfantasy',  thumb:'fantacy.jpg', fullres:'fantacy.jpg', res:'2160×3840' },
+  { id:'pw16', title:'Dragon Fog',         category:'darkfantasy',  thumb:'dragonfog.jpg', fullres:'dragonfog.jpg', res:'1440×3200' },
+  { id:'pw17', title:'Dark Castle',        category:'darkfantasy',  thumb:'dark castle.jpg', fullres:'dark castle.jpg', res:'2160×3840' },
   // 🏛️ Architecture
-  { id:'pw17', title:'Tower',        category:'architecture', thumb:'build.avif', fullres:'build.avif', res:'2160×3840' },
-  { id:'pw18', title:'Brutalist Dark',     category:'architecture', thumb:'darkarche.jpg', fullres:'darkarche.jpg', res:'1440×3200' },
-  { id:'pw19', title:'Cathedral Night',    category:'architecture', thumb:'cathedral.jpg', fullres:'cathedral.jpg', res:'2160×3840' },
+  { id:'pw18', title:'Tower',        category:'architecture', thumb:'build.avif', fullres:'build.avif', res:'2160×3840' },
+  { id:'pw19', title:'Brutalist Dark',     category:'architecture', thumb:'darkarche.jpg', fullres:'darkarche.jpg', res:'1440×3200' },
+  { id:'pw20', title:'Cathedral Night',    category:'architecture', thumb:'cathedral.jpg', fullres:'cathedral.jpg', res:'2160×3840' },
   // ⛩️ Anime
-  { id:'pw20', title:'Samurai',      category:'anime',        thumb:'samurai.jpg', fullres:'samurai.jpg', res:'2160×3840' },
-  { id:'pw21', title:'Rain Alley',         category:'anime',        thumb:'rainy alley.jpg', fullres:'rainy alley.jpg', res:'1440×3200' },
-  { id:'pw22', title:'Sakura Night',       category:'anime',        thumb:'sakuranight.jpg', fullres:'sakuranight.jpg', res:'2160×3840' },
+  { id:'pw21', title:'Samurai',      category:'anime',        thumb:'samurai.jpg', fullres:'samurai.jpg', res:'2160×3840' },
+  { id:'pw22', title:'Rain Alley',         category:'anime',        thumb:'rainy alley.jpg', fullres:'rainy alley.jpg', res:'1440×3200' },
+  { id:'pw23', title:'Sakura Night',       category:'anime',        thumb:'sakuranight.jpg', fullres:'sakuranight.jpg', res:'2160×3840' },
   // 🌌 Space & Galaxy
-  { id:'pw23', title:'Black Hole',        category:'space',        thumb:'blackhole.jpg', fullres:'blackhole.jpg', res:'2160×3840' },
-  { id:'pw24', title:'Milky Way Arc',      category:'space',        thumb:'milkyway.jpg', fullres:'milkyway.jpg', res:'1440×3200' },
-  { id:'pw25', title:'B2',      category:'space',        thumb:'B2.png', fullres:'B2.png', res:'2160×3840' },
+  { id:'pw24', title:'Black Hole',        category:'space',        thumb:'blackhole.jpg', fullres:'blackhole.jpg', res:'2160×3840' },
+  { id:'pw25', title:'Milky Way Arc',      category:'space',        thumb:'milkyway.jpg', fullres:'milkyway.jpg', res:'1440×3200' },
+  { id:'pw26', title:'B2',      category:'space',        thumb:'B2.png', fullres:'B2.png', res:'2160×3840' },
 ];
 
 let pfCat='all';
