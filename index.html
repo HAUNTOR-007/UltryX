@@ -300,9 +300,73 @@ footer{border-top:1px solid var(--br);padding:1.5rem 2.5rem;display:flex;justify
 .phone-empty p{color:var(--mu);font-size:.85rem}
 @media(max-width:600px){.phone-grid{grid-template-columns:repeat(3,1fr)}.phone-section-header{flex-direction:column;align-items:flex-start}}
 @media(max-width:380px){.phone-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ── ENTRY SELECTOR OVERLAY ── */
+#entrySel{position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center;padding:1.5rem;background:rgba(0,0,0,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);animation:esIn .4s cubic-bezier(.22,1,.36,1)}
+#entrySel.hide{animation:esOut .35s cubic-bezier(.55,0,1,.45) forwards}
+@keyframes esIn{from{opacity:0}to{opacity:1}}
+@keyframes esOut{from{opacity:1}to{opacity:0;pointer-events:none}}
+.es-wrap{display:flex;flex-direction:column;align-items:center;gap:2rem;max-width:640px;width:100%;animation:esUp .5s cubic-bezier(.22,1,.36,1) .05s both}
+@keyframes esUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.es-logo{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;letter-spacing:-.02em}
+.es-logo span{color:var(--ac)}
+.es-head{text-align:center;display:flex;flex-direction:column;gap:.5rem}
+.es-head h2{font-family:'Syne',sans-serif;font-size:clamp(1.5rem,5vw,2.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.es-head h2 em{font-style:normal;color:var(--ac)}
+.es-head p{color:var(--mu);font-size:.9rem}
+.es-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;width:100%}
+.es-card{position:relative;background:var(--sf);border:1px solid var(--br);border-radius:16px;padding:2rem 1.5rem 1.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;cursor:pointer;text-align:center;transition:all .3s cubic-bezier(.34,1.4,.64,1);overflow:hidden}
+.es-card::before{content:'';position:absolute;inset:0;opacity:0;transition:opacity .3s;pointer-events:none}
+.es-card.pc::before{background:radial-gradient(ellipse 80% 60% at 50% 100%,rgba(200,241,53,.12),transparent 70%)}
+.es-card.phone::before{background:radial-gradient(ellipse 80% 60% at 50% 100%,rgba(200,241,53,.12),transparent 70%)}
+.es-card:hover{transform:translateY(-6px) scale(1.02);border-color:rgba(200,241,53,.5);box-shadow:0 20px 60px rgba(0,0,0,.6),0 0 0 1px rgba(200,241,53,.2)}
+.es-card:hover::before{opacity:1}
+.es-card:active{transform:scale(.98)}
+.es-icon{width:72px;height:72px;border-radius:14px;background:rgba(200,241,53,.08);border:1px solid rgba(200,241,53,.2);display:flex;align-items:center;justify-content:center;font-size:2rem;transition:all .3s;flex-shrink:0}
+.es-card:hover .es-icon{background:rgba(200,241,53,.15);border-color:rgba(200,241,53,.4);transform:scale(1.08)}
+.es-label{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.01em}
+.es-sub{color:var(--mu);font-size:.78rem;line-height:1.5}
+.es-tag{font-size:.65rem;font-weight:700;letter-spacing:.06em;padding:.22rem .65rem;border-radius:5px;background:rgba(200,241,53,.1);color:var(--ac);border:1px solid rgba(200,241,53,.25);white-space:nowrap}
+.es-arrow{position:absolute;bottom:1rem;right:1rem;color:var(--mu);font-size:.85rem;transition:all .3s;opacity:0}
+.es-card:hover .es-arrow{opacity:1;transform:translate(2px,-2px)}
+.es-skip{background:none;border:none;color:var(--mu);font-size:.78rem;cursor:pointer;padding:.4rem .8rem;border-radius:6px;transition:color .2s;font-family:'DM Sans',sans-serif;letter-spacing:.02em}
+.es-skip:hover{color:var(--tx)}
+@media(max-width:460px){.es-cards{grid-template-columns:1fr}.es-card{padding:1.5rem 1.2rem;flex-direction:row;text-align:left;gap:1rem}.es-icon{width:56px;height:56px;flex-shrink:0}.es-arrow{bottom:.9rem}}
 </style>
 </head>
 <body>
+<!-- ── ENTRY CATEGORY SELECTOR ── -->
+<div id="entrySel" role="dialog" aria-modal="true" aria-label="Choose wallpaper category">
+  <div class="es-wrap">
+    <div class="es-logo">Ultry<span>X</span></div>
+    <div class="es-head">
+      <h2>What are you looking<br>for <em>today?</em></h2>
+      <p>Pick your screen type — we'll take you straight there.</p>
+    </div>
+    <div class="es-cards">
+      <div class="es-card pc" id="esPC" role="button" tabindex="0" aria-label="Go to PC Wallpapers">
+        <div class="es-icon">🖥️</div>
+        <div>
+          <div class="es-label">PC Wallpapers</div>
+          <div class="es-sub">4K &amp; HD · 16:10 landscape<br>Cars, Abstract, Nature &amp; more</div>
+        </div>
+        <div class="es-tag">16:9 / 16:10</div>
+        <span class="es-arrow">↗</span>
+      </div>
+      <div class="es-card phone" id="esPhone" role="button" tabindex="0" aria-label="Go to Phone Wallpapers">
+        <div class="es-icon">📱</div>
+        <div>
+          <div class="es-label">Phone Wallpapers</div>
+          <div class="es-sub">Portrait · 9:16 AMOLED<br>Anime, Space, Dark Fantasy &amp; more</div>
+        </div>
+        <div class="es-tag">9:16 Portrait</div>
+        <span class="es-arrow">↗</span>
+      </div>
+    </div>
+    <button class="es-skip" id="esSkip">Browse everything ↓</button>
+  </div>
+</div>
+
 <div class="nb" id="nb"><strong>Data Saver ON</strong> — Live previews paused. Thumbnails only.</div>
 <header>
   <div class="logo">Ultry<span>X</span></div>
@@ -1027,7 +1091,30 @@ function af(){
   if(srt==='res')fl.sort((a,b)=>parseInt(b.res)-parseInt(a.res));
   cp=1;render();
 }
-requestAnimationFrame(af);
+// ── ENTRY SELECTOR ──
+(function(){
+  const overlay=document.getElementById('entrySel');
+  if(!overlay)return;
+  function dismiss(scrollTo){
+    overlay.classList.add('hide');
+    setTimeout(()=>{overlay.style.display='none';document.body.style.overflow='';},340);
+    if(scrollTo){
+      setTimeout(()=>{
+        const t=document.querySelector(scrollTo);
+        if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+      },360);
+    }
+  }
+  document.body.style.overflow='hidden';
+  document.getElementById('esPC').addEventListener('click',()=>dismiss('#gg'));
+  document.getElementById('esPhone').addEventListener('click',()=>dismiss('.phone-section'));
+  document.getElementById('esSkip').addEventListener('click',()=>dismiss(null));
+  ['esPC','esPhone'].forEach(id=>{
+    document.getElementById(id).addEventListener('keydown',e=>{
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();document.getElementById(id).click();}
+    });
+  });
+})();
 </script>
 </body>
 </html>
