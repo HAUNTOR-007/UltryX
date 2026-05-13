@@ -1097,13 +1097,20 @@ function af(){
   if(!overlay)return;
   function dismiss(scrollTo){
     overlay.classList.add('hide');
-    setTimeout(()=>{overlay.style.display='none';document.body.style.overflow='';},340);
-    if(scrollTo){
-      setTimeout(()=>{
+    setTimeout(()=>{
+      overlay.style.display='none';
+      document.body.style.overflow='';
+      if(scrollTo){
         const t=document.querySelector(scrollTo);
-        if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
-      },360);
-    }
+        if(t){
+          // Use instant scroll first to position correctly, then we're done
+          t.scrollIntoView({behavior:'auto',block:'start'});
+        }
+      } else {
+        // "Browse everything" — scroll to very top
+        window.scrollTo({top:0,behavior:'auto'});
+      }
+    },340);
   }
   document.body.style.overflow='hidden';
   document.getElementById('esPC').addEventListener('click',()=>dismiss('#gg'));
