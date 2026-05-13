@@ -56,9 +56,9 @@ body.light .th{transform:translateX(14px);background:#fff}
 .gg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:var(--br);border:1px solid var(--br);border-radius:10px;contain:layout}
 .card.premium-card.locked img{pointer-events:none;user-select:none}/* card base moved to upgrade block */
 .cp{position:absolute;inset:0;z-index:0;background:#1a1a22;transition:opacity .45s}
-.cp::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 20%,rgba(255,255,255,.055) 50%,transparent 80%);animation:sh 1.8s infinite linear;will-change:transform}
+.cp::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,rgba(255,255,255,.055) 50%,transparent 80%);animation:sh 1.8s infinite linear;will-change:transform}
 html.sd .cp::after{animation:none}
-@keyframes sh{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+@keyframes sh{0%{transform:translateY(-100%)}100%{transform:translateY(100%)}}
 .card.ok .cp{opacity:0;pointer-events:none}
 .card.ok .cp::after{animation:none}
 /* img hover moved to upgrade block */
@@ -747,7 +747,6 @@ function render(){
       '<img data-s="'+thumb+'" src="" alt="'+ttl+'" loading="lazy" decoding="async" width="280" height="175" draggable="false">'+
       (isL?'<video data-s="'+(locked?'':fullres)+'" muted loop playsinline></video><div class="lb2"><span class="ld"></span>LIVE</div>':'')+
       (locked?'<div class="lock-shield"></div>':'<div class="free-shield"></div>')+
-      '<div class="ctl-overlay"><div class="ctl-icon">'+LOAD_SVG+'</div><span class="ctl-label">Tap to load</span></div>'+
       badgeHTML+
       '<div class="ci"><span class="cr">'+res+'</span><span class="cs">'+sz+'</span></div>'+
       '<div class="co"><div class="ct2">'+ttl+'</div><div class="ca"><span class="ctg">'+cat+'</span>'+btnHTML+'</div></div>';
