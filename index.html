@@ -1066,6 +1066,7 @@ document.getElementById('phoneGrid').addEventListener('click',e=>{
 });
 
 renderPhoneGrid();
+af(); // populate PC grid on load
 
 // Theme
 let il=localStorage.getItem('theme')==='light';
@@ -1102,12 +1103,8 @@ function af(){
       document.body.style.overflow='';
       if(scrollTo){
         const t=document.querySelector(scrollTo);
-        if(t){
-          // Use instant scroll first to position correctly, then we're done
-          t.scrollIntoView({behavior:'auto',block:'start'});
-        }
+        if(t) t.scrollIntoView({behavior:'auto',block:'start'});
       } else {
-        // "Browse everything" — scroll to very top
         window.scrollTo({top:0,behavior:'auto'});
       }
     },340);
