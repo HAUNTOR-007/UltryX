@@ -451,30 +451,79 @@ showStep('success');
 };
 [document.getElementById('pmClose1'),document.getElementById('pmClose2')].forEach(b=>{if(b)b.onclick=closePayModal;});
 PM.onclick=e=>{if(e.target===PM)closePayModal();};
-document.addEventListener('contextmenu',function(e){
-if(e.target.tagName==='IMG'||e.target.tagName==='VIDEO'){e.preventDefault();return false;}
-if(e.target.closest&&e.target.closest('.card')){e.preventDefault();return false;}
-if(e.target.closest&&e.target.closest('#lx')){e.preventDefault();return false;}
-});
-document.addEventListener('dragstart',function(e){
-if(e.target.tagName==='IMG'||e.target.tagName==='VIDEO'){e.preventDefault();return false;}
-});
-document.addEventListener('keydown',function(e){
-if(e.key==='F12'){e.preventDefault();return false;}
-if(e.ctrlKey&&e.shiftKey&&['I','J','C'].includes(e.key.toUpperCase())){e.preventDefault();return false;}
-if(e.ctrlKey&&e.key.toLowerCase()==='u'){e.preventDefault();return false;}
-if(e.ctrlKey&&e.key.toLowerCase()==='s'){e.preventDefault();return false;}
-});
-document.addEventListener('touchstart',function(e){
-if(e.target.tagName==='IMG'||e.target.tagName==='VIDEO'){
-const el=e.target;
-el._pt=setTimeout(()=>{},800);
-el.addEventListener('touchend',()=>clearTimeout(el._pt),{once:true});
-}
-},{passive:true});
-document.addEventListener('selectstart',function(e){
-if(e.target.tagName==='IMG'||e.target.closest&&e.target.closest('.card')){e.preventDefault();}
-});
+/* ── SECURITY: Full-page protection ── */
+(function(){
+  // 1. Block right-click everywhere
+  document.addEventListener('contextmenu', function(e){
+    e.preventDefault(); return false;
+  }, true);
+
+  // 2. Block drag on images, videos, links
+  document.addEventListener('dragstart', function(e){
+    if(e.target.tagName==='IMG'||e.target.tagName==='VIDEO'||e.target.tagName==='A'){
+      e.preventDefault(); return false;
+    }
+  }, true);
+
+  // 3. Block all DevTools keyboard shortcuts
+  document.addEventListener('keydown', function(e){
+    if(e.key==='F12'){ e.preventDefault(); return false; }
+    if(e.ctrlKey && e.shiftKey && ['I','J','C','K','E'].includes(e.key.toUpperCase())){
+      e.preventDefault(); return false;
+    }
+    if(e.ctrlKey && e.key.toLowerCase()==='u'){ e.preventDefault(); return false; }
+    if(e.ctrlKey && e.key.toLowerCase()==='s'){ e.preventDefault(); return false; }
+    if(e.ctrlKey && e.key.toLowerCase()==='p'){ e.preventDefault(); return false; }
+    if(e.ctrlKey && e.key.toLowerCase()==='a'){ e.preventDefault(); return false; }
+    if(e.metaKey && e.shiftKey && ['I','J','C','K','E'].includes(e.key.toUpperCase())){
+      e.preventDefault(); return false;
+    }
+    if(e.metaKey && e.altKey && e.key.toLowerCase()==='i'){ e.preventDefault(); return false; }
+    if(e.metaKey && e.key.toLowerCase()==='u'){ e.preventDefault(); return false; }
+    if(e.metaKey && e.key.toLowerCase()==='s'){ e.preventDefault(); return false; }
+  }, true);
+
+  // 4. Block text selection everywhere
+  document.addEventListener('selectstart', function(e){
+    e.preventDefault(); return false;
+  }, true);
+
+  // 5. Block long-press context menu on touch
+  document.addEventListener('touchstart', function(e){
+    if(e.target.tagName==='IMG'||e.target.tagName==='VIDEO'){
+      const el=e.target;
+      el._pt=setTimeout(function(){}, 800);
+      el.addEventListener('touchend', function(){ clearTimeout(el._pt); }, {once:true});
+    }
+  }, {passive:true});
+
+  // 6. DevTools open detection — replace page content
+  var _devOpen=false;
+  function _checkDevTools(){
+    var w=window.outerWidth - window.innerWidth;
+    var h=window.outerHeight - window.innerHeight;
+    if(w > 160 || h > 160){
+      if(!_devOpen){
+        _devOpen=true;
+        document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0d0d0d;color:#f0ede8;font-family:sans-serif;font-size:1.2rem;text-align:center;padding:2rem;">&#x26A0;&#xFE0F;<br><br>Developer tools are not permitted on this site.</div>';
+      }
+    } else {
+      _devOpen=false;
+    }
+  }
+  setInterval(_checkDevTools, 1000);
+
+  // 7. Block middle-click
+  document.addEventListener('mousedown', function(e){
+    if(e.button===1){ e.preventDefault(); return false; }
+    if(e.ctrlKey && e.target.closest && e.target.closest('.card')){ e.preventDefault(); return false; }
+  }, true);
+
+  // 8. Disable printing (hides source via print)
+  var _noprint=document.createElement('style');
+  _noprint.innerHTML='@media print{body{display:none!important}}';
+  document.head.appendChild(_noprint);
+})();
 document.addEventListener('click',function(e){
 if(e.target.classList.contains('lock-shield')){
 const card=e.target.closest('.card');
